@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/odie/!svn/ver/551/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/lsp/consumer
+END
+ODIE_LspTermPairCasConsumer.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/odie/!svn/ver/551/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/lsp/consumer/ODIE_LspTermPairCasConsumer.java
+END
+ODIE_CASC_LspSuggestionGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/odie/!svn/ver/551/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/lsp/consumer/ODIE_CASC_LspSuggestionGenerator.java
+END
+ODIE_LspWordPair.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/odie/!svn/ver/311/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/lsp/consumer/ODIE_LspWordPair.java
+END

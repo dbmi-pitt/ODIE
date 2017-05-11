@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/odie/!svn/ver/593/trunk/indexfinder/desc/church/cache
+END
+ODIE_CPE_ChurchSuggestionGenerator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/odie/!svn/ver/593/trunk/indexfinder/desc/church/cache/ODIE_CPE_ChurchSuggestionGenerator.xml
+END
+ODIE_CASC_ChurchSuggestionGenerator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/odie/!svn/ver/593/trunk/indexfinder/desc/church/cache/ODIE_CASC_ChurchSuggestionGenerator.xml
+END
+ODIE_AAE_ChurchSuggestionGeneratorTester.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/odie/!svn/ver/593/trunk/indexfinder/desc/church/cache/ODIE_AAE_ChurchSuggestionGeneratorTester.xml
+END

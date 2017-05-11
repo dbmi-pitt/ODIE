@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/odie/!svn/ver/503/trunk/middletier/src/edu/pitt/dbmi/odie/middletier/test
+END
+AnalysisMiddleTierHibernateTester.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/odie/!svn/ver/392/trunk/middletier/src/edu/pitt/dbmi/odie/middletier/test/AnalysisMiddleTierHibernateTester.java
+END
+MiddleTierHibernateTester.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/odie/!svn/ver/503/trunk/middletier/src/edu/pitt/dbmi/odie/middletier/test/MiddleTierHibernateTester.java
+END
+MiddleTierJDBCTester.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/odie/!svn/ver/348/trunk/middletier/src/edu/pitt/dbmi/odie/middletier/test/MiddleTierJDBCTester.java
+END

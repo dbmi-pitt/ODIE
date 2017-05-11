@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/chunker/type
+END
+LST.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/chunker/type/LST.xml
+END
+INTJ.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/chunker/type/INTJ.xml
+END
+PRT.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/chunker/type/PRT.xml
+END
+VP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/chunker/type/VP.xml
+END
+ChunkerTypeSystem.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/chunker/type/ChunkerTypeSystem.xml
+END
+SBAR.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/chunker/type/SBAR.xml
+END
+UCP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/chunker/type/UCP.xml
+END
+Chunk.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/chunker/type/Chunk.xml
+END
+CONJP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/chunker/type/CONJP.xml
+END
+ADVP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/chunker/type/ADVP.xml
+END
+NP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/chunker/type/NP.xml
+END
+ADJP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/chunker/type/ADJP.xml
+END
+PP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/chunker/type/PP.xml
+END

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/odie/!svn/ver/638/trunk/indexfinder/src/lvg/data/Unicode
+END
+diacriticMap.data
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/odie/!svn/ver/638/trunk/indexfinder/src/lvg/data/Unicode/diacriticMap.data
+END
+ligatureMap.data
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/odie/!svn/ver/638/trunk/indexfinder/src/lvg/data/Unicode/ligatureMap.data
+END
+nonStripMap.data
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/odie/!svn/ver/638/trunk/indexfinder/src/lvg/data/Unicode/nonStripMap.data
+END
+synonymMap.data
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/odie/!svn/ver/638/trunk/indexfinder/src/lvg/data/Unicode/synonymMap.data
+END
+symbolMap.data
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/odie/!svn/ver/638/trunk/indexfinder/src/lvg/data/Unicode/symbolMap.data
+END
+unicodeMap.data
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/odie/!svn/ver/638/trunk/indexfinder/src/lvg/data/Unicode/unicodeMap.data
+END

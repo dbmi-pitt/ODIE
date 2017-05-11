@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/odie/!svn/ver/733/trunk/indexfinder/desc/reader
+END
+ODIE_CR_JdbcCollectionReader.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/odie/!svn/ver/431/trunk/indexfinder/desc/reader/ODIE_CR_JdbcCollectionReader.xml
+END
+ODIE_CR_JdbcBigResultCollectionReader.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/odie/!svn/ver/733/trunk/indexfinder/desc/reader/ODIE_CR_JdbcBigResultCollectionReader.xml
+END
+FilesInDirectoryCollectionReader.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/odie/!svn/ver/676/trunk/indexfinder/desc/reader/FilesInDirectoryCollectionReader.xml
+END

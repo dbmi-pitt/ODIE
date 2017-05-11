@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="MarkableExpander">
+      <import location="MarkableExpander.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ChainCreator">
+      <import location="ChainCreator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="MarkableCreator">
+      <import location="MarkableCreator.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>CoreferenceResolverAggregate2</name>
+    <description/>
+    <version>1.0</version>
+    <vendor>Mayo Clinic</vendor>
+    <configurationParameters searchStrategy="language_fallback"/>
+    <configurationParameterSettings/>
+    <flowConstraints>
+      <fixedFlow>
+        <node>MarkableCreator</node>
+        <node>MarkableExpander</node>
+        <node>ChainCreator</node>
+      </fixedFlow>
+    </flowConstraints>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

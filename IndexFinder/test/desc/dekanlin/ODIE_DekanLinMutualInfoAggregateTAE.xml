@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="TokenizerAnnotator">
+      <import location="../cTAKES/core/analysis_engine/TokenizerAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_MiniparSimilarityClusterTAE">
+      <import location="ODIE_MiniparSimilarityClusterTAE.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="SentenceDetectorAnnotator">
+      <import location="../cTAKES/core/analysis_engine/SentenceDetectorAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_MiniparTAE">
+      <import location="../minipar/ODIE_MiniparTAE.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="SimpleSegmentAnnotator">
+      <import location="../cTAKES/core/analysis_engine/SimpleSegmentAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_PosHistogramGeneratorTAE">
+      <import location="ODIE_PosHistogramGeneratorTAE.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="POSTagger">
+      <import location="../cTAKES/POS tagger/analysis_engine/POSTagger.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>ODIE_DekanLinMutualInfoAggregateTAE</name>
+    <description>Implementation of technique described in Automatic Retrieval and Clustering Similar Words by Dekang Lin.</description>
+    <version>1.0</version>
+    <vendor>University of Pittsburgh ODIE</vendor>
+    <configurationParameters/>
+    <configurationParameterSettings/>
+    <flowConstraints>
+      <fixedFlow>
+        <node>SimpleSegmentAnnotator</node>
+        <node>TokenizerAnnotator</node>
+        <node>SentenceDetectorAnnotator</node>
+        <node>POSTagger</node>
+        <node>ODIE_PosHistogramGeneratorTAE</node>
+        <node>ODIE_MiniparTAE</node>
+        <node>ODIE_MiniparSimilarityClusterTAE</node>
+      </fixedFlow>
+    </flowConstraints>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

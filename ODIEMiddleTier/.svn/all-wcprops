@@ -1,0 +1,45 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 19
+/svn/odie/!svn/act/
+K 25
+svn:wc:ra_dav:version-url
+V 39
+/svn/odie/!svn/ver/467/trunk/middletier
+END
+odie.log.1
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/odie/!svn/ver/220/trunk/middletier/odie.log.1
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/odie/!svn/ver/73/trunk/middletier/.classpath
+END
+protege.properties
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/odie/!svn/ver/220/trunk/middletier/protege.properties
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/svn/odie/!svn/ver/9/trunk/middletier/.project
+END
+build.properties
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/odie/!svn/ver/779/trunk/middletier/build.properties
+END
+global.repository
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/odie/!svn/ver/220/trunk/middletier/global.repository
+END

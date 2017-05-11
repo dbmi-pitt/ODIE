@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/odie/!svn/ver/739/trunk/indexfinder/desc/odie_pipe
+END
+ODIE_AAE_CTAKES.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/odie/!svn/ver/779/trunk/indexfinder/desc/odie_pipe/ODIE_AAE_CTAKES.xml
+END
+ODIE_AAE_OE_ALL.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/odie/!svn/ver/739/trunk/indexfinder/desc/odie_pipe/ODIE_AAE_OE_ALL.xml
+END
+ODIE_CPE_FILTERED_CHURCH.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/odie/!svn/ver/510/trunk/indexfinder/desc/odie_pipe/ODIE_CPE_FILTERED_CHURCH.xml
+END
+ODIE_AAE_OE_CHURCH.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/odie/!svn/ver/352/trunk/indexfinder/desc/odie_pipe/ODIE_AAE_OE_CHURCH.xml
+END
+ODIE_CPE_KJM_0304_LIN_PHRASES.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/odie/!svn/ver/510/trunk/indexfinder/desc/odie_pipe/ODIE_CPE_KJM_0304_LIN_PHRASES.xml
+END
+ODIE_AAE_OE_LSP.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/odie/!svn/ver/352/trunk/indexfinder/desc/odie_pipe/ODIE_AAE_OE_LSP.xml
+END
+ODIE_AAE_NER_COREF.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/odie/!svn/ver/669/trunk/indexfinder/desc/odie_pipe/ODIE_AAE_NER_COREF.xml
+END
+ODIE_AAE_NER.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/odie/!svn/ver/669/trunk/indexfinder/desc/odie_pipe/ODIE_AAE_NER.xml
+END
+ODIE_AE_NER_CD_RESOURCE_MGR.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/odie/!svn/ver/185/trunk/indexfinder/desc/odie_pipe/ODIE_AE_NER_CD_RESOURCE_MGR.xml
+END
+ODIE_AAE_OE_LIN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/odie/!svn/ver/352/trunk/indexfinder/desc/odie_pipe/ODIE_AAE_OE_LIN.xml
+END
+ODIE_AAE_Lucene_Finder_With_CTakes.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/odie/!svn/ver/570/trunk/indexfinder/desc/odie_pipe/ODIE_AAE_Lucene_Finder_With_CTakes.xml
+END
+ODIE_AAE_OE_WITHOUT_LIN.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/odie/!svn/ver/658/trunk/indexfinder/desc/odie_pipe/ODIE_AAE_OE_WITHOUT_LIN.xml
+END
+ODIE_AAE_CoreferenceResolverTester.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/odie/!svn/ver/800/trunk/indexfinder/desc/odie_pipe/ODIE_AAE_CoreferenceResolverTester.xml
+END

@@ -1,0 +1,340 @@
+package edu.pitt.dbmi.odie.ui;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Random;
+
+import org.apache.log4j.Logger;
+import org.eclipse.jface.resource.ImageDescriptor;
+import org.eclipse.jface.resource.JFaceResources;
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.Font;
+import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.graphics.ImageData;
+import org.eclipse.swt.graphics.PaletteData;
+import org.eclipse.swt.graphics.Point;
+import org.eclipse.swt.graphics.RGB;
+import org.eclipse.swt.graphics.Rectangle;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Shell;
+
+import edu.pitt.dbmi.odie.utils.GeneralUtils;
+import edu.pitt.ontology.IClass;
+import edu.pitt.ontology.IOntology;
+
+public class Aesthetics {
+
+	static Logger logger = Logger.getLogger(Aesthetics.class);
+	public static final int HORIZONTAL_INDENT = 30;
+	static public Color[] colors;
+	// static HashMap<IClass,Integer> colorMap = null;
+
+	static HashMap<Object, Color> colorMap = new HashMap<Object, Color>();
+
+	static public int INTERGROUP_SPACING = 12;
+	static public int INTRAGROUP_SPACING = 6;
+
+	static public int TOP_MARGIN = 3;
+	static public int LEFT_MARGIN = 3;
+	//	
+	// static public int HORIZONTAL_INTERGROUP_SPACING = 12;
+	// static public int HORIZONTAL_INTRAGROUP_SPACING = 6;
+
+	static private Color chartSelectionColor;
+	private static Color selectionForeground;
+	private static Color enabledBg;
+	static private Color disabledBg;
+	private static Color helpTitleBackground;
+	private static Color stickyNoteBackground;
+	private static Color white;
+	private static Color black;
+	private static Color red;
+	private static Color filterTextColor;
+
+	private static ImageDescriptor runImage;
+	private static ImageDescriptor resumeImage;
+
+	private static Image oeAEIcon;
+	private static Image nerAEIcon;
+	private static Image otherAEIcon;
+	private static Image ontologyImageSmall;
+	private static ImageDescriptor oeAEIconDescriptor;
+	private static ImageDescriptor nerAEIconDescriptor;
+	private static ImageDescriptor otherAEIconDescriptor;
+
+	private static Image oeAESmallIcon;
+	private static Image nerAESmallIcon;
+	private static Image otherAESmallIcon;
+	private static Image warnIcon;
+
+	private static Image arrowLeftIcon;
+	private static Image arrowRightIcon;
+	private static Image refreshIcon;
+	
+	
+	private static ImageDescriptor helpImage;
+
+	public static Image getOeAESmallIcon() {
+		return oeAESmallIcon;
+	}
+
+	public static Image getNerAESmallIcon() {
+		return nerAESmallIcon;
+	}
+
+	public static Image getOtherAESmallIcon() {
+		return otherAESmallIcon;
+	}
+
+	public static ImageDescriptor getRunImage() {
+		return runImage;
+	}
+
+	public static ImageDescriptor getResumeImage() {
+		return resumeImage;
+	}
+
+	public static Image getOeAEIcon() {
+		return oeAEIcon;
+	}
+
+	public static Image getNerAEIcon() {
+		return nerAEIcon;
+	}
+
+	public static Image getOtherAEIcon() {
+		return otherAEIcon;
+	}
+
+	public static Image getWarnIcon() {
+		return warnIcon;
+	}
+
+	public static ImageDescriptor getOeAEIconDescriptor() {
+		return oeAEIconDescriptor;
+	}
+
+	public static ImageDescriptor getNerAEIconDescriptor() {
+		return nerAEIconDescriptor;
+	}
+
+	public static ImageDescriptor getOtherAEIconDescriptor() {
+		return otherAEIconDescriptor;
+	}
+
+	public static ImageDescriptor getHelpImage() {
+		return helpImage;
+	}
+
+	static {
+		helpImage = Activator.getImageDescriptor("icons/help.png");
+
+		runImage = Activator.getImageDescriptor("icons/cog-go.png");
+		resumeImage = Activator.getImageDescriptor("images/resume.png");
+		ontologyImageSmall = Activator.getImageDescriptor(
+				"icons/chart_organisationsml.png").createImage();
+
+		nerAEIconDescriptor = Activator
+				.getImageDescriptor("icons/012-options.png");
+		oeAEIconDescriptor = Activator
+				.getImageDescriptor("icons/012-options_2.png");
+		otherAEIconDescriptor = Activator
+				.getImageDescriptor("icons/012-options_1.png");
+		nerAEIcon = nerAEIconDescriptor.createImage();
+		oeAEIcon = oeAEIconDescriptor.createImage();
+		otherAEIcon = otherAEIconDescriptor.createImage();
+
+		warnIcon = Activator.getImageDescriptor("icons/warning_sml.png").createImage();
+		
+		arrowLeftIcon = Activator.getImageDescriptor("icons/arrow_left.png").createImage();
+		arrowRightIcon = Activator.getImageDescriptor("icons/arrow_right.png").createImage();
+		refreshIcon = Activator.getImageDescriptor("icons/refresh.png").createImage();
+		
+		warnIcon = Activator.getImageDescriptor("icons/warning_sml.png").createImage();
+		warnIcon = Activator.getImageDescriptor("icons/warning_sml.png").createImage();
+		
+		nerAESmallIcon = Activator.getImageDescriptor(
+				"icons/012-optionssml.png").createImage();
+		oeAESmallIcon = Activator.getImageDescriptor(
+				"icons/012-options_2sml.png").createImage();
+		otherAESmallIcon = Activator.getImageDescriptor(
+				"icons/012-options_1sml.png").createImage();
+
+		Display display = Display.getDefault();
+
+		colors = new Color[] { new Color(display, new RGB(125, 189, 0)),
+				new Color(display, new RGB(114, 51, 119)),
+				new Color(display, new RGB(228, 142, 52)),
+				new Color(display, new RGB(244, 229, 61)) };
+		chartSelectionColor = new Color(display, new RGB(40, 160, 195));
+		selectionForeground = new Color(display, new RGB(255, 255, 255));
+		enabledBg = new Color(display, new RGB(255, 255, 255));
+
+		disabledBg = new Color(display, new RGB(240, 240, 240));
+
+		helpTitleBackground = new Color(display, new RGB(205, 230, 255));
+		stickyNoteBackground = new Color(display, new RGB(255, 255, 170));
+		white = new Color(display, new RGB(255, 255, 255));
+		black = new Color(display, new RGB(0, 0, 0));
+		red = new Color(display, new RGB(255, 0, 0));
+	}
+
+	public static Image getArrowLeftIcon() {
+		return arrowLeftIcon;
+	}
+
+	public static Image getArrowRightIcon() {
+		return arrowRightIcon;
+	}
+
+	public static Image getRefreshIcon() {
+		return refreshIcon;
+	}
+
+	public static Image getOntologyImageSmall() {
+		return ontologyImageSmall;
+	}
+
+	public static Color getColorForObject(Object type) {
+		Color col = colorMap.get(type);
+
+		if (col == null) {
+			if (type instanceof IClass) {
+				IOntology o = ((IClass) type).getOntology();
+				col = colorMap.get(o);
+
+				// ontology color not yet loaded; add it and give same color to
+				// class
+				if (col == null) {
+					Random generator = new Random();
+
+					col = new Color(Display.getDefault(), generator
+							.nextInt(125) + 125, generator.nextInt(125) + 125,
+							generator.nextInt(125) + 125);
+					colorMap.put(o, col);
+					colorMap.put(type, col);
+				}
+			} else {
+				Random generator = new Random();
+				col = new Color(Display.getDefault(),
+						generator.nextInt(125) + 125,
+						generator.nextInt(125) + 125,
+						generator.nextInt(125) + 125);
+				colorMap.put(type, col);
+				logger.debug("Object:" + type.toString() + "    Color:"
+						+ col.toString());
+			}
+		}
+
+		return col;
+	}
+
+	public static void setColorMap(HashMap<Object, Color> map) {
+		colorMap = map;
+	}
+
+	/**
+	 * @return
+	 */
+	public static Color getChartSelectionColor() {
+		return chartSelectionColor;
+	}
+
+	public static Color getSelectionForeground() {
+		return getChartSelectionColor();
+	}
+
+	public static Color getSelectionBackground() {
+		return selectionForeground;
+	}
+
+	/**
+	 * @return
+	 */
+	public static Color getEnabledBackground() {
+		return enabledBg;
+	}
+
+	/**
+	 * @return
+	 */
+	public static Color getDisabledBackground() {
+		return disabledBg;
+	}
+
+	public static Color getHelpTitleColor() {
+		return helpTitleBackground;
+	}
+
+	public static Color getStickyNoteBackground() {
+		return stickyNoteBackground;
+	}
+
+	public static Color getWhiteColor() {
+		return white;
+	}
+
+	public static Color getBlackColor() {
+		return black;
+	}
+
+	public static Color getErrorColor() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private static Map<Object, Image> colorImageMap = new HashMap<Object, Image>();
+
+	public static Image getColorImageForObject(Object object) {
+		Image m = colorImageMap.get(object);
+
+		if (m == null) {
+			PaletteData paletteData = new PaletteData(new RGB[] { Aesthetics
+					.getColorForObject(object).getRGB() });
+
+			ImageData imageData = new ImageData(12, 12, 1, paletteData);
+			m = new Image(Display.getDefault(), imageData);
+			colorImageMap.put(object, m);
+		}
+		return m;
+	}
+
+	public static Font getBoldFont() {
+		return JFaceResources.getFontRegistry().getBold(
+				JFaceResources.DIALOG_FONT);
+	}
+
+	public static Font getRegularFont() {
+		return JFaceResources.getFontRegistry().get(JFaceResources.DIALOG_FONT);
+	}
+
+	public static Color getSystemColor(int colorId) {
+		return Display.getCurrent().getSystemColor(colorId);
+	}
+
+	public static Color getFilterTextColor() {
+		return Display.getCurrent().getSystemColor(
+				SWT.COLOR_WIDGET_NORMAL_SHADOW);
+	}
+
+	public static Color getForegroundColor() {
+		return Display.getCurrent().getSystemColor(SWT.COLOR_WIDGET_FOREGROUND);
+	}
+
+	public static Color getInactiveForegroundColor(){
+		return Display.getCurrent().getSystemColor(SWT.COLOR_GRAY);
+	}
+
+	public static void centerDialog(Shell dialog) {
+		Rectangle shellBounds = GeneralUtils.getShell().getBounds();
+        Point dialogSize = dialog.getSize();
+
+        dialog.setLocation(
+          shellBounds.x + (shellBounds.width - dialogSize.x) / 2,
+          shellBounds.y + (shellBounds.height - dialogSize.y) / 2);
+		
+	}
+
+
+}

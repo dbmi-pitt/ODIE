@@ -1,0 +1,19 @@
+bin.includes = META-INF/,\
+               resources/,\
+               .,\
+               lib/,\
+               pearpackage/desc/,\
+               metadata/,\
+               lib/PDFBox-0.7.2.jar,\
+               lib/caties.jar,\
+               lib/mod_coref-v0.2.jar
+source.. = src/
+src.includes = pearpackage/desc/,\
+               src/,\
+               resources/,\
+               lib/,\
+               META-INF/,\
+               .project,\
+               .classpath,\
+               .settings/,\
+               build.properties

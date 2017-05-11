@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/436/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/document
+END
+AnnotatedDocumentEditor.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/odie/!svn/ver/577/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/document/AnnotatedDocumentEditor.java
+END
+DocumentEditorInput.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/document/DocumentEditorInput.java
+END
+AnnotatedDocument.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/document/AnnotatedDocument.java
+END
+AnnotationAccess.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/odie/!svn/ver/613/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/document/AnnotationAccess.java
+END
+ODIEAnnotationModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/document/ODIEAnnotationModel.java
+END

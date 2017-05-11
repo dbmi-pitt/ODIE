@@ -1,0 +1,365 @@
+K 25
+svn:wc:ra_dav:version-url
+V 45
+/svn/odie/!svn/ver/789/trunk/dependencies/lib
+END
+servlet-2_3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/odie/!svn/ver/10/trunk/dependencies/lib/servlet-2_3.jar
+END
+ojdbc5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/odie/!svn/ver/789/trunk/dependencies/lib/ojdbc5.jar
+END
+wsdl4j-1.5.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/odie/!svn/ver/10/trunk/dependencies/lib/wsdl4j-1.5.1.jar
+END
+serializer.jar
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/odie/!svn/ver/372/trunk/dependencies/lib/serializer.jar
+END
+commons-discovery-0.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/odie/!svn/ver/10/trunk/dependencies/lib/commons-discovery-0.2.jar
+END
+dom4j-1.6.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/odie/!svn/ver/91/trunk/dependencies/lib/dom4j-1.6.1.jar
+END
+slf4j-simple-1.5.8.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/odie/!svn/ver/91/trunk/dependencies/lib/slf4j-simple-1.5.8.jar
+END
+jgroups-2.8.0.GA.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/odie/!svn/ver/586/trunk/dependencies/lib/jgroups-2.8.0.GA.jar
+END
+jfreechart-1.0.10-experimental.jar
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/odie/!svn/ver/10/trunk/dependencies/lib/jfreechart-1.0.10-experimental.jar
+END
+jcommon-1.0.16.jar
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/odie/!svn/ver/395/trunk/dependencies/lib/jcommon-1.0.16.jar
+END
+swtgraphics2d.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/odie/!svn/ver/395/trunk/dependencies/lib/swtgraphics2d.jar
+END
+TextTools1.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/odie/!svn/ver/788/trunk/dependencies/lib/TextTools1.4.jar
+END
+jfreechart-1.0.10.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/odie/!svn/ver/10/trunk/dependencies/lib/jfreechart-1.0.10.jar
+END
+lucene-analyzers-2.9.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/odie/!svn/ver/586/trunk/dependencies/lib/lucene-analyzers-2.9.3.jar
+END
+uima-tools.jar
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/odie/!svn/ver/409/trunk/dependencies/lib/uima-tools.jar
+END
+hibernate-search-3.2.1.Final.jar
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/odie/!svn/ver/586/trunk/dependencies/lib/hibernate-search-3.2.1.Final.jar
+END
+jaxen-core.jar
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/odie/!svn/ver/480/trunk/dependencies/lib/jaxen-core.jar
+END
+jaxen-jdom.jar
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/odie/!svn/ver/480/trunk/dependencies/lib/jaxen-jdom.jar
+END
+xsltc.jar
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/odie/!svn/ver/372/trunk/dependencies/lib/xsltc.jar
+END
+mod-uima-core.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/odie/!svn/ver/424/trunk/dependencies/lib/mod-uima-core.jar
+END
+glazedlists-1.8.0_java15.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/430/trunk/dependencies/lib/glazedlists-1.8.0_java15.jar
+END
+bioportalservices.jar
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/odie/!svn/ver/10/trunk/dependencies/lib/bioportalservices.jar
+END
+javassist-3.4.GA.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/odie/!svn/ver/91/trunk/dependencies/lib/javassist-3.4.GA.jar
+END
+log4j-1.2.13.jar
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/odie/!svn/ver/10/trunk/dependencies/lib/log4j-1.2.13.jar
+END
+uima-pear-ant-task.jar
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/odie/!svn/ver/372/trunk/dependencies/lib/uima-pear-ant-task.jar
+END
+jfreechart-1.0.10-swt.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/odie/!svn/ver/10/trunk/dependencies/lib/jfreechart-1.0.10-swt.jar
+END
+xalan.jar
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/odie/!svn/ver/372/trunk/dependencies/lib/xalan.jar
+END
+protege-owl.jar
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/odie/!svn/ver/702/trunk/dependencies/lib/protege-owl.jar
+END
+ejb3-persistence.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/odie/!svn/ver/91/trunk/dependencies/lib/ejb3-persistence.jar
+END
+protege.jar
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/odie/!svn/ver/702/trunk/dependencies/lib/protege.jar
+END
+uima-examples.jar
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/odie/!svn/ver/409/trunk/dependencies/lib/uima-examples.jar
+END
+lucene-core-2.9.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/odie/!svn/ver/602/trunk/dependencies/lib/lucene-core-2.9.3.jar
+END
+hibernate3_5.jar
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/odie/!svn/ver/604/trunk/dependencies/lib/hibernate3_5.jar
+END
+saxpath.jar
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/odie/!svn/ver/480/trunk/dependencies/lib/saxpath.jar
+END
+jdom1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/odie/!svn/ver/556/trunk/dependencies/lib/jdom1.1.jar
+END
+xercesImpl.jar
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/odie/!svn/ver/372/trunk/dependencies/lib/xercesImpl.jar
+END
+jta-1.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/odie/!svn/ver/586/trunk/dependencies/lib/jta-1.1.jar
+END
+commons-cli-1.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/odie/!svn/ver/523/trunk/dependencies/lib/commons-cli-1.2.jar
+END
+uima-document-annotation.jar
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/409/trunk/dependencies/lib/uima-document-annotation.jar
+END
+jaxrpc-1.1-noQName.jar
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/odie/!svn/ver/10/trunk/dependencies/lib/jaxrpc-1.1-noQName.jar
+END
+obo2owl.jar
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/svn/odie/!svn/ver/10/trunk/dependencies/lib/obo2owl.jar
+END
+commons-collections-3.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/odie/!svn/ver/91/trunk/dependencies/lib/commons-collections-3.1.jar
+END
+geronimo-stax-api_1.0_spec-1.0.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/odie/!svn/ver/318/trunk/dependencies/lib/geronimo-stax-api_1.0_spec-1.0.1.jar
+END
+gspell.jar
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/odie/!svn/ver/10/trunk/dependencies/lib/gspell.jar
+END
+ejb3-persistence-1.0.2.GA.jar
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/odie/!svn/ver/318/trunk/dependencies/lib/ejb3-persistence-1.0.2.GA.jar
+END
+antlr-2.7.6.jar
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/odie/!svn/ver/91/trunk/dependencies/lib/antlr-2.7.6.jar
+END
+jsr250-api-1.0.jar
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/odie/!svn/ver/318/trunk/dependencies/lib/jsr250-api-1.0.jar
+END
+xml-apis-1.0.b2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/odie/!svn/ver/586/trunk/dependencies/lib/xml-apis-1.0.b2.jar
+END
+nlpSelect.jar
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/odie/!svn/ver/10/trunk/dependencies/lib/nlpSelect.jar
+END
+junit.jar
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/odie/!svn/ver/10/trunk/dependencies/lib/junit.jar
+END
+xml-apis.jar
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/odie/!svn/ver/372/trunk/dependencies/lib/xml-apis.jar
+END
+hibernate-commons-annotations-3.2.0.Final.jar
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/odie/!svn/ver/586/trunk/dependencies/lib/hibernate-commons-annotations-3.2.0.Final.jar
+END
+commons-logging-1.0.4.jar
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/odie/!svn/ver/10/trunk/dependencies/lib/commons-logging-1.0.4.jar
+END
+hibernate-jpa-2.0-api-1.0.0.Final.jar
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/odie/!svn/ver/590/trunk/dependencies/lib/hibernate-jpa-2.0-api-1.0.0.Final.jar
+END
+slf4j-api-1.5.8.jar
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/odie/!svn/ver/586/trunk/dependencies/lib/slf4j-api-1.5.8.jar
+END
+uima-cpe.jar
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/odie/!svn/ver/409/trunk/dependencies/lib/uima-cpe.jar
+END
+protege-owl-inference.jar
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/odie/!svn/ver/702/trunk/dependencies/lib/protege-owl-inference.jar
+END
+axis-1.2.1.jar
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/odie/!svn/ver/10/trunk/dependencies/lib/axis-1.2.1.jar
+END
+lucene-snowball-2.9.3.jar
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/odie/!svn/ver/586/trunk/dependencies/lib/lucene-snowball-2.9.3.jar
+END
+mysql-connector-java-5.1.10-bin.jar
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/odie/!svn/ver/346/trunk/dependencies/lib/mysql-connector-java-5.1.10-bin.jar
+END

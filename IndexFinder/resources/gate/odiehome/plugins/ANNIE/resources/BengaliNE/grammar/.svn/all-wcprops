@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/BengaliNE/grammar
+END
+main.jape
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/BengaliNE/grammar/main.jape
+END
+person.jape
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/BengaliNE/grammar/person.jape
+END
+location.jape
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/BengaliNE/grammar/location.jape
+END
+organisation.jape
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/BengaliNE/grammar/organisation.jape
+END

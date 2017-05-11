@@ -1,0 +1,197 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/odie/!svn/ver/426/trunk/ui/src/edu/pitt/dbmi/odie/ui/views
+END
+StackedViewPart.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/StackedViewPart.java
+END
+AnnotationsPatternFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/AnnotationsPatternFilter.java
+END
+AnnotationTypeView.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/odie/!svn/ver/552/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/AnnotationTypeView.java
+END
+ODIEMessages.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/odie/!svn/ver/667/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/ODIEMessages.java
+END
+ConceptsView.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/odie/!svn/ver/705/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/ConceptsView.java
+END
+SuggestionsViewWithHelp.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/SuggestionsViewWithHelp.java
+END
+DatapointComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/DatapointComparator.java
+END
+CoreferenceView.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/CoreferenceView.java
+END
+OntologiesView.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/odie/!svn/ver/766/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/OntologiesView.java
+END
+OrderedStructuredSelection.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/OrderedStructuredSelection.java
+END
+AnalysesViewWithHelp.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/AnalysesViewWithHelp.java
+END
+TableColumnTextFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/TableColumnTextFilter.java
+END
+AnnotationsTypeSystemTree.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/AnnotationsTypeSystemTree.java
+END
+DetailsViewWithHelp.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/DetailsViewWithHelp.java
+END
+ResourceTreeNodeLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/odie/!svn/ver/766/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/ResourceTreeNodeLabelProvider.java
+END
+DocumentsMessages.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/DocumentsMessages.java
+END
+AnnotationInstancesTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/AnnotationInstancesTable.java
+END
+LightWeightConsoleView.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/LightWeightConsoleView.java
+END
+DocumentsViewWithHelp.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/DocumentsViewWithHelp.java
+END
+SuggestionsView.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/SuggestionsView.java
+END
+AnalysesView.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/odie/!svn/ver/502/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/AnalysesView.java
+END
+IPrioritizedSorter.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/IPrioritizedSorter.java
+END
+StickyNotePanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/StickyNotePanel.java
+END
+HelpTextPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/HelpTextPanel.java
+END
+ConceptsViewWithHelp.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/ConceptsViewWithHelp.java
+END
+OntologyCoverageComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/OntologyCoverageComparator.java
+END
+TableHeaderSortListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/TableHeaderSortListener.java
+END
+FilteredStackedViewPart.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/FilteredStackedViewPart.java
+END
+DetailsView.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/DetailsView.java
+END
+CoreferenceViewWithHelp.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/CoreferenceViewWithHelp.java
+END
+DocumentsView.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/odie/!svn/ver/700/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/DocumentsView.java
+END
+AnnotationsViewWithHelp.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/AnnotationsViewWithHelp.java
+END

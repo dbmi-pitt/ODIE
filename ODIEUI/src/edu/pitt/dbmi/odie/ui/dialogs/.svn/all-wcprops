@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/odie/!svn/ver/444/trunk/ui/src/edu/pitt/dbmi/odie/ui/dialogs
+END
+TextDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/dialogs/TextDialog.java
+END
+AddToProposalOntologyDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/dialogs/AddToProposalOntologyDialog.java
+END
+FiltersDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/dialogs/FiltersDialog.java
+END
+PerformanceReportDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/dialogs/PerformanceReportDialog.java
+END
+OntologyClassPickerDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/dialogs/OntologyClassPickerDialog.java
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/tokeniser
+END
+DefaultTokeniser.rules
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/tokeniser/DefaultTokeniser.rules
+END
+postprocess.jape
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/tokeniser/postprocess.jape
+END
+AlternateTokeniser.rules
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/tokeniser/AlternateTokeniser.rules
+END

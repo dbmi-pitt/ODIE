@@ -1,0 +1,402 @@
+package edu.pitt.dbmi.odie.lexicalizer.lucenefinder;
+
+import java.beans.PropertyChangeListener;
+import java.beans.PropertyChangeSupport;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Comparator;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Stack;
+import java.util.TreeSet;
+
+import org.apache.log4j.Logger;
+
+import edu.pitt.dbmi.odie.ODIEConstants;
+import edu.pitt.ontology.IClass;
+import edu.pitt.ontology.IOntology;
+import edu.pitt.ontology.IResource;
+import edu.pitt.terminology.lexicon.SemanticType;
+
+/**
+ * 
+ * @author mitchellkj
+ * 
+ *         The Lucene Foundry Builder traverses the ontologies visiting each
+ *         named class once and using the terminology associated with that class
+ *         to seed the Named Entity Recognition engine of ODIE which is a
+ *         modified version of the IndexFinder method.
+ * 
+ *         The primary component of the Lucene IndexFinder representation is the
+ *         a Lucene index where each concept synonym is represented as a
+ *         Document.
+ * 
+ *         Ancestors are also saved for each concept using identifier sets These
+ *         sets are delimited by the "|" character.
+ */
+
+public class ODIE_LuceneNerFoundryBuilder {
+
+	private static final Logger logger = Logger
+			.getLogger(ODIE_LuceneNerFoundryBuilder.class);
+
+	public static final String IF_PARAM_CHAIN_SEPARATOR = "|";
+
+	private ODIE_LexicalizerClsFactory lexicalizerClsFactory = new ODIE_LexicalizerClsFactory();
+
+	private String propertyBundleFile;
+
+	private Map<String, IClass> conceptMap = new HashMap<String, IClass>();
+
+	private boolean isCurrentClassViable = false;
+
+	private String indexLocation = null;
+
+	private String previousMessage = "";
+
+	private ODIE_LuceneNerFoundryIndexBuilder indexBuilder = null;
+
+	private PropertyChangeSupport propertyChangeSupport = new PropertyChangeSupport(
+			this);
+
+	private boolean isProcessingSynonyms = true;
+
+	private int displayCurrentClsCount = 0;
+
+	private long iterationStartTimeInMilliseconds = 0L;
+
+	public ODIE_LuceneNerFoundryBuilder() {
+	}
+
+	public void addPropertyChangeListener(PropertyChangeListener listener) {
+		propertyChangeSupport.addPropertyChangeListener(listener);
+	}
+
+	public void removePropertyChangeListener(PropertyChangeListener listener) {
+		propertyChangeSupport.removePropertyChangeListener(listener);
+	}
+
+	public void storeFoundryAsLuceneFinderIndex(
+			String lexicalSetLuceneIndexDirectoryName, List<IResource> resources) {
+
+		this.indexBuilder = new ODIE_LuceneNerFoundryIndexBuilder();
+		this.indexBuilder.setIndexLocation(lexicalSetLuceneIndexDirectoryName);
+
+		String message = "Initializing...";
+		changeProgressMessageTo(message);
+		this.indexBuilder.initialize();
+
+		pullVocabularyFromFoundry(resources);
+
+		this.indexBuilder.finalize();
+	}
+
+	private void pullVocabularyFromFoundry(List<IResource> resources) {
+		TreeSet<IClass> distinctOrderedClses = deriveDistinctOrderedClses(resources);
+		this.displayCurrentClsCount = 0;
+		this.iterationStartTimeInMilliseconds = (new Date()).getTime();
+		for (IResource resource : distinctOrderedClses) {
+			try {
+				ODIE_LexicalizerClsWrapper odieLexicalizerCls = this.lexicalizerClsFactory
+						.newCls((IClass) resource);
+				odieLexicalizerCls.setCls((IClass) resource);
+				odieLexicalizerCls.setUri(resource.getURI().toString());
+				pullVocabularyFromClassRecursively(odieLexicalizerCls,
+						null /* parent */,
+						new Stack<ODIE_LexicalizerClsWrapper>());
+			} catch (ODIE_ExceptionClassLexicalization e) {
+				logger.warn("Failed to lexicalize visited class "
+						+ resource.getName());
+			}
+		}
+	}
+
+	private void pullVocabularyFromClassRecursively(
+			ODIE_LexicalizerClsWrapper odieLexicalizerCls,
+			ODIE_LexicalizerClsWrapper odieLexicalizerParentCls,
+			Stack<ODIE_LexicalizerClsWrapper> ancestorClses)
+			throws ODIE_ExceptionClassLexicalization {
+		this.displayCurrentClsCount++;
+		if (this.displayCurrentClsCount > 0
+				&& this.displayCurrentClsCount % 1000 == 0) {
+			long elapsedTimeInMilliseconds = (new Date()).getTime()
+					- this.iterationStartTimeInMilliseconds;
+			logger.debug("Traversed " + this.displayCurrentClsCount
+					+ " classes in " + elapsedTimeInMilliseconds);
+		}
+		if (!isMemberOf(odieLexicalizerCls.getCls().getURI().toString(), ancestorClses)) {
+			indexCls(odieLexicalizerCls, odieLexicalizerParentCls, ancestorClses);
+			indexClsChildren(odieLexicalizerCls, ancestorClses);
+		}
+	}
+	
+	
+	/**
+	 * indexClsChildren
+	 * 
+	 * Contributes to the recursion calling pullVocabularyFromClassRecursively 
+	 * for each child class.  Avoids cycles by checking the ancestors list.
+	 * No further processing happens if the class has already been visited.
+	 * 
+	 * @param odieLexicalizerCls
+	 * @param ancestors
+	 * @throws ODIE_ExceptionClassLexicalization
+	 */
+	private void indexClsChildren(
+			ODIE_LexicalizerClsWrapper odieLexicalizerCls,
+			Stack<ODIE_LexicalizerClsWrapper> ancestors)
+			throws ODIE_ExceptionClassLexicalization {
+		List<IClass> children = new ArrayList<IClass>(Arrays
+				.asList(odieLexicalizerCls.getCls().getDirectSubClasses()));
+		if (children != null && !children.isEmpty()) {
+			for (IClass childCls : children) {
+				Stack<ODIE_LexicalizerClsWrapper> childAncestors = new Stack<ODIE_LexicalizerClsWrapper>();
+				childAncestors.addAll(ancestors);
+				childAncestors.push(odieLexicalizerCls);
+				ODIE_LexicalizerClsWrapper childLexicalizerCls = this.lexicalizerClsFactory
+						.newCls(childCls);
+				childLexicalizerCls.setCls(childCls);
+				childLexicalizerCls.setUri(childCls.getURI().toString());
+				pullVocabularyFromClassRecursively(childLexicalizerCls,
+						odieLexicalizerCls, childAncestors);
+			}
+		}
+	}
+	
+	
+	/**
+	 * indexCls
+	 * 
+	 * Inspects the class itself finding preferred term and synonymous terms
+	 * Each word of these exploded terms will contribute a Document to the
+	 * Lucene index. Class attributes are redundantly stored for each of 
+	 * the words along with the word position in the normalized term and
+	 * count of words in the term
+	 * 
+	 * @param odieLexicalizerCls
+	 * @param parentLexicalizerCls
+	 * @param ancestorClses
+	 * @throws ODIE_ExceptionClassLexicalization
+	 */
+	private void indexCls(ODIE_LexicalizerClsWrapper odieLexicalizerCls,
+			ODIE_LexicalizerClsWrapper parentLexicalizerCls,
+			Stack<ODIE_LexicalizerClsWrapper> ancestorClses)
+			throws ODIE_ExceptionClassLexicalization {
+
+		if (odieLexicalizerCls.getCls().getName() != null) {
+
+			// String indexableClassName = deriveClassName(cls);
+			String indexableClassName = odieLexicalizerCls.getCls().getName();
+
+			String msg = "Processing " + indexableClassName;
+			changeProgressMessageTo(msg);
+
+			// Only if the Class information stores successfully do we continue.
+
+			final TreeSet<ODIE_LexicalizerTerm> termsForCui = ODIE_LexicalizerTerm
+					.getSortingTreeSet();
+			termsForCui.add(new ODIE_LexicalizerTerm(indexableClassName));
+
+			// Add synonyms if we have them
+
+			String[] synonyms = odieLexicalizerCls.getCls().getConcept()
+					.getSynonyms();
+			if (isProcessingSynonyms && synonyms != null) {
+				for (String synonym : synonyms) {
+					termsForCui.add(new ODIE_LexicalizerTerm(synonym));
+				}
+			}
+
+			storeCuiToPhraseTable(odieLexicalizerCls, parentLexicalizerCls,
+					termsForCui, ancestorClses);
+
+		}
+	}
+
+	/**
+	 * storeCuiToPhraseTable
+	 * 
+	 * Passes each viable term to the Indexer for final indexing.
+	 * 
+	 * @param odieLexicalizerCls
+	 * @param parentLexicalizerCls
+	 * @param terms
+	 * @param ancestorClses
+	 */
+	private void storeCuiToPhraseTable(
+			ODIE_LexicalizerClsWrapper odieLexicalizerCls,
+			ODIE_LexicalizerClsWrapper parentLexicalizerCls,
+			TreeSet<ODIE_LexicalizerTerm> terms,
+			Stack<ODIE_LexicalizerClsWrapper> ancestorClses) {
+		for (ODIE_LexicalizerTerm term : terms) {
+			if (term.isViable()) {
+				String className = odieLexicalizerCls.getCls().getName();
+				int wordCount = term.getWordCount();
+				String delineatedTerms = term.getWordsAsCommaSeparatedValues();
+				delineatedTerms = delineatedTerms.replaceAll(",", " ");
+				String umlsCui = generateIndexableUmlsCuiEntry(odieLexicalizerCls
+						.getCls());
+				String odieCui = odieLexicalizerCls.getOdieCui() + "";
+				String parents = (parentLexicalizerCls != null) ? parentLexicalizerCls.getOdieCui() + "" : "0";
+				String ancestors = stringifyAncestorOdieIdentifiers(ancestorClses);
+				
+				// Determine Semantic Type information
+				ODIE_OrganProcedureDisorderFindingClassifier.getInstance().processLexicalizerCls(odieLexicalizerCls);
+				int cTakesSemanticType = ODIE_OrganProcedureDisorderFindingClassifier
+						.getInstance().getSemanticType() ;
+				if (cTakesSemanticType < 0) {
+					cTakesSemanticType = odieLexicalizerCls.getOdieCui();
+				}
+				String umlsTuis = ODIE_OrganProcedureDisorderFindingClassifier
+				.getInstance().getSpaceSeparatedTuis() ;
+				if (umlsTuis == null || umlsTuis.trim().length() == 0) {
+					umlsTuis = "UNKNOWN" ;
+				}
+				
+				// Call the indexer
+				this.indexBuilder.indexCls(odieLexicalizerCls.getCls(),
+						odieCui, className, delineatedTerms, wordCount,
+						parents, ancestors, umlsCui, umlsTuis,
+						cTakesSemanticType);
+			}
+		}
+	}
+
+	private TreeSet<IClass> deriveDistinctOrderedClses(List<IResource> resources) {
+		changeProgressMessageTo("Creating class list from ontologies...");
+		final TreeSet<IClass> distinctOrderedClses = new TreeSet<IClass>(
+				new Comparator<IClass>() {
+					public int compare(IClass o1, IClass o2) {
+						String uri1 = o1.getURI().toASCIIString();
+						String uri2 = o2.getURI().toASCIIString();
+						int result = uri1.compareTo(uri2);
+						return result;
+					}
+				});
+		try {
+			for (IResource resource : resources) {
+				if (resource instanceof IOntology) {
+					IOntology ontology = (IOntology) resource;
+					IClass[] clses = ontology.getRootClasses() ;
+					List<IClass> topLevelClassList = Arrays.asList(clses);
+					if (topLevelClassList != null
+							&& !topLevelClassList.isEmpty()) {
+						distinctOrderedClses.addAll(topLevelClassList);
+					}
+				} else if (resource instanceof IClass) {
+					distinctOrderedClses.add((IClass) resource);
+				}
+				changeProgressMessageTo("Processed "
+						+ distinctOrderedClses.size() + " classes");
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return distinctOrderedClses;
+	}
+
+	private String stringifyAncestorOdieIdentifiers(
+			Stack<ODIE_LexicalizerClsWrapper> ancestors) {
+		StringBuffer sb = new StringBuffer();
+		for (ODIE_LexicalizerClsWrapper ancestorCls : ancestors) {
+			sb.append(ancestorCls.getOdieCui() + " ") ;
+		}
+		if (sb.length()>0) {
+			sb.deleteCharAt(sb.length() - 1);
+		}
+		return sb.toString();
+	}
+
+	private boolean isMemberOf(String uri,
+			Collection<ODIE_LexicalizerClsWrapper> clses) {
+		boolean result = false;
+		for (ODIE_LexicalizerClsWrapper collectionCls : clses) {
+			if (uri.equals(collectionCls.getUri())) {
+				result = true;
+				break;
+			}
+		}
+		return result;
+	}
+
+
+	public String generateIndexableUmlsCuiEntry(IClass cls) {
+		Map<String, String> codeMap = cls.getConcept().getCodes() ;
+		String indexableCui = "UNKNOWN" ;
+		if(codeMap!=null){
+			for (String code : codeMap.values()) {
+				if (code.matches("^C\\d{7}")) {
+					indexableCui = code ;
+					break ;
+				}
+			}
+		}
+		return indexableCui;
+	}
+
+	public String getTuiCollectionFromCls(IClass cls) {
+		// Call this method after generateCTakesSemanticTypeEntry
+		return ODIE_OrganProcedureDisorderFindingClassifier
+		.getInstance().getSpaceSeparatedTuis() ;
+	}
+
+	public String concatenateCollection(Collection<String> words,
+			String separator) {
+		StringBuffer commaSeparatedWords = new StringBuffer();
+		for (String word : words) {
+			commaSeparatedWords.append(word);
+			commaSeparatedWords.append(separator);
+		}
+		commaSeparatedWords.deleteCharAt(commaSeparatedWords.length() - 1);
+		return commaSeparatedWords.toString();
+	}
+
+
+
+	private void changeProgressMessageTo(String message) {
+		propertyChangeSupport.firePropertyChange(
+				ODIEConstants.PROPERTY_PROGRESS_MSG, previousMessage, message);
+		previousMessage = message;
+	}
+
+	@SuppressWarnings("unused")
+	private void displayConceptWords(TreeSet<ODIE_LexicalizerTerm> terms) {
+		logger.debug("Latest Terms added: ");
+		for (ODIE_LexicalizerTerm term : terms) {
+			logger.debug(term);
+		}
+	}
+
+	public String getPropertyBundleFile() {
+		return propertyBundleFile;
+	}
+
+	public void setPropertyBundleFile(String propertyBundleFileInput) {
+		propertyBundleFile = propertyBundleFileInput;
+	}
+
+	public Map<String, IClass> getIClassMap() {
+		return conceptMap;
+	}
+
+	public boolean isCurrentClassViable() {
+		return isCurrentClassViable;
+	}
+
+	public void setCurrentClassViable(boolean isCurrentClassViable) {
+		this.isCurrentClassViable = isCurrentClassViable;
+	}
+
+	public String getIndexLocation() {
+		return indexLocation;
+	}
+
+	public void setIndexLocation(String indexLocation) {
+		this.indexLocation = indexLocation;
+	}
+
+}

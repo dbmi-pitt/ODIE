@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <name>ODIE_MiniParSystemDescriptor</name>
+  <description>These types support port of GATE MiniparWrapper to UIMA framework.  They are dual to the GATE Annotations used by the MiniparWrapper.
+</description>
+  <version>1.0</version>
+  <vendor>University of Pittsburgh DBMI ODIE Project</vendor>
+  <types>
+    <typeDescription>
+      <name>edu.pitt.dbmi.odie.uima.ae.minipar.POSType</name>
+      <description>Holds the Minipar derived POS tag that is related to
+other tags through its ids</description>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>tagName</name>
+          <description>POSTag including det, obj, pred, s and others.</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>headId</name>
+          <description>Id for the head word</description>
+          <rangeTypeName>uima.cas.Integer</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>headWord</name>
+          <description>The head word.</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>childId</name>
+          <description>Id of child word</description>
+          <rangeTypeName>uima.cas.Integer</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>childWord</name>
+          <description>The child word.</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>edu.pitt.dbmi.odie.uima.ae.minipar.DepTreeNode</name>
+      <description>Represents a node in the Minipar output representation.  DepTreeNodes are joined by POSTypes.</description>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>miniparId</name>
+          <description>Minipar generated id.</description>
+          <rangeTypeName>uima.cas.Integer</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>word</name>
+          <description>The word.</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+  </types>
+</typeSystemDescription>

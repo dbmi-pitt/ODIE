@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/odie/!svn/ver/729/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/church/reader
+END
+ODIE_JdbcCollectionReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/odie/!svn/ver/726/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/church/reader/ODIE_JdbcCollectionReader.java
+END
+ODIE_SingleColumnJdbcCollectionReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/odie/!svn/ver/726/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/church/reader/ODIE_SingleColumnJdbcCollectionReader.java
+END
+ODIE_JdbcBigResultSetReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/odie/!svn/ver/794/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/church/reader/ODIE_JdbcBigResultSetReader.java
+END

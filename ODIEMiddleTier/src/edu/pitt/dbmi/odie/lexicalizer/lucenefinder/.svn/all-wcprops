@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/odie/!svn/ver/705/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/lucenefinder
+END
+ODIE_MorphologicalNormalizer.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/odie/!svn/ver/532/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/lucenefinder/ODIE_MorphologicalNormalizer.java
+END
+ODIE_LexicalizerTerm.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/odie/!svn/ver/670/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/lucenefinder/ODIE_LexicalizerTerm.java
+END
+LexicalSetBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/odie/!svn/ver/705/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/lucenefinder/LexicalSetBuilder.java
+END
+ODIE_StopWords.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/odie/!svn/ver/532/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/lucenefinder/ODIE_StopWords.java
+END
+ODIE_LexicalizerFormatUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/odie/!svn/ver/532/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/lucenefinder/ODIE_LexicalizerFormatUtils.java
+END
+ODIE_LexicalizerClsFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/odie/!svn/ver/670/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/lucenefinder/ODIE_LexicalizerClsFactory.java
+END
+ODIE_LexicalizerWord.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/odie/!svn/ver/532/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/lucenefinder/ODIE_LexicalizerWord.java
+END
+ODIE_IndexFinderBestMneumonicNameDeterminer.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/odie/!svn/ver/532/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/lucenefinder/ODIE_IndexFinderBestMneumonicNameDeterminer.java
+END
+ODIE_LexicalizerClsWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/odie/!svn/ver/670/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/lucenefinder/ODIE_LexicalizerClsWrapper.java
+END
+ODIE_OrganProcedureDisorderFindingClassifier.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/odie/!svn/ver/689/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/lucenefinder/ODIE_OrganProcedureDisorderFindingClassifier.java
+END
+ODIE_IndexFinderUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/odie/!svn/ver/532/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/lucenefinder/ODIE_IndexFinderUtils.java
+END
+ODIE_ExceptionClassLexicalization.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/odie/!svn/ver/532/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/lucenefinder/ODIE_ExceptionClassLexicalization.java
+END
+ODIE_LuceneNerFoundryIndexBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/odie/!svn/ver/670/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/lucenefinder/ODIE_LuceneNerFoundryIndexBuilder.java
+END
+ODIE_LuceneNerBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/odie/!svn/ver/773/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/lucenefinder/ODIE_LuceneNerBuilder.java
+END
+ODIE_LuceneNerFoundryBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/odie/!svn/ver/718/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/lucenefinder/ODIE_LuceneNerFoundryBuilder.java
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/odie/!svn/ver/61/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/church/resource
+END
+stopwords.txt
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/odie/!svn/ver/61/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/church/resource/stopwords.txt
+END
+ODIE_Gazetteer.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/odie/!svn/ver/61/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/church/resource/ODIE_Gazetteer.java
+END
+ODIE_GazetteerImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/odie/!svn/ver/61/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/church/resource/ODIE_GazetteerImpl.java
+END

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/odie/!svn/ver/69/trunk/indexfinder/resources/models/small
+END
+postagger.model.bin.gz
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/odie/!svn/ver/64/trunk/indexfinder/resources/models/small/postagger.model.bin.gz
+END
+chunker.model.bin.gz
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/odie/!svn/ver/69/trunk/indexfinder/resources/models/small/chunker.model.bin.gz
+END
+tag.dictionary.txt
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/odie/!svn/ver/64/trunk/indexfinder/resources/models/small/tag.dictionary.txt
+END

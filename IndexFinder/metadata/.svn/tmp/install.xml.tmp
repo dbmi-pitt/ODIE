@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<COMPONENT_INSTALLATION_DESCRIPTOR>
+	<OS>
+		<NAME>Windows and Linux</NAME>
+	</OS>
+	<TOOLKITS>
+		<JDK_VERSION>1.4.0</JDK_VERSION>
+	</TOOLKITS>
+	<UIMA_FRAMEWORK>
+	</UIMA_FRAMEWORK>
+	<SUBMITTED_COMPONENT>
+		<ID>ODIE_OE_LSP</ID>
+		<NAME></NAME>
+		<DESC>$main_root/desc/odie_pipe/ODIE_AAE_OE_LSP.xml</DESC>
+		<DEPLOYMENT>standard</DEPLOYMENT>
+	</SUBMITTED_COMPONENT>
+	<INSTALLATION>
+		<PROCESS>
+			<ACTION>set_env_variable</ACTION>
+			<PARAMETERS>
+				<COMMENTS></COMMENTS>
+				<VAR_VALUE>$main_root/bin;$main_root/lib/gate.jar;$main_root/lib/jasper-compiler-jdt.jar;$main_root/lib/jdom.jar;$main_root/lib/mysql-connector-java-5.1.6-bin.jar;$main_root/lib/nekohtml-0.9.5.jar;$main_root/lib/ontotext.jar;$main_root/lib/stax-api-1.0.jar;$main_root/lib/xercesImpl.jar;$main_root/resources;$main_root/lib/caties.jar;$main_root/lib/Chunker.jar;$main_root/lib/cTAKES-chunker.jar;$main_root/lib/cTAKES-clinical-documents-pipeline.jar;$main_root/lib/cTAKES-context-dependent-tokenizer.jar;$main_root/lib/cTAKES-dictionary-lookup.jar;$main_root/lib/cTAKES-document-preprocessor.jar;$main_root/lib/cTAKES-LVG.jar;$main_root/lib/cTAKES-NE-contexts.jar;$main_root/lib/cTAKES-POS-tagger.jar;$main_root/lib/mod_cTAKES-core.jar;$main_root/lib/gate-asm.jar;$main_root/lib/lvg2008dist.jar;$main_root/lib/opennlp-tools-1.4.3.jar;$main_root/lib/trove.jar;$main_root/lib/OpenAI_FSM.jar;$main_root/lib/PDFBox-0.7.2.jar;$main_root/lib/maxent-2.4.0.jar;$main_root/lib/gate-compiler-jdt.jar;$main_root/lib/coref-resolver-0.1.jar;$main_root/lib/weka.jar;</VAR_VALUE>
+				<VAR_NAME>CLASSPATH</VAR_NAME>
+			</PARAMETERS>
+		</PROCESS>
+	</INSTALLATION>
+</COMPONENT_INSTALLATION_DESCRIPTOR>

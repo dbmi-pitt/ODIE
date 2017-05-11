@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/odie/!svn/ver/356/trunk/ui/src/edu/pitt/dbmi/odie/ui/wizards/providers
+END
+AnalysisEngineMetadataContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/wizards/providers/AnalysisEngineMetadataContentProvider.java
+END
+BioportalContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/odie/!svn/ver/92/trunk/ui/src/edu/pitt/dbmi/odie/ui/wizards/providers/BioportalContentProvider.java
+END
+AllOntologiesTreeContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/wizards/providers/AllOntologiesTreeContentProvider.java
+END
+LanguageResourceContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/odie/!svn/ver/779/trunk/ui/src/edu/pitt/dbmi/odie/ui/wizards/providers/LanguageResourceContentProvider.java
+END
+LexicalSetContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/wizards/providers/LexicalSetContentProvider.java
+END
+AnalysisEngineMetadataLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/wizards/providers/AnalysisEngineMetadataLabelProvider.java
+END
+BioportalLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/odie/!svn/ver/503/trunk/ui/src/edu/pitt/dbmi/odie/ui/wizards/providers/BioportalLabelProvider.java
+END
+LanguageResourceTreeLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/wizards/providers/LanguageResourceTreeLabelProvider.java
+END
+LexicalSetLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/wizards/providers/LexicalSetLabelProvider.java
+END

@@ -1,0 +1,4 @@
+source.. = src/
+bin.includes = workspace/META-INF/,\
+               .,\
+               lib/mysql-connector-java-5.1.6-bin.jar

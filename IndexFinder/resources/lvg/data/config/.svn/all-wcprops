@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/odie/!svn/ver/174/trunk/indexfinder/resources/lvg/data/config
+END
+lvg.properties
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/odie/!svn/ver/174/trunk/indexfinder/resources/lvg/data/config/lvg.properties
+END
+lvg.properties.hsql
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/odie/!svn/ver/69/trunk/indexfinder/resources/lvg/data/config/lvg.properties.hsql
+END
+lvg.properties.TEMPLATE
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/odie/!svn/ver/69/trunk/indexfinder/resources/lvg/data/config/lvg.properties.TEMPLATE
+END

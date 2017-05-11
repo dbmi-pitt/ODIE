@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/444/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/ontology
+END
+OntologyTreeSection.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/ontology/OntologyTreeSection.java
+END
+ClassDetailsSection.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/odie/!svn/ver/668/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/ontology/ClassDetailsSection.java
+END
+ClassContentProposal.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/ontology/ClassContentProposal.java
+END
+OntologyContentProposalProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/ontology/OntologyContentProposalProvider.java
+END
+OntologyEditor.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/ontology/OntologyEditor.java
+END
+OntologyEditorInput.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/ontology/OntologyEditorInput.java
+END
+OntologyPage.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/668/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/ontology/OntologyPage.java
+END
+OntologyFilteredTree.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/ontology/OntologyFilteredTree.java
+END
+OntologyTree.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/779/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/ontology/OntologyTree.java
+END
+OntologyClassPickerPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/odie/!svn/ver/668/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/ontology/OntologyClassPickerPanel.java
+END

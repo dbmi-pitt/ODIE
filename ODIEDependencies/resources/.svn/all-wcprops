@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/odie/!svn/ver/19/trunk/dependencies/resources
+END
+StopWords.lst
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/odie/!svn/ver/19/trunk/dependencies/resources/StopWords.lst
+END
+PluralTable.lst
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/odie/!svn/ver/19/trunk/dependencies/resources/PluralTable.lst
+END

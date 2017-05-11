@@ -1,0 +1,94 @@
+<project name="IndexFinder" default="jarCaTAKES_core" basedir="../..">
+	<description>
+        CaTIES Build File
+    </description>
+
+	<!-- set global properties for this build -->
+	<property name="src.dir" location="${basedir}/src"/>
+	<property name="api.dir" location="${basedir}/docs/api"/>
+	<property name="bin.dir" location="${basedir}/bin"/>
+	<property name="lib.dir" location="${basedir}/lib"/>
+	<property name="build.dir" location="${basedir}/build"/>
+	<property name="config.dir" location="${basedir}"/>
+	<property name="ctakes-chunker.dir" location="${basedir}/../chunker"/>
+	<property name="ctakes-clinical-documents-pipeline.dir" location="${basedir}/../clinical documents pipeline"/>
+	<property name="ctakes-context-dependent-tokenizer.dir" location="${basedir}/../context dependent tokenizer"/>
+	<property name="ctakes-core.dir" location="${basedir}/../core"/>
+	<property name="ctakes-dictionary-lookup.dir" location="${basedir}/../dictionary lookup"/>
+	<property name="ctakes-document-preprocessor.dir" location="${basedir}/../document preprocessor"/>
+	<property name="ctakes-LVG.dir" location="${basedir}/../LVG"/>
+	<property name="ctakes-NE-contexts.dir" location="${basedir}/../NE contexts"/>
+	<property name="ctakes-POS-tagger.dir" location="${basedir}/../POS tagger"/>
+
+	<target name="jarCaTAKES_core" 
+		depends=""
+		description="generate the cTAKES jars">
+		<jar jarfile="${basedir}/lib/cTAKES-chunker.jar" basedir="${ctakes-chunker.dir}/bin">
+			<include name="**/*.class" />
+			<include name="**/images/*.*" />
+			<include name="**/*.xml" />
+		</jar>
+		<jar jarfile="${basedir}/lib/cTAKES-clinical-documents-pipeline.jar" basedir="${ctakes-clinical-documents-pipeline.dir}/bin">
+			<include name="**/*.class" />
+			<include name="**/images/*.*" />
+			<include name="**/*.xml" />
+	   </jar>
+	   <jar jarfile="${basedir}/lib/cTAKES-context-dependent-tokenizer.jar" basedir="${ctakes-context-dependent-tokenizer.dir}/bin">
+	  	    <include name="**/*.class" />
+		    <include name="**/images/*.*" />
+		    <include name="**/*.xml" />
+		</jar>
+		<jar jarfile="${basedir}/lib/cTAKES-core.jar" basedir="${ctakes-core.dir}/bin">
+			<include name="**/*.class" />
+			<include name="**/images/*.*" />
+			<include name="**/*.xml" />
+		</jar>
+		<jar jarfile="${basedir}/lib/cTAKES-dictionary-lookup.jar" basedir="${ctakes-dictionary-lookup.dir}/bin">
+			<include name="**/*.class" />
+			<include name="**/images/*.*" />
+			<include name="**/*.xml" />
+	    </jar>
+		<jar jarfile="${basedir}/lib/cTAKES-document-preprocessor.jar" basedir="${ctakes-document-preprocessor.dir}/bin">
+			<include name="**/*.class" />
+			<include name="**/images/*.*" />
+			<include name="**/*.xml" />
+	    </jar>
+		<jar jarfile="${basedir}/lib/cTAKES-LVG.jar" basedir="${ctakes-LVG.dir}/bin">
+			<include name="**/*.class" />
+			<include name="**/images/*.*" />
+			<include name="**/*.xml" />
+		</jar>
+		<jar jarfile="${basedir}/lib/cTAKES-NE-contexts.jar" basedir="${ctakes-NE-contexts.dir}/bin">
+			<include name="**/*.class" />
+			<include name="**/images/*.*" />
+			<include name="**/*.xml" />
+		</jar>
+		<jar jarfile="${basedir}/lib/cTAKES-POS-tagger.jar" basedir="${ctakes-POS-tagger.dir}/bin">
+			<include name="**/*.class" />
+			<include name="**/images/*.*" />
+			<include name="**/*.xml" />
+	    </jar>
+	</target>
+	
+	<target name="jarCaTAKES_core_only" 
+		depends=""
+		description="generate the cTAKES core jar">
+		<jar jarfile="${basedir}/lib/cTAKES-core.jar" basedir="${ctakes-core.dir}/bin">
+				<include name="**/*.class" />
+				<include name="**/images/*.*" />
+				<include name="**/*.xml" />
+	    </jar>
+	</target>
+	
+	<target name="jarCaTAKES_LVG" 
+		depends=""
+		description="generate the cTAKES LVG jar">
+		<jar jarfile="${basedir}/lib/cTAKES-LVG.jar" basedir="${ctakes-LVG.dir}/bin">
+			<include name="**/*.class" />
+			<include name="**/images/*.*" />
+			<include name="**/*.xml" />
+		</jar>
+	</target>
+	
+</project>
+

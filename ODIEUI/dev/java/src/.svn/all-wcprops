@@ -1,0 +1,257 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/odie/!svn/ver/395/trunk/ui/dev/java/src
+END
+RemoveAnalysisAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/RemoveAnalysisAction.java
+END
+AnalysisEngineConfigParamsPage.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/AnalysisEngineConfigParamsPage.java
+END
+SelectOntologiesWizardPage.java
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/odie/!svn/ver/395/trunk/ui/dev/java/src/SelectOntologiesWizardPage.java
+END
+AnnotationConceptsView.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/odie/!svn/ver/459/trunk/ui/dev/java/src/AnnotationConceptsView.java
+END
+RunProposalsAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/RunProposalsAction.java
+END
+ConfigurationParameterPage.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/ConfigurationParameterPage.java
+END
+SuggestionsViewWithHelp.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/odie/!svn/ver/273/trunk/ui/dev/java/src/SuggestionsViewWithHelp.java
+END
+ImportOntologiesAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/ImportOntologiesAction.java
+END
+StyleRangeSorter.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/StyleRangeSorter.java
+END
+NewAnalysisHandler2.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/NewAnalysisHandler2.java
+END
+ChartSelectionFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/odie/!svn/ver/273/trunk/ui/dev/java/src/ChartSelectionFilter.java
+END
+NewAnalysisTaskAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/NewAnalysisTaskAction.java
+END
+ConfigParametersSection.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/ConfigParametersSection.java
+END
+AnalysisRemover.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/AnalysisRemover.java
+END
+DocumentEditor.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/DocumentEditor.java
+END
+SuggestionSorter.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/odie/!svn/ver/273/trunk/ui/dev/java/src/SuggestionSorter.java
+END
+ProcessingTraceView.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/odie/!svn/ver/459/trunk/ui/dev/java/src/ProcessingTraceView.java
+END
+ConfigParamsTableContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/ConfigParamsTableContentProvider.java
+END
+ConfigParamsTableLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/ConfigParamsTableLabelProvider.java
+END
+SuggestionsSection.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/odie/!svn/ver/312/trunk/ui/dev/java/src/SuggestionsSection.java
+END
+NewAnalysisWizard2.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/NewAnalysisWizard2.java
+END
+SuggestionLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/odie/!svn/ver/273/trunk/ui/dev/java/src/SuggestionLabelProvider.java
+END
+LegendContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/LegendContentProvider.java
+END
+OEDocumentStyler.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/OEDocumentStyler.java
+END
+SuggestionsView.java
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/odie/!svn/ver/273/trunk/ui/dev/java/src/SuggestionsView.java
+END
+RunProposalsHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/odie/!svn/ver/347/trunk/ui/dev/java/src/RunProposalsHandler.java
+END
+AddToOntologyDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/odie/!svn/ver/336/trunk/ui/dev/java/src/AddToOntologyDialog.java
+END
+RunAnalysisAction.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/RunAnalysisAction.java
+END
+AnnotationTypeTreeLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/AnnotationTypeTreeLabelProvider.java
+END
+AnalysisLRComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/AnalysisLRComparator.java
+END
+LegendLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/LegendLabelProvider.java
+END
+AnnotationConceptsViewWithHelp.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/odie/!svn/ver/459/trunk/ui/dev/java/src/AnnotationConceptsViewWithHelp.java
+END
+AnalysisEngineDelegatesMDB.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/AnalysisEngineDelegatesMDB.java
+END
+DetailsView.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/DetailsView.java
+END
+WordContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/WordContentProvider.java
+END
+DocumentStyler.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/DocumentStyler.java
+END
+AnnotationConceptsTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/odie/!svn/ver/459/trunk/ui/dev/java/src/AnnotationConceptsTable.java
+END
+AnalysisProcessor.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/AnalysisProcessor.java
+END
+PhraseContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/PhraseContentProvider.java
+END
+ConfigParamsModifier.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/ConfigParamsModifier.java
+END
+AnalysisEngineProcessor2.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/odie/!svn/ver/92/trunk/ui/dev/java/src/AnalysisEngineProcessor2.java
+END
+ProcessingTraceViewWithHelp.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/odie/!svn/ver/459/trunk/ui/dev/java/src/ProcessingTraceViewWithHelp.java
+END

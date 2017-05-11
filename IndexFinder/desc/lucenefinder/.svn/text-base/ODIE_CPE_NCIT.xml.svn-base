@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><cpeDescription xmlns="http://uima.apache.org/resourceSpecifier">
+    <collectionReader>
+        <collectionIterator>
+            <descriptor>
+                <import location="../reader/ODIE_CR_JdbcCollectionReader.xml"/>
+            </descriptor>
+            <configurationParameterSettings>
+                <nameValuePair>
+                    <name>odie.db.url</name>
+                    <value>
+                        <string>jdbc:mysql://localhost:3306/caties_upmc_pathology</string>
+                    </value>
+                </nameValuePair>
+                <nameValuePair>
+                    <name>odie.reports.to.process</name>
+                    <value>
+                        <string>10</string>
+                    </value>
+                </nameValuePair>
+            </configurationParameterSettings>
+        </collectionIterator>
+    </collectionReader>
+    <casProcessors casPoolSize="3" processingUnitThreadCount="1">
+        <casProcessor deployment="integrated" name="ODIE Lucene NER Engine">
+            <descriptor>
+                <import location="ODIE_AAE_LuceneNer.xml"/>
+            </descriptor>
+            <deploymentParameters/>
+            <errorHandling>
+                <errorRateThreshold action="terminate" value="0/1000"/>
+                <maxConsecutiveRestarts action="terminate" value="30"/>
+                <timeout max="100000" default="-1"/>
+            </errorHandling>
+            <checkpoint batch="10000" time="1000ms"/>
+            <configurationParameterSettings>
+                <nameValuePair>
+                    <name>odie.fs.directory.path</name>
+                    <value>
+                        <string>C:/index_ncit</string>
+                    </value>
+                </nameValuePair>
+                <nameValuePair>
+                    <name>odie.is.overlapping</name>
+                    <value>
+                        <string>false</string>
+                    </value>
+                </nameValuePair>
+            </configurationParameterSettings>
+        </casProcessor>
+        <casProcessor deployment="integrated" name="ODIE_PeliminaryCoverageCalculator">
+            <descriptor>
+                <import location="../../../ODIEResearch/desc/research/ODIE_PeliminaryCoverageCalculator.xml"/>
+            </descriptor>
+            <deploymentParameters/>
+            <errorHandling>
+                <errorRateThreshold action="terminate" value="0/1000"/>
+                <maxConsecutiveRestarts action="terminate" value="30"/>
+                <timeout max="100000" default="-1"/>
+            </errorHandling>
+            <checkpoint batch="10000" time="1000ms"/>
+            <configurationParameterSettings>
+                <nameValuePair>
+                    <name>odie.db.table.name</name>
+                    <value>
+                        <string>ncit_gap_coverage</string>
+                    </value>
+                </nameValuePair>
+            </configurationParameterSettings>
+        </casProcessor>
+    </casProcessors>
+    <cpeConfig>
+        <numToProcess>-1</numToProcess>
+        <deployAs>immediate</deployAs>
+        <checkpoint batch="0" time="300000ms"/>
+        <timerImpl/>
+    </cpeConfig>
+</cpeDescription>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="MarkableExpander">
+      <import location="MarkableExpander.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="MarkableCreator">
+      <import location="MarkableCreator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="VectorCreator">
+      <import location="VectorCreator.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>CoreferenceResolverAggregate</name>
+    <description/>
+    <version>1.1</version>
+    <vendor>Mayo Clinic</vendor>
+    <configurationParameters searchStrategy="language_fallback"/>
+    <configurationParameterSettings/>
+    <flowConstraints>
+      <fixedFlow>
+        <node>MarkableCreator</node>
+        <node>MarkableExpander</node>
+        <node>VectorCreator</node>
+      </fixedFlow>
+    </flowConstraints>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration>
+    <externalResources>
+      <externalResource>
+        <name>wekaModelFile</name>
+        <description/>
+        <fileResourceSpecifier>
+          <fileUrl>file:cc_pa-J48.mod</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName>edu.mayo.bmi.uima.core.resource.FileResourceImpl</implementationName>
+      </externalResource>
+    </externalResources>
+    <externalResourceBindings>
+      <externalResourceBinding>
+        <key>ChainCreator/wekaModel</key>
+        <resourceName>wekaModelFile</resourceName>
+      </externalResourceBinding>
+    </externalResourceBindings>
+  </resourceManagerConfiguration>
+</analysisEngineDescription>

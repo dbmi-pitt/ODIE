@@ -1,0 +1,434 @@
+package edu.pitt.dbmi.odie.uima.util;
+
+import java.sql.Array;
+import java.sql.Blob;
+import java.sql.CallableStatement;
+import java.sql.Clob;
+import java.sql.Connection;
+import java.sql.DatabaseMetaData;
+import java.sql.DriverManager;
+import java.sql.NClob;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLClientInfoException;
+import java.sql.SQLException;
+import java.sql.SQLWarning;
+import java.sql.SQLXML;
+import java.sql.Savepoint;
+import java.sql.Statement;
+import java.sql.Struct;
+import java.util.Date;
+import java.util.Map;
+import java.util.Properties;
+import java.util.concurrent.Executor;
+
+public class ODIE_Connection implements Connection {
+
+	private Connection connection = null;
+	private String dbDriver = null;
+	private String dbUrl = null;
+	private String dbUser = null;
+	private String dbPassword = null;
+	
+	private long startTime = 0L ;
+	
+	private static long CONST_RESTART_TIME = 60L * 60L * 1000L ; // 1 hour
+
+	public Connection getConnection() {
+		try {
+			long currentTime = (new Date()).getTime() ;
+			if (connection == null) {
+				;
+			}
+			else if (connection.isClosed()) {
+				connection = null ;
+			}
+			else if (currentTime - startTime > CONST_RESTART_TIME) {
+				connection.close();
+				connection = null ;
+			}
+			else if (!testConnection(connection)) {
+				connection.close();
+				connection = null ;
+			}
+			while (connection == null || connection.isClosed()) {
+				Thread.sleep(1000) ;
+				Class.forName(getDbDriver()).newInstance();
+				String url = getDbUrl() ;
+				String dbUser = getDbUser() ;
+				String dbPassword = getDbPassword() ;
+				connection = DriverManager.getConnection(url,
+						dbUser, dbPassword);
+				startTime = currentTime ;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+		return connection;
+	}
+
+	private boolean testConnection(Connection testConnection) {
+		boolean isGoodConnection = false ;
+		try {
+			PreparedStatement selectFromDual = testConnection.prepareStatement("select 'status' from dual") ;
+			ResultSet rs = selectFromDual.executeQuery() ;
+			rs.next() ;
+			String testResponse = rs.getString(1) ;
+			if (testResponse.equals("status")) {
+				isGoodConnection = true ;
+			}
+			rs.close();
+			selectFromDual.close();
+		} catch (SQLException e) {
+			;
+		}
+		return isGoodConnection ;
+	}
+
+	public void setConnection(Connection connection) {
+		this.connection = connection;
+	}
+
+	public String getDbDriver() {
+		return dbDriver;
+	}
+
+	public void setDbDriver(String dbDriver) {
+		this.dbDriver = dbDriver;
+	}
+
+	public String getDbUrl() {
+		return dbUrl;
+	}
+
+	public void setDbUrl(String dbUrl) {
+		this.dbUrl = dbUrl;
+	}
+
+	public String getDbUser() {
+		return dbUser;
+	}
+
+	public void setDbUser(String dbUser) {
+		this.dbUser = dbUser;
+	}
+
+	public String getDbPassword() {
+		return dbPassword;
+	}
+
+	public void setDbPassword(String dbPassword) {
+		this.dbPassword = dbPassword;
+	}
+
+	public ODIE_Connection(String dbDriver, String dbUrl, String dbUser,
+			String dbPassword) {
+		setDbDriver(dbDriver);
+		setDbUrl(dbUrl);
+		setDbUser(dbUser);
+		setDbPassword(dbPassword);
+
+	}
+
+	@Override
+	public void clearWarnings() throws SQLException {
+		getConnection().clearWarnings() ;
+
+	}
+
+	@Override
+	public void close() throws SQLException {
+		getConnection().close() ;
+	}
+
+	@Override
+	public void commit() throws SQLException {
+		getConnection().commit() ;
+
+	}
+
+	@Override
+	public Array createArrayOf(String typeName, Object[] elements)
+			throws SQLException {
+		return getConnection().createArrayOf(typeName, elements);
+	}
+
+	@Override
+	public Blob createBlob() throws SQLException {
+		return getConnection().createBlob();
+	}
+
+	@Override
+	public Clob createClob() throws SQLException {
+		return getConnection().createClob();
+	}
+
+	@Override
+	public NClob createNClob() throws SQLException {
+		return getConnection().createNClob();
+	}
+
+	@Override
+	public SQLXML createSQLXML() throws SQLException {
+		return getConnection().createSQLXML();
+	}
+
+	@Override
+	public Statement createStatement() throws SQLException {
+		return getConnection(). createStatement();
+	}
+
+	@Override
+	public Statement createStatement(int resultSetType, int resultSetConcurrency)
+			throws SQLException {
+		return getConnection(). createStatement(resultSetType, resultSetConcurrency);
+	}
+
+	@Override
+	public Statement createStatement(int resultSetType,
+			int resultSetConcurrency, int resultSetHoldability)
+			throws SQLException {
+		return getConnection(). createStatement(resultSetType, resultSetConcurrency, resultSetHoldability);
+	}
+
+	@Override
+	public Struct createStruct(String typeName, Object[] attributes)
+			throws SQLException {
+		return getConnection(). createStruct(typeName, attributes);
+	}
+
+	@Override
+	public boolean getAutoCommit() throws SQLException {
+		return getConnection().getAutoCommit() ;
+	}
+
+	@Override
+	public String getCatalog() throws SQLException {
+		return getConnection().getCatalog() ;
+	}
+
+	@Override
+	public Properties getClientInfo() throws SQLException {
+		return getConnection().getClientInfo() ;
+	}
+
+	@Override
+	public String getClientInfo(String name) throws SQLException {
+		return getConnection().getClientInfo(name) ;
+	}
+
+	@Override
+	public int getHoldability() throws SQLException {
+		return getConnection().getHoldability() ;
+	}
+
+	@Override
+	public DatabaseMetaData getMetaData() throws SQLException {
+		return getConnection().getMetaData() ;
+	}
+
+	@Override
+	public int getTransactionIsolation() throws SQLException {
+		return getConnection().getTransactionIsolation() ;
+	}
+
+	@Override
+	public Map<String, Class<?>> getTypeMap() throws SQLException {
+		return getConnection().getTypeMap() ;
+	}
+
+	@Override
+	public SQLWarning getWarnings() throws SQLException {
+		return getConnection().getWarnings() ;
+	}
+
+	@Override
+	public boolean isClosed() throws SQLException {
+		return getConnection().isClosed() ;
+	}
+
+	@Override
+	public boolean isReadOnly() throws SQLException {
+		return getConnection().isReadOnly() ;
+	}
+
+	@Override
+	public boolean isValid(int timeout) throws SQLException {
+		return getConnection().isValid(timeout) ;
+	}
+
+	@Override
+	public String nativeSQL(String sql) throws SQLException {
+		return getConnection().nativeSQL(sql) ;
+	}
+
+	@Override
+	public CallableStatement prepareCall(String sql) throws SQLException {
+		return getConnection().prepareCall(sql) ;
+	}
+
+	@Override
+	public CallableStatement prepareCall(String sql, int resultSetType,
+			int resultSetConcurrency) throws SQLException {
+		return getConnection().prepareCall(sql, resultSetType, resultSetConcurrency) ;
+	}
+
+	@Override
+	public CallableStatement prepareCall(String sql, int resultSetType,
+			int resultSetConcurrency, int resultSetHoldability)
+			throws SQLException {
+		return getConnection().prepareCall(sql, resultSetType, resultSetConcurrency, resultSetHoldability) ;
+	}
+
+	@Override
+	public PreparedStatement prepareStatement(String sql) throws SQLException {
+		return getConnection().prepareStatement(sql) ;
+	}
+
+	@Override
+	public PreparedStatement prepareStatement(String sql, int autoGeneratedKeys)
+			throws SQLException {
+		return getConnection().prepareStatement(sql, autoGeneratedKeys) ;
+	}
+
+	@Override
+	public PreparedStatement prepareStatement(String sql, int[] columnIndexes)
+			throws SQLException {
+		return getConnection().prepareStatement(sql, columnIndexes) ;
+	}
+
+	@Override
+	public PreparedStatement prepareStatement(String sql, String[] columnNames)
+			throws SQLException {
+		return getConnection().prepareStatement(sql, columnNames) ;
+	}
+
+	@Override
+	public PreparedStatement prepareStatement(String sql, int resultSetType,
+			int resultSetConcurrency) throws SQLException {
+		return getConnection().prepareStatement(sql, resultSetType, resultSetConcurrency) ;
+	}
+
+	@Override
+	public PreparedStatement prepareStatement(String sql, int resultSetType,
+			int resultSetConcurrency, int resultSetHoldability)
+			throws SQLException {
+		return getConnection().prepareStatement(sql, resultSetType, resultSetConcurrency, resultSetHoldability) ;
+	}
+
+	@Override
+	public void releaseSavepoint(Savepoint savepoint) throws SQLException {
+		getConnection().releaseSavepoint(savepoint) ;
+	}
+
+	@Override
+	public void rollback() throws SQLException {
+		getConnection().rollback() ;
+	}
+
+	@Override
+	public void rollback(Savepoint savepoint) throws SQLException {
+		getConnection().rollback(savepoint) ;
+	}
+
+	@Override
+	public void setAutoCommit(boolean autoCommit) throws SQLException {
+		getConnection().setAutoCommit(autoCommit) ;
+	}
+
+	@Override
+	public void setCatalog(String catalog) throws SQLException {
+		getConnection().setCatalog(catalog) ;
+	}
+
+	@Override
+	public void setClientInfo(Properties properties)
+			throws SQLClientInfoException {
+		getConnection().setClientInfo(properties) ;
+	}
+
+	@Override
+	public void setClientInfo(String name, String value)
+			throws SQLClientInfoException {
+		getConnection().setClientInfo(name, value) ;
+	}
+
+	@Override
+	public void setHoldability(int holdability) throws SQLException {		
+		getConnection().setHoldability(holdability) ;
+	}
+
+	@Override
+	public void setReadOnly(boolean readOnly) throws SQLException {
+		getConnection().setReadOnly(readOnly) ;
+	}
+
+	@Override
+	public Savepoint setSavepoint() throws SQLException {
+		return getConnection().setSavepoint() ;
+	}
+
+	@Override
+	public Savepoint setSavepoint(String name) throws SQLException {
+		return getConnection().setSavepoint(name) ;
+	}
+
+	@Override
+	public void setTransactionIsolation(int level) throws SQLException {
+		getConnection().setTransactionIsolation(level) ;
+	}
+
+	@Override
+	public void setTypeMap(Map<String, Class<?>> map) throws SQLException {
+		getConnection().setTypeMap(map) ;
+	}
+
+	@Override
+	public boolean isWrapperFor(Class<?> iface) throws SQLException {
+		return getConnection().isWrapperFor(iface) ;
+	}
+
+	@Override
+	public <T> T unwrap(Class<T> iface) throws SQLException {
+		return getConnection().unwrap(iface) ;
+	}
+
+	@Override
+	public void abort(Executor arg0) throws SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int getNetworkTimeout() throws SQLException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public String getSchema() throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setNetworkTimeout(Executor arg0, int arg1) throws SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void setSchema(String arg0) throws SQLException {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

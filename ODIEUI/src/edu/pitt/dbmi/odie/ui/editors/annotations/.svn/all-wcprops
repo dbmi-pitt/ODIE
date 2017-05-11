@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/odie/!svn/ver/426/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/annotations
+END
+AnnotationSubTypeRegistry.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/odie/!svn/ver/552/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/annotations/AnnotationSubTypeRegistry.java
+END
+IAnnotationSubType.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/annotations/IAnnotationSubType.java
+END
+NegatedNESubType.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/odie/!svn/ver/613/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/annotations/NegatedNESubType.java
+END
+AvailableTextStylingStrategies.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/annotations/AvailableTextStylingStrategies.java
+END
+EclipseAnnotationPeer.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/odie/!svn/ver/552/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/annotations/EclipseAnnotationPeer.java
+END

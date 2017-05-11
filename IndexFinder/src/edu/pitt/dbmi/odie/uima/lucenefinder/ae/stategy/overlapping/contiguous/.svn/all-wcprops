@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/odie/!svn/ver/673/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/lucenefinder/ae/stategy/overlapping/contiguous
+END
+ODIE_LuceneNerStategy.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/odie/!svn/ver/794/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/lucenefinder/ae/stategy/overlapping/contiguous/ODIE_LuceneNerStategy.java
+END
+ODIE_LuceneNerCandidate.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/odie/!svn/ver/543/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/lucenefinder/ae/stategy/overlapping/contiguous/ODIE_LuceneNerCandidate.java
+END

@@ -1,0 +1,89 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/odie/!svn/ver/395/trunk/ui/src/edu/pitt/dbmi/odie/ui/handlers
+END
+SaveAnalysisHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/handlers/SaveAnalysisHandler.java
+END
+BrowserHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/odie/!svn/ver/738/trunk/ui/src/edu/pitt/dbmi/odie/ui/handlers/BrowserHandler.java
+END
+PEARInstallerHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/handlers/PEARInstallerHandler.java
+END
+DeleteAnalysisHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/odie/!svn/ver/696/trunk/ui/src/edu/pitt/dbmi/odie/ui/handlers/DeleteAnalysisHandler.java
+END
+CompareAnalysesHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/odie/!svn/ver/502/trunk/ui/src/edu/pitt/dbmi/odie/ui/handlers/CompareAnalysesHandler.java
+END
+ImportAnalysisEnginesHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/handlers/ImportAnalysisEnginesHandler.java
+END
+NewLexicalSetHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/handlers/NewLexicalSetHandler.java
+END
+ODIEOntologyPackageHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/odie/!svn/ver/779/trunk/ui/src/edu/pitt/dbmi/odie/ui/handlers/ODIEOntologyPackageHandler.java
+END
+RunAnalysisHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/odie/!svn/ver/502/trunk/ui/src/edu/pitt/dbmi/odie/ui/handlers/RunAnalysisHandler.java
+END
+CloseAnalysisHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/674/trunk/ui/src/edu/pitt/dbmi/odie/ui/handlers/CloseAnalysisHandler.java
+END
+DropInHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/odie/!svn/ver/781/trunk/ui/src/edu/pitt/dbmi/odie/ui/handlers/DropInHandler.java
+END
+ImportOntologiesHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/handlers/ImportOntologiesHandler.java
+END
+NewAnalysisHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/handlers/NewAnalysisHandler.java
+END
+DeleteOntologyHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/odie/!svn/ver/572/trunk/ui/src/edu/pitt/dbmi/odie/ui/handlers/DeleteOntologyHandler.java
+END

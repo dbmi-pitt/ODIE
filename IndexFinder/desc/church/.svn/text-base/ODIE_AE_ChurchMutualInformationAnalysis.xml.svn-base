@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="ODIE_AE_Tokeniser">
+      <import location="ODIE_AE_Tokeniser.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_AE_StopWordDetector">
+      <import location="ODIE_AE_StopWordDetector.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>ODIE_AE_ChurchMutualInformationAnalysis</name>
+    <description>Aggregate Analysis Engine combining
+1) Word tokeniser 
+2) Stopword Detector</description>
+    <version>1.0</version>
+    <vendor>PITT</vendor>
+    <configurationParameters/>
+    <configurationParameterSettings/>
+    <flowConstraints>
+      <fixedFlow>
+        <node>ODIE_AE_Tokeniser</node>
+        <node>ODIE_AE_StopWordDetector</node>
+      </fixedFlow>
+    </flowConstraints>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs>
+          <type allAnnotatorFeatures="true">edu.pitt.dbmi.odie.uima.church.types.ODIE_Word</type>
+          <type allAnnotatorFeatures="true">edu.pitt.dbmi.odie.uima.church.types.ODIE_StopWord</type>
+        </outputs>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration>
+    <externalResources>
+      <externalResource>
+        <name>CaTIES_StopWords</name>
+        <description>Stopwords used in CaTIES</description>
+        <fileResourceSpecifier>
+          <fileUrl>http://caties.cabig.upmc.edu/gate_3_1/application/plugins/caTIES/CaTIES_StopWords.lst</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName>edu.pitt.dbmi.odie.uima.church.resource.ODIE_GazetteerImpl</implementationName>
+      </externalResource>
+    </externalResources>
+    <externalResourceBindings>
+      <externalResourceBinding>
+        <key>ODIE_AE_StopWordDetector/ODIE_StopWordGazetteer</key>
+        <resourceName>CaTIES_StopWords</resourceName>
+      </externalResourceBinding>
+    </externalResourceBindings>
+  </resourceManagerConfiguration>
+</analysisEngineDescription>

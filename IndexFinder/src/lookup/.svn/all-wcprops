@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/svn/odie/!svn/ver/637/trunk/indexfinder/src/lookup
+END
+JdbcDesc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/odie/!svn/ver/637/trunk/indexfinder/src/lookup/JdbcDesc.xml
+END
+dictionary1.csv
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/odie/!svn/ver/637/trunk/indexfinder/src/lookup/dictionary1.csv
+END
+LookupDesc_csv_sample.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/odie/!svn/ver/637/trunk/indexfinder/src/lookup/LookupDesc_csv_sample.xml
+END
+snomed-like_codes_sample.zip
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/odie/!svn/ver/637/trunk/indexfinder/src/lookup/snomed-like_codes_sample.zip
+END
+LookupDesc.xml
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/odie/!svn/ver/637/trunk/indexfinder/src/lookup/LookupDesc.xml
+END
+OrangeBook.zip
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/odie/!svn/ver/637/trunk/indexfinder/src/lookup/OrangeBook.zip
+END
+JDBC_Resource.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/odie/!svn/ver/637/trunk/indexfinder/src/lookup/JDBC_Resource.xml
+END
+drug_index.zip
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/odie/!svn/ver/637/trunk/indexfinder/src/lookup/drug_index.zip
+END
+snomed-like_sample.zip
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/637/trunk/indexfinder/src/lookup/snomed-like_sample.zip
+END
+LookupDesc_Db.xml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/odie/!svn/ver/637/trunk/indexfinder/src/lookup/LookupDesc_Db.xml
+END

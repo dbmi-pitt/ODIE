@@ -1,0 +1,162 @@
+// #######################################
+//
+//  ODIE_NER_Discoverer.jape
+//
+//  Copyright (c) 2008, Oncology Pathology Informatics UPMC
+//
+//  author: Kevin J. Mitchell
+//
+// $Log
+//
+// #######################################
+
+// #######################################
+//
+//   This JAPE script expects a series of NounChunks
+//   overlapping Tokens SpaceTokens.
+//   
+//   The objective is to discover meaningful Hearst, Snow, Meronym, and Lui Patterns
+//   within sentences cued by NounChunks and Pattern specific
+//   vocabulary
+//
+// #######################################
+
+
+Phase: IsolatePunctuation
+Input: Token
+Options: control = all
+	 debug = true
+  
+  Rule: IsolateCommas
+        (
+	  {Token.string == "," }
+        ) : commas
+     -->
+        :commas.Comma = { rule = IsoloateCommas },
+        {
+//          inputAS.removeAll((gate.AnnotationSet)bindings.get("commas")) ;
+        }
+
+  Rule: IsolatePeriods
+        (
+	  {Token.string == "." }
+        ) : periods
+     -->
+        :periods.Period = { rule = IsoloateCommas },
+        {
+//          inputAS.removeAll((gate.AnnotationSet)bindings.get("periods")) ;
+        }
+
+  Rule: IsolateParens
+        (
+	  {Token.string == "(" } | {Token.string == ")" }
+        ) : paren
+     -->
+        :paren.Paren = { rule = IsoloateParens },
+        {
+//          inputAS.removeAll((gate.AnnotationSet)bindings.get("paren")) ;
+        }
+
+Phase: TagDiscoveryAka
+Input: Token Period Lookup
+Options: control = appelt
+	 debug = true
+
+  Rule: TagDiscoveryAka
+        (
+         ({Token.string == "a"} | {Token.string == "A"}) ({Period})?
+         ({Token.string == "k"} | {Token.string == "K"}) ({Period})?
+         ({Token.string == "a"} | {Token.string == "A"}) ({Period})?
+        ) : aka
+     -->
+        :aka
+        {
+           //System.out.println("TagDiscoveryAka fires.") ;
+           try {
+              edu.upmc.opi.caBIG.caTIES.creole.CaTIES_SortedAnnotationSet sortedAkaAnnots =
+  	              new edu.upmc.opi.caBIG.caTIES.creole.CaTIES_SortedAnnotationSet(akaAnnots) ;
+	      Node startNode = ((Annotation)sortedAkaAnnots.first()).getStartNode() ;
+	      Node endNode = ((Annotation) sortedAkaAnnots.last()).getEndNode() ;
+              long startOffset = startNode.getOffset() ;
+              long endOffset = endNode.getOffset() ;
+   	      java.util.HashSet underlyingAnnotationTypes = new HashSet() ;
+  	      underlyingAnnotationTypes.add("Lookup") ;
+  	      underlyingAnnotationTypes.add("Token") ;
+  	      underlyingAnnotationTypes.add("SpaceToken") ;
+              AnnotationSet underlyingAnnotations = doc.getAnnotations()
+                             .get(underlyingAnnotationTypes)
+                             .get(startOffset, endOffset) ;
+              inputAS.removeAll(underlyingAnnotations) ;
+              FeatureMap discoveryAnnotationFeatureMap = Factory.newFeatureMap() ;
+              discoveryAnnotationFeatureMap.put("rule", "TagDiscoveryAka") ;
+              discoveryAnnotationFeatureMap.put("string", "a.k.a") ;
+              outputAS.add(startNode, endNode, "DiscoveryDelimiter", discoveryAnnotationFeatureMap) ;
+           }
+           catch (Exception x) {
+              x.printStackTrace() ;
+           }
+        }
+
+
+Phase: TagDiscoveryDelimiters
+Input: Lookup
+Options: control = appelt
+	 debug = true
+
+  Rule: TagDiscoveryDelimiters
+        (
+          {Lookup.majorType == pattern, Lookup.minorType == literal}
+        ) : delimiterLookups
+     -->
+        {
+           try {
+               AnnotationSet lookUpSet = (AnnotationSet) bindings.get("delimiterLookups") ;
+               java.util.ArrayList annotationsToRemove = new java.util.ArrayList() ;
+               for (java.util.Iterator lookUpIterator = lookUpSet.iterator() ; lookUpIterator.hasNext() ;) {
+                   Annotation lookUpAnnotation = (Annotation) lookUpIterator.next() ;
+                   int discoveryAnnotationID = outputAS.add(
+                                                              lookUpAnnotation.getStartNode().getOffset(),
+                                                              lookUpAnnotation.getEndNode().getOffset(),
+                                                              "DiscoveryDelimiter",
+                                                              Factory.newFeatureMap()) ;
+                   Annotation discoveryAnnotation = doc.getAnnotations().get(discoveryAnnotationID) ;
+                   AnnotationSet tokenSet = doc.getAnnotations().get("Token", discoveryAnnotation.getStartNode().getOffset(),
+                                                                          discoveryAnnotation.getEndNode().getOffset()) ;
+                   java.util.Iterator tokenIterator = tokenSet.iterator() ;
+                   if (tokenIterator.hasNext()) {
+	                   Annotation tokenAnnotation = (Annotation) tokenIterator.next() ;
+	                   FeatureMap tokenFeatures = tokenAnnotation.getFeatures() ;
+	                   FeatureMap discoveryFeatures = discoveryAnnotation.getFeatures() ;
+	                   for (Iterator keys = tokenFeatures.keySet().iterator() ; keys.hasNext() ;) {
+	                       String featureKey = (String) keys.next() ;
+	                       String featureValue = (String) tokenFeatures.get(featureKey) ;
+		               if (featureKey.equalsIgnoreCase("string") && featureValue != null) {
+        	                  featureValue = featureValue.toLowerCase() ;
+                                  discoveryFeatures.put(featureKey, featureValue) ;
+                               }
+	                    }
+                           annotationsToRemove.add(tokenAnnotation) ;
+                   }
+                   annotationsToRemove.add(lookUpAnnotation) ;
+               }
+               outputAS.removeAll(annotationsToRemove) ;
+           }
+           catch (Exception x) {
+              x.printStackTrace() ;
+           }
+        }
+
+Phase: SubsumeDiscoveryDelimiters
+Input: DiscoveryDelimiter
+Options: control = all
+	 debug = true
+  
+  Rule: SubsumeHearstDelimiters
+        (
+	  {DiscoveryDelimiter}
+        ) : hearstDelimiters
+     -->
+        {
+           int exactStrategy = edu.upmc.opi.caBIG.caTIES.creole.CaTIES_Utilities.SUBSUME_STRATEGY_EXACT ;
+           edu.upmc.opi.caBIG.caTIES.creole.CaTIES_Utilities.subsume("DiscoveryDelimiter", null, "Token", null, exactStrategy, outputAS) ;
+        }

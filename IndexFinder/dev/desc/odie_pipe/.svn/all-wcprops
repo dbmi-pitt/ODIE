@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/odie/!svn/ver/352/trunk/indexfinder/dev/desc/odie_pipe
+END
+ODIE_CPE_LSP_CAS_ONLY_PIPELINE.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/odie/!svn/ver/214/trunk/indexfinder/dev/desc/odie_pipe/ODIE_CPE_LSP_CAS_ONLY_PIPELINE.xml
+END
+ODIE_AAE_Church.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/odie/!svn/ver/352/trunk/indexfinder/dev/desc/odie_pipe/ODIE_AAE_Church.xml
+END
+ODIE_CPE_CHURCH_ONLY.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/odie/!svn/ver/214/trunk/indexfinder/dev/desc/odie_pipe/ODIE_CPE_CHURCH_ONLY.xml
+END
+ODIE_CPE_PEAR_TESTER.xml
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/odie/!svn/ver/214/trunk/indexfinder/dev/desc/odie_pipe/ODIE_CPE_PEAR_TESTER.xml
+END
+ODIE_AAE_COREF.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/odie/!svn/ver/352/trunk/indexfinder/dev/desc/odie_pipe/ODIE_AAE_COREF.xml
+END
+ODIE_CPE_NER_CD_PIPELINE.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/odie/!svn/ver/214/trunk/indexfinder/dev/desc/odie_pipe/ODIE_CPE_NER_CD_PIPELINE.xml
+END
+ODIE_CPE_NER_CD_PIPELINE_10.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/odie/!svn/ver/214/trunk/indexfinder/dev/desc/odie_pipe/ODIE_CPE_NER_CD_PIPELINE_10.xml
+END
+ODIE_CPE_NER_CD_PIPELINE_918.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/214/trunk/indexfinder/dev/desc/odie_pipe/ODIE_CPE_NER_CD_PIPELINE_918.xml
+END
+ODIE_CPE_NER_CD_PIPELINE_919.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/214/trunk/indexfinder/dev/desc/odie_pipe/ODIE_CPE_NER_CD_PIPELINE_919.xml
+END
+ODIE_CPE_LSP_PIPELINE.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/odie/!svn/ver/214/trunk/indexfinder/dev/desc/odie_pipe/ODIE_CPE_LSP_PIPELINE.xml
+END
+ODIE_AAE_NER_CD_ALL_METHODS.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/odie/!svn/ver/352/trunk/indexfinder/dev/desc/odie_pipe/ODIE_AAE_NER_CD_ALL_METHODS.xml
+END
+ODIE_AAE_NER_OE_PROPOSING.xml
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/odie/!svn/ver/352/trunk/indexfinder/dev/desc/odie_pipe/ODIE_AAE_NER_OE_PROPOSING.xml
+END
+ODIE_AE_NER_CD.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/odie/!svn/ver/214/trunk/indexfinder/dev/desc/odie_pipe/ODIE_AE_NER_CD.xml
+END

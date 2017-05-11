@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="TokenizerAnnotator">
+      <import location="../cTAKES/core/analysis_engine/TokenizerAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_MiniparSimilarityClusterTAE">
+      <import location="ODIE_MiniparSimilarityClusterTAE.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ContextDependentTokenizerAnnotator">
+      <import location="../cTAKES/cdt/analysis_engine/ContextDependentTokenizerAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="StatusAnnotator">
+      <import location="../cTAKES/NE/analysis_engine/StatusAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="NegationAnnotator">
+      <import location="../cTAKES/NE/analysis_engine/NegationAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="SentenceDetectorAnnotator">
+      <import location="../cTAKES/core/analysis_engine/SentenceDetectorAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_MiniparTAE">
+      <import location="../minipar/ODIE_MiniparTAE.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="SimpleSegmentAnnotator">
+      <import location="../cTAKES/core/analysis_engine/SimpleSegmentAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_PosHistogramGeneratorTAE">
+      <import location="ODIE_PosHistogramGeneratorTAE.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="POSTagger">
+      <import location="../cTAKES/POS Tagger/analysis_engine/POSTagger.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="Chunker">
+      <import location="../cTAKES/Chunker/analysis_engine/Chunker.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_IndexFinderTAE">
+      <import location="../IndexFinder/ODIE_IndexFinderTAE.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_CASC_LinSuggestionGenerator">
+      <import location="ODIE_CASC_LinSuggestionGenerator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ExtractionPrepAnnotator">
+      <import location="../cTAKES/cdp/analysis_engine/ExtractionPrepAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="LookupWindowAnnotator">
+      <import location="../cTAKES/cdp/analysis_engine/LookupWindowAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_MiniparSimilarityClusterWordLevelTAE">
+      <import location="ODIE_MiniparSimilarityClusterWordLevelTAE.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="LvgAnnotator">
+      <import location="../cTAKES/LVG/analysis_engine/LvgAnnotator.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>ODIE_AAE_PhraseMiniparTester</name>
+    <description/>
+    <version>1.0</version>
+    <vendor/>
+    <configurationParameters searchStrategy="language_fallback">
+      <configurationParameter>
+        <name>odie.db.url</name>
+        <description>Jdbc url</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_MiniparSimilarityClusterTAE/odie.db.url</parameter>
+          <parameter>ODIE_CASC_LinSuggestionGenerator/odie.db.url</parameter>
+          <parameter>ODIE_PosHistogramGeneratorTAE/odie.db.url</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.db.url1</name>
+        <description>Jdbc url</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_IndexFinderTAE/odie.db.url</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>stopWords</name>
+        <type>String</type>
+        <multiValued>true</multiValued>
+        <mandatory>false</mandatory>
+      </configurationParameter>
+    </configurationParameters>
+    <configurationParameterSettings>
+      <nameValuePair>
+        <name>odie.db.url</name>
+        <value>
+          <string>jdbc:mysql://localhost:3306/minipar_word_level</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.db.url1</name>
+        <value>
+          <string>jdbc:mysql://1upmc-opi-cab52:3307/od_lex_ifbuild</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>stopWords</name>
+        <value>
+          <array>
+            <string>there</string>
+            <string>something</string>
+          </array>
+        </value>
+      </nameValuePair>
+    </configurationParameterSettings>
+    <flowConstraints>
+      <fixedFlow>
+        <node>SimpleSegmentAnnotator</node>
+        <node>SentenceDetectorAnnotator</node>
+        <node>TokenizerAnnotator</node>
+        <node>POSTagger</node>
+        <node>Chunker</node>
+        <node>ODIE_MiniparTAE</node>
+        <node>ODIE_MiniparSimilarityClusterWordLevelTAE</node>
+      </fixedFlow>
+    </flowConstraints>
+    <typePriorities>
+      <name>Ordering</name>
+      <description>For subiterator</description>
+      <version>1.0</version>
+      <priorityList>
+        <type>edu.mayo.bmi.uima.core.type.Segment</type>
+        <type>edu.mayo.bmi.uima.core.type.Sentence</type>
+        <type>edu.mayo.bmi.uima.core.type.BaseToken</type>
+      </priorityList>
+      <priorityList>
+        <type>edu.mayo.bmi.uima.core.type.Sentence</type>
+        <type>edu.mayo.bmi.uima.core.type.NamedEntity</type>
+      </priorityList>
+    </typePriorities>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

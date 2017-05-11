@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/NP_Chunking
+END
+pos_tag_dict
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/NP_Chunking/pos_tag_dict
+END
+sample_input
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/NP_Chunking/sample_input
+END
+HISTORY
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/NP_Chunking/HISTORY
+END
+chunker.bat
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/NP_Chunking/chunker.bat
+END
+COPYING
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/NP_Chunking/COPYING
+END
+chunker.sh
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/NP_Chunking/chunker.sh
+END
+creole.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/NP_Chunking/creole.xml
+END
+Chunker.jar
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/NP_Chunking/Chunker.jar
+END
+rules
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/NP_Chunking/rules
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/NP_Chunking/README
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/NP_Chunking/build.xml
+END

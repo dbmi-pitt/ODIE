@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/odie/!svn/ver/215/trunk/indexfinder/test/desc/collections
+END
+ODIE_CASC_XmiWriter.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/odie/!svn/ver/215/trunk/indexfinder/test/desc/collections/ODIE_CASC_XmiWriter.xml
+END
+ODIE_CR_JdbcCollectionReader.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/odie/!svn/ver/215/trunk/indexfinder/test/desc/collections/ODIE_CR_JdbcCollectionReader.xml
+END

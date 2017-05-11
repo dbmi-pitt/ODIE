@@ -1,0 +1,578 @@
+// #######################################
+//
+//  ODIE_NER_Discoverer_Post_Noun_Chunker.jape
+//
+//  Copyright (c) 2008, Oncology Pathology Informatics UPMC
+//
+//  author: Kevin J. Mitchell
+//
+// $Log
+//
+// #######################################
+
+// #######################################
+//
+//   This JAPE script expects a series of NounChunks
+//   overlapping Tokens SpaceTokens.
+//   
+//   The objective is to discover meaningful Hearst, Snow, Meronym, and Lui Patterns
+//   within sentences cued by NounChunks and Pattern specific
+//   vocabulary
+//
+// #######################################
+
+Phase: DuplicateTokensAndChunks
+Input: Token NP
+Options: control = all
+	 debug = true
+
+  //
+  // DuplicateTokens
+  //  
+  Rule: DuplicateTokens
+        (
+	  {Token}
+        ) : srcTokenAnnots
+     -->
+      {
+            try {
+                gate.AnnotationSet srcTokenSet = (gate.AnnotationSet) bindings.get("srcTokenAnnots") ;
+                for (Iterator srcTokenIterator = srcTokenSet.iterator() ; srcTokenIterator.hasNext() ;) {
+                    gate.Annotation srcTokenAnnotation = (gate.Annotation) srcTokenIterator.next() ;
+                    FeatureMap duplicateFeatureMap = gate.Factory.newFeatureMap() ;
+                    for (Iterator featureKeysIterator = srcTokenAnnotation.getFeatures().keySet().iterator(); 
+                         featureKeysIterator.hasNext();) {
+                        Object featureKey = featureKeysIterator.next() ;
+                        duplicateFeatureMap.put(featureKey, srcTokenAnnotation.getFeatures().get(featureKey)) ;
+                    }
+                    outputAS.add(srcTokenAnnotation.getStartNode().getOffset(), 
+                                 srcTokenAnnotation.getEndNode().getOffset(), "TransientToken", duplicateFeatureMap) ;
+                }
+            }
+            catch (Exception x) {
+                x.printStackTrace() ;
+            }
+      }
+
+  //
+  // DuplicateChunks
+  //  
+  Rule: DuplicateChunks
+        (
+	  {NP}
+        ) : srcChunkAnnots
+     -->
+      {
+            try {
+                gate.AnnotationSet srcChunkSet = (gate.AnnotationSet) bindings.get("srcChunkAnnots") ;
+                for (Iterator srcChunkIterator = srcChunkSet.iterator() ; srcChunkIterator.hasNext() ;) {
+                    gate.Annotation srcChunkAnnotation = (gate.Annotation) srcChunkIterator.next() ;
+                    FeatureMap duplicateFeatureMap = gate.Factory.newFeatureMap() ;
+                    for (Iterator featureKeysIterator = srcChunkAnnotation.getFeatures().keySet().iterator(); 
+                                  featureKeysIterator.hasNext();) {
+                        Object featureKey = featureKeysIterator.next() ;
+                        duplicateFeatureMap.put(featureKey, srcChunkAnnotation.getFeatures().get(featureKey)) ;
+                    }
+                    outputAS.add(srcChunkAnnotation.getStartNode().getOffset(), 
+                                 srcChunkAnnotation.getEndNode().getOffset(), "TransientChunk", duplicateFeatureMap) ;
+                }
+            }
+            catch (Exception x) {
+                x.printStackTrace() ;
+            }
+      }
+
+
+Phase: AdjustNounChunks
+Input: TransientToken Comma TransientChunk
+Options: control = first
+	 debug = true
+  //
+  // AdjustNounChunks
+  //  
+  Rule: AdjustNounChunks
+        (
+	  {TransientChunk.chunkType == "NP"}
+        )+ : nounChunks
+     -->
+        {
+           //System.out.println("ODIE_NER_Discoverer_Post_Noun_Chunker ReportNounChunks fires.") ;
+           AnnotationSet nounChunkSet = (AnnotationSet) bindings.get("nounChunks") ;
+           java.util.ArrayList annotationsToRemove = new java.util.ArrayList() ;
+           for (Iterator nounChunkIterator = nounChunkSet.iterator() ; nounChunkIterator.hasNext() ;) {
+               Annotation nounChunkAnnotation = (Annotation) nounChunkIterator.next() ;
+               String textBeneathNounChunk = 
+                  edu.upmc.opi.caBIG.caTIES.creole.CaTIES_Utilities.spanStrings(doc, nounChunkAnnotation) ;
+//               System.out.println("Checking beneath " + textBeneathNounChunk) ;
+               annotationsToRemove.add(nounChunkAnnotation) ;
+	       java.util.HashSet filterSet = new java.util.HashSet() ;
+               filterSet.add("TransientToken") ;
+               filterSet.add("Comma") ;
+               filterSet.add("DiscoveryDelimiter") ;
+               AnnotationSet tokensAndDiscoverySet = doc.getAnnotations().get(filterSet).get(nounChunkAnnotation.getStartNode().getOffset(),
+                                                                                             nounChunkAnnotation.getEndNode().getOffset()) ;
+               edu.upmc.opi.caBIG.caTIES.creole.CaTIES_SortedAnnotationSet sortedTokensAndDiscoverySet =
+ 	                new edu.upmc.opi.caBIG.caTIES.creole.CaTIES_SortedAnnotationSet(tokensAndDiscoverySet) ;
+               java.util.ArrayList nounChunkAccumulator = new java.util.ArrayList() ;               
+               for (Iterator iterator = sortedTokensAndDiscoverySet.iterator() ; iterator.hasNext() ;) {
+                   Annotation childAnnot = (Annotation) iterator.next() ;
+                   if (   childAnnot.getType().equals("DiscoveryDelimiter")
+                       || childAnnot.getType().equals("Comma") ) {
+                      if (!nounChunkAccumulator.isEmpty()) {
+                         try {
+                             outputAS.add(
+                                 ((Annotation)nounChunkAccumulator.get(0)).getStartNode().getOffset(),
+                                 ((Annotation)nounChunkAccumulator.get(nounChunkAccumulator.size()-1)).getEndNode().getOffset(),
+                                 "TransientNP", 
+                                 Factory.newFeatureMap()) ;
+                              String diagnostic = 
+                                    "Post Chunker Adding NP at ("
+                                  + ((Annotation)nounChunkAccumulator.get(0)).getStartNode().getOffset()
+                                  + ", "
+                                  + ((Annotation)nounChunkAccumulator.get(nounChunkAccumulator.size()-1)).getEndNode().getOffset()
+                                  + ") " ;
+//                              System.out.println(diagnostic) ;
+                             } catch (InvalidOffsetException ioe) { ; }
+                             nounChunkAccumulator.clear() ;
+                      }
+                   }
+                   else if (childAnnot.getType().equals("TransientToken")) {
+                       try {
+                             outputAS.add(
+                                          childAnnot.getStartNode().getOffset(),
+                                          childAnnot.getEndNode().getOffset(),
+                                          "DiscoveryToken", 
+                                          childAnnot.getFeatures()
+                                         ) ;
+                             } 
+                       catch (InvalidOffsetException ioe) { ; }
+                       annotationsToRemove.add(childAnnot) ;
+                       nounChunkAccumulator.add(childAnnot) ;
+                   }   
+               }
+               if (!nounChunkAccumulator.isEmpty()) {
+                      try {
+                              outputAS.add(
+                                    ((Annotation)nounChunkAccumulator.get(0)).getStartNode().getOffset(),
+                                    ((Annotation)nounChunkAccumulator.get(nounChunkAccumulator.size()-1)).getEndNode().getOffset(),
+                                    "TransientNP", 
+                                    Factory.newFeatureMap()) ;
+                              String diagnostic = 
+                                    "Post Chunker Adding NP at ("
+                                  + ((Annotation)nounChunkAccumulator.get(0)).getStartNode().getOffset()
+                                  + ", "
+                                  + ((Annotation)nounChunkAccumulator.get(nounChunkAccumulator.size()-1)).getEndNode().getOffset()
+                                  + ") " ;
+//                              System.out.println(diagnostic) ;
+                      } catch (InvalidOffsetException ioe) { ; }
+               }
+               outputAS.removeAll(annotationsToRemove) ;
+           }
+        }
+
+
+Phase: CleanBeneathTransientNPs
+Input: Comma TransientToken DiscoveryDelmiter TransientNP
+Options: control = all
+	 debug = true
+  //
+  // CleanBeneathChunks
+  //  
+  Rule: CleanBeneathChunks
+        (
+	  {TransientNP} 
+        ) : chunkAnnots
+     -->
+        {
+           AnnotationSet chunkSet = (AnnotationSet) bindings.get("chunkAnnots") ;
+           java.util.HashSet filterSet = new java.util.HashSet() ;
+           filterSet.add("TransientToken") ;
+           filterSet.add("Comma") ;
+           filterSet.add("DiscoveryDelimiter") ;
+           java.util.ArrayList annotationsToRemove = new java.util.ArrayList() ;
+           for (Iterator chunkIterator = chunkSet.iterator() ; chunkIterator.hasNext() ;) {
+               Annotation chunkAnnotation = (Annotation) chunkIterator.next() ;
+               AnnotationSet tokensAndDiscoverySet = doc.getAnnotations().get(filterSet).get(chunkAnnotation.getStartNode().getOffset(),
+                                                                                             chunkAnnotation.getEndNode().getOffset()) ;
+               annotationsToRemove.addAll(tokensAndDiscoverySet) ;
+           }
+           outputAS.removeAll(annotationsToRemove) ;
+        }
+
+Phase: DetectHearstSnowLuiPattern
+Input: TransientNP TransientToken Comma Period DiscoveryDelimiter
+Options: control = appelt
+	 debug = true
+  
+ Macro: A_LITERAL
+        ( {DiscoveryDelimiter.string == "a"} )
+
+ Macro: AKA_LITERAL
+        ( {DiscoveryDelimiter.string == "a.k.a"} | {DiscoveryDelimiter.string == "aka"} )
+
+ Macro: ALSO_LITERAL
+        ( {DiscoveryDelimiter.string == "also"} )
+
+ Macro: AND_LITERAL
+        ( {DiscoveryDelimiter.string == "and"} )
+
+ Macro: AS_LITERAL
+        ( {DiscoveryDelimiter.string == "as"} )
+
+ Macro: CALLED_LITERAL
+        ( {DiscoveryDelimiter.string == "called"} )
+
+ Macro: ESPECIALLY_LITERAL
+        ( {DiscoveryDelimiter.string == "especially"} )
+
+ Macro: IS_LITERAL
+        ( {DiscoveryDelimiter.string == "is"} )
+
+ Macro: IN_LITERAL
+        ( {DiscoveryDelimiter.string == "in"} )
+
+ Macro: INCLUDING_LITERAL
+        ( {DiscoveryDelimiter.string == "including"} )
+
+ Macro: KNOWN_LITERAL
+        ( {DiscoveryDelimiter.string == "known"} )
+
+ Macro: LIKE_LITERAL
+        ( {DiscoveryDelimiter.string == "like"} )
+
+ Macro: OF_LITERAL
+        ( {DiscoveryDelimiter.string == "of"} )
+
+ Macro: OR_LITERAL
+        ( {DiscoveryDelimiter.string == "or"} )
+
+ Macro: OTHER_LITERAL
+        ( {DiscoveryDelimiter.string == "other"} )
+
+ Macro: REFERRED_LITERAL
+        ( {DiscoveryDelimiter.string == "referred"} )
+
+ Macro: SO_LITERAL
+        ( {DiscoveryDelimiter.string == "so"} )
+
+ Macro: SOMETIMES_LITERAL
+        ( {DiscoveryDelimiter.string == "sometimes"} )
+
+ Macro: SUCH_LITERAL
+        ( {DiscoveryDelimiter.string == "such"} )
+
+ Macro: THE_LITERAL
+        ( {DiscoveryDelimiter.string == "the"} )
+
+ Macro: TO_LITERAL
+        ( {DiscoveryDelimiter.string == "to"} )
+
+  Rule: HearstRule_01
+        (
+          ({TransientNP}):parent SUCH_LITERAL AS_LITERAL ({TransientNP} ({Comma})?)+:childSequence AND_LITERAL ({TransientNP}):lastChild
+        ) : hearstPattern
+     -->
+        :hearstPattern.HearstPattern = { rule = NP_such_as_NP_and_NP },
+        {
+        }
+
+  Rule: HearstRule_02
+        (
+          ({TransientNP}):parent SUCH_LITERAL AS_LITERAL ({TransientNP} ({Comma})?)+:childSequence OR_LITERAL ({TransientNP}):lastChild
+        ) : hearstPattern
+     -->
+        :hearstPattern.HearstPattern = { rule = NP_such_as_NP_or_NP },
+        {
+        }
+
+  Rule: HearstRule_03
+        (
+          SUCH_LITERAL ({TransientNP}):parent AS_LITERAL ({TransientNP} ({Comma})?)+:childSequence AND_LITERAL ({TransientNP}):lastChild
+        ) : hearstPattern
+     -->
+        :hearstPattern.HearstPattern = { rule = Such_NP_as_NP_and_NP },
+        {
+        }
+
+  Rule: HearstRule_04
+        (
+          SUCH_LITERAL ({TransientNP}):parent AS_LITERAL ({TransientNP} ({Comma})?)+:childSequence OR_LITERAL ({TransientNP}):lastChild
+        ) : hearstPattern
+     -->
+        :hearstPattern.HearstPattern = { rule = Such_NP_as_NP_or_NP },
+        {
+        }
+
+  Rule: HearstRule_05
+        (
+          ({TransientNP} ({Comma})?)+:childSequence AND_LITERAL OTHER_LITERAL ({TransientNP}):parent
+        ) : hearstPattern
+     -->
+        :hearstPattern.HearstPattern = { rule = NP_and_other_NP },
+        {
+        }
+
+  Rule: HearstRule_06
+        (
+          ({TransientNP} ({Comma})?)+:childSequence OR_LITERAL OTHER_LITERAL ({TransientNP}):parent
+        ) : hearstPattern
+     -->
+        :hearstPattern.HearstPattern = { rule = NP_or_other_NP },
+        {
+        }
+
+  Rule: HearstRule_07
+        (
+          ({TransientNP} ({Comma})?):parent INCLUDING_LITERAL ({TransientNP} ({Comma})?)+:childSequence AND_LITERAL ({TransientNP}):lastChild
+        ) : hearstPattern
+     -->
+        :hearstPattern.HearstPattern = { rule = NP_including_NP_and_NP },
+        {
+        }
+
+  Rule: HearstRule_08
+        (
+          ({TransientNP} ({Comma})?):parent INCLUDING_LITERAL ({TransientNP} ({Comma})?)+:childSequence OR_LITERAL ({TransientNP}):lastChild
+        ) : hearstPattern
+     -->
+        :hearstPattern.HearstPattern = { rule = NP_including_NP_or_NP },
+        {
+        }
+
+  Rule: HearstRule_09
+        (
+          ({TransientNP} ({Comma})?):parent ESPECIALLY_LITERAL ({TransientNP} ({Comma})?)+:childSequence AND_LITERAL ({TransientNP}):lastChild
+        ) : hearstPattern
+     -->
+        :hearstPattern.HearstPattern = { rule = NP_especially_NP_and_NP },
+        {
+        }
+
+  Rule: HearstRule_10
+        (
+          ({TransientNP} ({Comma})?):parent ESPECIALLY_LITERAL ({TransientNP} ({Comma})?)+:childSequence OR_LITERAL ({TransientNP}):lastChild
+        ) : hearstPattern
+     -->
+        :hearstPattern.HearstPattern = { rule = NP_especially_NP_or_NP },
+        {
+        }
+
+  Rule: SnowRule_01
+        (
+          ({TransientNP}):parent LIKE_LITERAL ({TransientNP}):child
+        ) : snowPattern
+     -->
+        :snowPattern.SnowPattern = { rule = NP_like_NP },
+        {
+        }
+
+  Rule: SnowRule_02
+        (
+          ({TransientNP}):parent CALLED_LITERAL ({TransientNP}):child
+        ) : snowPattern
+     -->
+        :snowPattern.SnowPattern = { rule = NP_called_NP },
+        {
+        }
+
+  Rule: SnowRule_03
+        (
+          ({TransientNP}):child IS_LITERAL A_LITERAL ({TransientNP}):parent
+        ) : snowPattern
+     -->
+        :snowPattern.SnowPattern = { rule = NP_is_a_NP },
+        {
+        }
+
+  // Appositive rule
+  Rule: SnowRule_04
+        (
+          ({TransientNP}):child {Comma} A_LITERAL ({TransientNP}):parent
+        ) : snowPattern
+     -->
+        :snowPattern.SnowPattern = { rule = NP_a_NP_appositive },
+        {
+        }
+
+  //
+  // Lui Patterns
+  // 
+
+  Rule: LuiRule_01
+        (
+          ({TransientNP}):anaphor ALSO_LITERAL KNOWN_LITERAL AS_LITERAL ( ({TransientToken})? {TransientNP} ({Comma})?)+:antecedentSequence
+        ) : luiPattern
+     -->
+        :luiPattern.LuiPattern = { rule = NP_also_known_as_NP },
+        {
+        }
+
+  Rule: LuiRule_02
+        (
+          ({TransientNP}):anaphor AKA_LITERAL ({TransientNP} ({Comma})?)+:antecedentSequence
+        ) : luiPattern
+     -->
+        :luiPattern.LuiPattern = { rule = NP_aka_NP },
+        {
+        }
+
+  Rule: LuiRule_03
+        (
+          ({TransientNP}):anaphor ALSO_LITERAL CALLED_LITERAL ({TransientNP} ({Comma})?)+:antecedentSequence
+        ) : luiPattern
+     -->
+        :luiPattern.LuiPattern = { rule = NP_also_called_NP },
+        {
+        }
+
+  Rule: LuiRule_04
+        (
+          ({TransientNP}):anaphor SO_LITERAL CALLED_LITERAL ({TransientNP} ({Comma})?)+:antecedentSequence
+        ) : luiPattern
+     -->
+        :luiPattern.LuiPattern = { rule = NP_so_called_NP },
+        {
+        }
+
+  Rule: LuiRule_05
+        (
+          ({TransientNP}):anaphor SOMETIMES_LITERAL KNOWN_LITERAL AS_LITERAL ({TransientNP} ({Comma})?)+:antecedentSequence
+        ) : luiPattern
+     -->
+        :luiPattern.LuiPattern = { rule = NP_sometimes_known_as_NP },
+        {
+        }
+
+  Rule: LuiRule_06
+        (
+          ({TransientNP}):anaphor SOMETIMES_LITERAL CALLED_LITERAL ({TransientNP} ({Comma})?)+:antecedentSequence
+        ) : luiPattern
+     -->
+        :luiPattern.LuiPattern = { rule = NP_sometimes_called_NP },
+        {
+        }
+
+  Rule: LuiRule_07
+        (
+          ({TransientNP}):anaphor ALSO_LITERAL REFERRED_LITERAL TO_LITERAL AS_LITERAL ({TransientNP} ({Comma})?)+:antecedentSequence
+        ) : luiPattern
+     -->
+        :luiPattern.LuiPattern = { rule = NP_also_referred_to_as_NP },
+        {
+        }
+
+Phase: DetectMeronymyPatterns
+Input: Comma Period TransientToken DiscoveryToken DiscoveryDelimiter
+Options: control = brill
+	 debug = true
+  //
+  // Meronymy Patterns
+  // 
+  Macro: NN_OR_NNS_OR_NNP_OR_NNPS
+        ( 
+          {DiscoveryToken.category == "NN"} | {DiscoveryToken.category == "NNS"}
+        | {DiscoveryToken.category == "NNP"} | {DiscoveryToken.category == "NNPS"}
+        | {DiscoveryToken.partOfSpeech == "NN"} | {DiscoveryToken.partOfSpeech == "NNS"}
+        | {DiscoveryToken.partOfSpeech == "NNP"} | {DiscoveryToken.partOfSpeech == "NNPS"} 
+        ) 
+
+  Macro: NN_OR_NNS
+        ( 
+          {DiscoveryToken.category == "NN"} | {DiscoveryToken.category == "NNS"} |
+          {DiscoveryToken.partOfSpeech == "NN"} | {DiscoveryToken.partOfSpeech == "NNS"}
+        )
+
+  Macro: NN_OR_JJ
+        ( 
+          {DiscoveryToken.category == "NN"} | {DiscoveryToken.category == "JJ"} |
+          {DiscoveryToken.partOfSpeech == "NN"} | {DiscoveryToken.partOfSpeech == "JJ"}
+        )
+
+  Macro: NNS
+        ( 
+          {DiscoveryToken.category == "NNS"} | 
+          {DiscoveryToken.partOfSpeech == "NNS"}
+        )
+
+  Macro: DETERMINER
+        ( {DiscoveryToken.category == "DET"} |
+          {DiscoveryToken.partOfSpeech == "DET"} |
+          A_LITERAL | THE_LITERAL )
+
+  Macro: POSSESIVE
+        ( 
+         {DiscoveryToken.category == "POS"} |
+         {DiscoveryToken.partOfSpeech == "POS"}
+        )
+
+  Rule: MeronymyRule_01
+        (
+          (NN_OR_NNS):whole POSSESIVE (NN_OR_NNS):part
+        ) : meronymyPattern
+     -->
+        :meronymyPattern.MeronymyPattern = { rule = NN_pos_NN },
+        {
+        }
+
+  Rule: MeronymyRule_02
+        (
+          (NN_OR_NNS):part OF_LITERAL DETERMINER ((NN_OR_JJ)* NN_OR_NNS):whole
+        ) : meronymyPattern
+     -->
+        :meronymyPattern.MeronymyPattern = { rule = NN_of_the_NN },
+        {
+        }
+
+  Rule: MeronymyRule_03
+        (
+          (NN_OR_NNS):part IN_LITERAL DETERMINER ((NN_OR_JJ)* NN_OR_NNS):whole
+        ) : meronymyPattern
+     -->
+        :meronymyPattern.MeronymyPattern = { rule = NN_in_the_NN },
+        {
+        }
+
+  Rule: MeronymyRule_04
+        (
+          (NNS):parts OF_LITERAL (NNS):wholes
+        ) : meronymyPattern
+     -->
+        :meronymyPattern.MeronymyPattern = { rule = NN_of_NN },
+        {
+        }
+
+  Rule: MeronymyRule_05
+        (
+          (NNS):parts IN_LITERAL (NNS):wholes
+        ) : meronymyPattern
+     -->
+        :meronymyPattern.MeronymyPattern = { rule = NN_in_NN },
+        {
+        }
+
+
+// #######################################
+//
+//  Cleanup:
+//         1) DiscoveryToken 
+//         2) TransientToken
+//
+//  	  {Comma} | {Period} | {DiscoveryDelimiter} | {DiscoveryToken} | {TransientToken} | {TransientChunk}
+// #######################################
+
+Phase: Cleanup
+Input: Comma Period DiscoveryDelimiter DiscoveryToken TransientToken TransientChunk
+Options: control = all
+ 	 debug = true
+   //
+   // Cleanup
+   //  
+   Rule: Cleanup
+         (
+   	  {Comma} | {Period} | {DiscoveryToken} | {TransientChunk}
+         ) : cleanUpAnnots
+      -->
+         {
+            AnnotationSet cleanUpSet = (AnnotationSet) bindings.get("cleanUpAnnots") ;
+            outputAS.removeAll(cleanUpSet) ;
+        }

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/odie/!svn/ver/595/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/analysis/analysisengine
+END
+AnalysisEngineMetadataTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/odie/!svn/ver/653/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/analysis/analysisengine/AnalysisEngineMetadataTable.java
+END
+ConfigurationParameterPage.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/odie/!svn/ver/653/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/analysis/analysisengine/ConfigurationParameterPage.java
+END
+AnalysisEngineSection.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/odie/!svn/ver/646/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/analysis/analysisengine/AnalysisEngineSection.java
+END
+ConfigParametersSection.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/odie/!svn/ver/595/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/analysis/analysisengine/ConfigParametersSection.java
+END

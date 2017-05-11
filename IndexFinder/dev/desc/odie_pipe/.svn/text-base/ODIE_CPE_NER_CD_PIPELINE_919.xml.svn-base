@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cpeDescription xmlns="http://uima.apache.org/resourceSpecifier">
+    <collectionReader>
+        <collectionIterator>
+            <descriptor>
+                <import location="../church/ODIE_CR_JdbcCollectionReader.xml"/>
+            </descriptor>
+            <configurationParameterSettings>
+                <nameValuePair>
+                    <name>odie.db.url</name>
+                    <value>
+                        <string>jdbc:mysql://1upmc-opi-spn01:3306/caties_v_3_public</string>
+                    </value>
+                </nameValuePair>
+                <nameValuePair>
+                    <name>odie.reports.to.process</name>
+                    <value>
+                        <string>2</string>
+                    </value>
+                </nameValuePair>
+                <nameValuePair>
+                    <name>odie.db.select.sql</name>
+                    <value>
+                        <string/>
+                    </value>
+                </nameValuePair>
+            </configurationParameterSettings>
+        </collectionIterator>
+    </collectionReader>
+    <casProcessors casPoolSize="3" processingUnitThreadCount="1">
+        <casProcessor deployment="integrated" name="ODIE_AE_NER_Discovery">
+            <descriptor>
+                <import location="ODIE_AE_NER_CD.xml"/>
+            </descriptor>
+            <deploymentParameters/>
+            <errorHandling>
+                <errorRateThreshold action="terminate" value="0/1000"/>
+                <maxConsecutiveRestarts action="terminate" value="30"/>
+                <timeout max="100000" default="-1"/>
+            </errorHandling>
+            <checkpoint batch="10000" time="1000ms"/>
+            <configurationParameterSettings>
+                <nameValuePair>
+                    <name>odie.db.url</name>
+                    <value>
+                        <string>jdbc:mysql://10.144.36.202:3306/odie_918</string>
+                    </value>
+                </nameValuePair>
+                <nameValuePair>
+                    <name>odie.db.url1</name>
+                    <value>
+                        <string>jdbc:mysql://1upmc-opi-cab52:3307/od_lex_ifbuild</string>
+                    </value>
+                </nameValuePair>
+            </configurationParameterSettings>
+        </casProcessor>
+        <casProcessor deployment="integrated" name="ODIE_InformationTheoreticMeasurer">
+            <descriptor>
+                <import location="../church/ODIE_CASC_InformationTheoreticMeasurer.xml"/>
+            </descriptor>
+            <deploymentParameters/>
+            <errorHandling>
+                <errorRateThreshold action="terminate" value="0/1000"/>
+                <maxConsecutiveRestarts action="terminate" value="30"/>
+                <timeout max="100000" default="-1"/>
+            </errorHandling>
+            <checkpoint batch="10000" time="1000ms"/>
+            <configurationParameterSettings>
+                <nameValuePair>
+                    <name>odie.db.url</name>
+                    <value>
+                        <string>jdbc:mysql://10.144.36.202:3306/odie_918</string>
+                    </value>
+                </nameValuePair>
+                <nameValuePair>
+                    <name>odie.lookup.annotation.class</name>
+                    <value>
+                        <string>edu.mayo.bmi.uima.core.type.WordToken</string>
+                    </value>
+                </nameValuePair>
+                <nameValuePair>
+                    <name>odie.table.name.prefix</name>
+                    <value>
+                        <string>church_word</string>
+                    </value>
+                </nameValuePair>
+            </configurationParameterSettings>
+        </casProcessor>
+        <casProcessor deployment="integrated" name="ODIE_InformationTheoreticMeasurer 2">
+            <descriptor>
+                <import location="../church/ODIE_CASC_InformationTheoreticMeasurer.xml"/>
+            </descriptor>
+            <deploymentParameters/>
+            <errorHandling>
+                <errorRateThreshold action="terminate" value="0/1000"/>
+                <maxConsecutiveRestarts action="terminate" value="30"/>
+                <timeout max="100000" default="-1"/>
+            </errorHandling>
+            <checkpoint batch="10000" time="1000ms"/>
+            <configurationParameterSettings>
+                <nameValuePair>
+                    <name>odie.db.url</name>
+                    <value>
+                        <string>jdbc:mysql://10.144.36.202:3306/odie_918</string>
+                    </value>
+                </nameValuePair>
+                <nameValuePair>
+                    <name>odie.lookup.annotation.class</name>
+                    <value>
+                        <string>edu.mayo.bmi.uima.chunker.type.Chunk</string>
+                    </value>
+                </nameValuePair>
+                <nameValuePair>
+                    <name>odie.table.name.prefix</name>
+                    <value>
+                        <string>church_np</string>
+                    </value>
+                </nameValuePair>
+            </configurationParameterSettings>
+        </casProcessor>
+        <casProcessor deployment="integrated" name="ODIE_InformationTheoreticMeasurer 3">
+            <descriptor>
+                <import location="../church/ODIE_CASC_InformationTheoreticMeasurer.xml"/>
+            </descriptor>
+            <deploymentParameters/>
+            <errorHandling>
+                <errorRateThreshold action="terminate" value="0/1000"/>
+                <maxConsecutiveRestarts action="terminate" value="30"/>
+                <timeout max="100000" default="-1"/>
+            </errorHandling>
+            <checkpoint batch="10000" time="1000ms"/>
+            <configurationParameterSettings>
+                <nameValuePair>
+                    <name>odie.db.url</name>
+                    <value>
+                        <string>jdbc:mysql://10.144.36.202:3306/odie_918</string>
+                    </value>
+                </nameValuePair>
+                <nameValuePair>
+                    <name>odie.lookup.annotation.class</name>
+                    <value>
+                        <string>edu.mayo.bmi.uima.core.type.NamedEntity</string>
+                    </value>
+                </nameValuePair>
+                <nameValuePair>
+                    <name>odie.table.name.prefix</name>
+                    <value>
+                        <string>church_ne</string>
+                    </value>
+                </nameValuePair>
+            </configurationParameterSettings>
+        </casProcessor>
+        <casProcessor deployment="integrated" name="ODIE_MiniparStatisticsGeneratorCASConsumer">
+            <descriptor>
+                <import location="../dekanlin/ODIE_MiniparStatisticsGeneratorCASConsumer.xml"/>
+            </descriptor>
+            <deploymentParameters/>
+            <errorHandling>
+                <errorRateThreshold action="terminate" value="0/1000"/>
+                <maxConsecutiveRestarts action="terminate" value="30"/>
+                <timeout max="100000" default="-1"/>
+            </errorHandling>
+            <checkpoint batch="10000" time="1000ms"/>
+            <configurationParameterSettings>
+                <nameValuePair>
+                    <name>odie.db.url</name>
+                    <value>
+                        <string>jdbc:mysql://10.144.36.202:3306/odie_918</string>
+                    </value>
+                </nameValuePair>
+            </configurationParameterSettings>
+        </casProcessor>
+        <casProcessor deployment="integrated" name="ODIE_LSP_TermCombinedScorer">
+            <descriptor>
+                <import location="../lsp/ODIE_CASC_LspTermPairCasConsumer.xml"/>
+            </descriptor>
+            <deploymentParameters/>
+            <errorHandling>
+                <errorRateThreshold action="terminate" value="0/1000"/>
+                <maxConsecutiveRestarts action="terminate" value="30"/>
+                <timeout max="100000" default="-1"/>
+            </errorHandling>
+            <checkpoint batch="10000" time="1000ms"/>
+            <configurationParameterSettings>
+                <nameValuePair>
+                    <name>odie.db.url</name>
+                    <value>
+                        <string>jdbc:mysql://10.144.36.202:3306/odie_918</string>
+                    </value>
+                </nameValuePair>
+            </configurationParameterSettings>
+        </casProcessor>
+        <casProcessor deployment="integrated" name="ODIE_CASC_CombinedWordPairScorer">
+            <descriptor>
+                <import location="../combination/ODIE_CASC_CombinedWordPairScorer.xml"/>
+            </descriptor>
+            <deploymentParameters/>
+            <errorHandling>
+                <errorRateThreshold action="terminate" value="0/1000"/>
+                <maxConsecutiveRestarts action="terminate" value="30"/>
+                <timeout max="100000" default="-1"/>
+            </errorHandling>
+            <checkpoint batch="10000" time="1000ms"/>
+            <configurationParameterSettings>
+                <nameValuePair>
+                    <name>odie.db.url</name>
+                    <value>
+                        <string>jdbc:mysql://10.144.36.202:3306/odie_918</string>
+                    </value>
+                </nameValuePair>
+            </configurationParameterSettings>
+        </casProcessor>
+    </casProcessors>
+    <cpeConfig>
+        <numToProcess>-1</numToProcess>
+        <deployAs>immediate</deployAs>
+        <checkpoint batch="0" time="300000ms"/>
+        <timerImpl/>
+    </cpeConfig>
+</cpeDescription>

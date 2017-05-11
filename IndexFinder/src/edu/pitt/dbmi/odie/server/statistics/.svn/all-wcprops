@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/odie/!svn/ver/311/trunk/indexfinder/src/edu/pitt/dbmi/odie/server/statistics
+END
+ODIE_Normalizer.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/odie/!svn/ver/85/trunk/indexfinder/src/edu/pitt/dbmi/odie/server/statistics/ODIE_Normalizer.java
+END
+ODIE_OntologyEnrichmentStatistics.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/odie/!svn/ver/311/trunk/indexfinder/src/edu/pitt/dbmi/odie/server/statistics/ODIE_OntologyEnrichmentStatistics.java
+END
+ODIE_OntologyEnrichmentCombinedStatistics.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/odie/!svn/ver/311/trunk/indexfinder/src/edu/pitt/dbmi/odie/server/statistics/ODIE_OntologyEnrichmentCombinedStatistics.java
+END
+ODIE_LspWordPair.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/odie/!svn/ver/85/trunk/indexfinder/src/edu/pitt/dbmi/odie/server/statistics/ODIE_LspWordPair.java
+END
+ODIE_CombinedWordPair.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/odie/!svn/ver/139/trunk/indexfinder/src/edu/pitt/dbmi/odie/server/statistics/ODIE_CombinedWordPair.java
+END

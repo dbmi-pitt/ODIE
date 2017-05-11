@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/odie/!svn/ver/426/trunk/ui/src/edu/pitt/dbmi/odie/ui
+END
+KeyBindingContextSwitcher.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/KeyBindingContextSwitcher.java
+END
+Application.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/Application.java
+END
+AnalysisState.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/odie/!svn/ver/38/trunk/ui/src/edu/pitt/dbmi/odie/ui/AnalysisState.java
+END
+AnalysisConvertor.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/AnalysisConvertor.java
+END
+ApplicationWorkbenchWindowAdvisor.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/odie/!svn/ver/697/trunk/ui/src/edu/pitt/dbmi/odie/ui/ApplicationWorkbenchWindowAdvisor.java
+END
+View2EditorLinker.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/odie/!svn/ver/795/trunk/ui/src/edu/pitt/dbmi/odie/ui/View2EditorLinker.java
+END
+FormSection.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/499/trunk/ui/src/edu/pitt/dbmi/odie/ui/FormSection.java
+END
+Perspective.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/Perspective.java
+END
+UIConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/699/trunk/ui/src/edu/pitt/dbmi/odie/ui/UIConstants.java
+END
+Aesthetics.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/odie/!svn/ver/738/trunk/ui/src/edu/pitt/dbmi/odie/ui/Aesthetics.java
+END
+Activator.java
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/odie/!svn/ver/668/trunk/ui/src/edu/pitt/dbmi/odie/ui/Activator.java
+END
+ApplicationWorkbenchAdvisor.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/odie/!svn/ver/781/trunk/ui/src/edu/pitt/dbmi/odie/ui/ApplicationWorkbenchAdvisor.java
+END

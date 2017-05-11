@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/odie/!svn/ver/426/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/providers
+END
+OntologyLegendContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/odie/!svn/ver/774/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/providers/OntologyLegendContentProvider.java
+END
+SuggestionsContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/providers/SuggestionsContentProvider.java
+END
+OntologyTreeContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/odie/!svn/ver/779/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/providers/OntologyTreeContentProvider.java
+END
+UIMAAnalysisEngineMetaDataLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/providers/UIMAAnalysisEngineMetaDataLabelProvider.java
+END
+SuggestionAnnotation.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/odie/!svn/ver/613/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/providers/SuggestionAnnotation.java
+END
+OntologyLegendLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/odie/!svn/ver/774/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/providers/OntologyLegendLabelProvider.java
+END
+SuggestionsLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/providers/SuggestionsLabelProvider.java
+END
+OntologyTreeLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/odie/!svn/ver/546/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/providers/OntologyTreeLabelProvider.java
+END
+AnnotatedDocumentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/providers/AnnotatedDocumentProvider.java
+END
+ConfigParamsTableContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/providers/ConfigParamsTableContentProvider.java
+END
+ConfigParamsTableLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/providers/ConfigParamsTableLabelProvider.java
+END
+AnalysisEngineDelegatesTreeContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/providers/AnalysisEngineDelegatesTreeContentProvider.java
+END

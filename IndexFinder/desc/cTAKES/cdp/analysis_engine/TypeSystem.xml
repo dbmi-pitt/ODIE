@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+<name>TypeSystem</name>
+<description>Imports types defined in other projects</description>
+<version>1.0</version>
+<vendor></vendor>
+<imports>
+<import location="../../chunker/type/ChunkerTypeSystem.xml"/>
+<import location="../../cdt/type/CdtTypeSystem.xml"/>
+<import location="../../NE/type/ContextTypeSystem.xml"/>
+<import location="../../core/type/TypeSystem.xml"/>
+<import location="../../lookup/type/DictionaryLookupTypeSystem.xml"/>
+</imports>
+</typeSystemDescription>

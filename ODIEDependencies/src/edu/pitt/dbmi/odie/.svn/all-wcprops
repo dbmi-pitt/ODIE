@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/odie/!svn/ver/328/trunk/dependencies/src/edu/pitt/dbmi/odie
+END
+ODIEException.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/odie/!svn/ver/91/trunk/dependencies/src/edu/pitt/dbmi/odie/ODIEException.java
+END
+ODIEUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/odie/!svn/ver/503/trunk/dependencies/src/edu/pitt/dbmi/odie/ODIEUtils.java
+END
+HttpInputStreamWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/495/trunk/dependencies/src/edu/pitt/dbmi/odie/HttpInputStreamWrapper.java
+END
+ODIEConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/odie/!svn/ver/779/trunk/dependencies/src/edu/pitt/dbmi/odie/ODIEConstants.java
+END

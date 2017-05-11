@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/odie/!svn/ver/740/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/util
+END
+ODIE_Connection.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/odie/!svn/ver/759/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/util/ODIE_Connection.java
+END
+ODIE_IndexFinderUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/odie/!svn/ver/794/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/util/ODIE_IndexFinderUtils.java
+END
+ODIE_Comparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/odie/!svn/ver/150/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/util/ODIE_Comparator.java
+END
+ODIE_NormalizationUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/odie/!svn/ver/725/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/util/ODIE_NormalizationUtils.java
+END
+ODIE_SortedAnnotationSet.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/odie/!svn/ver/150/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/util/ODIE_SortedAnnotationSet.java
+END
+ODIE_FormatUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/odie/!svn/ver/710/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/util/ODIE_FormatUtils.java
+END
+ODIE_IFConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/odie/!svn/ver/740/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/util/ODIE_IFConstants.java
+END
+ODIE_UimaUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/odie/!svn/ver/521/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/util/ODIE_UimaUtils.java
+END
+JdbcConnectionResourceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/odie/!svn/ver/715/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/util/JdbcConnectionResourceImpl.java
+END

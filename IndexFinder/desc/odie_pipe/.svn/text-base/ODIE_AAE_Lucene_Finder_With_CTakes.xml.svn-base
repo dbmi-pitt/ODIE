@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="TokenizerAnnotator">
+      <import location="../cTAKES/core/analysis_engine/TokenizerAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ContextDependentTokenizerAnnotator">
+      <import location="../cTAKES/cdt/analysis_engine/ContextDependentTokenizerAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="StatusAnnotator">
+      <import location="../cTAKES/NE/analysis_engine/StatusAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="NegationAnnotator">
+      <import location="../cTAKES/NE/analysis_engine/NegationAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="SentenceDetectorAnnotator">
+      <import location="../cTAKES/core/analysis_engine/SentenceDetectorAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="SimpleSegmentAnnotator">
+      <import location="../cTAKES/core/analysis_engine/SimpleSegmentAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_AE_Jape">
+      <import location="../gate/jape/ODIE_AE_Jape.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="POSTagger">
+      <import location="../cTAKES/POS Tagger/analysis_engine/POSTagger.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="Chunker">
+      <import location="../cTAKES/chunker/analysis_engine/Chunker.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_AE_LuceneNer">
+      <import location="../lucenefinder/ODIE_AE_LuceneNer.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ExtractionPrepAnnotator">
+      <import location="../cTAKES/cdp/analysis_engine/ExtractionPrepAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_AE_Gazetteer">
+      <import location="../gate/gazetteer/ODIE_AE_Gazetteer.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="LookupWindowAnnotator">
+      <import location="../cTAKES/cdp/analysis_engine/LookupWindowAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="LvgAnnotator">
+      <import location="../cTAKES/LVG/analysis_engine/LvgAnnotator.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>ODIE IndexFinder NER Engine with Proposals Front Ent</name>
+    <description>Runs the complete pipeline for annotating clinical documents in plain text format using Ontology Derived coder. Also incorporates iterative proposals from the user. User proposals are implemented as a front IndexFinder engine that is rebuilt for each iteration.</description>
+    <version/>
+    <vendor/>
+    <configurationParameters searchStrategy="language_fallback">
+      <configurationParameter>
+        <name>SegmentID</name>
+        <description/>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+        <overrides>
+          <parameter>SimpleSegmentAnnotator/SegmentID</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>ChunkCreatorClass</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>Chunker/ChunkCreatorClass</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.fs.directory.path</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_AE_LuceneNer/odie.fs.directory.path</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.is.contiguous</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_AE_LuceneNer/odie.is.contiguous</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.is.overlapping</name>
+        <description>When true return overlapping annotations</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+        <overrides>
+          <parameter>ODIE_AE_LuceneNer/odie.is.overlapping</parameter>
+        </overrides>
+      </configurationParameter>
+    </configurationParameters>
+    <configurationParameterSettings>
+      <nameValuePair>
+        <name>ChunkCreatorClass</name>
+        <value>
+          <string>edu.mayo.bmi.uima.chunker.PhraseTypeChunkCreator</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.fs.directory.path</name>
+        <value>
+          <string>C:/index_radlex_200</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.is.contiguous</name>
+        <value>
+          <string>true</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.is.overlapping</name>
+        <value>
+          <string>false</string>
+        </value>
+      </nameValuePair>
+    </configurationParameterSettings>
+    <flowConstraints>
+      <fixedFlow>
+        <node>SimpleSegmentAnnotator</node>
+        <node>SentenceDetectorAnnotator</node>
+        <node>TokenizerAnnotator</node>
+        <node>LvgAnnotator</node>
+        <node>ContextDependentTokenizerAnnotator</node>
+        <node>POSTagger</node>
+        <node>Chunker</node>
+        <node>LookupWindowAnnotator</node>
+        <node>ODIE_AE_LuceneNer</node>
+        <node>StatusAnnotator</node>
+        <node>NegationAnnotator</node>
+        <node>ExtractionPrepAnnotator</node>
+      </fixedFlow>
+    </flowConstraints>
+    <typePriorities>
+      <name>Ordering</name>
+      <description>For subiterator</description>
+      <version>1.0</version>
+      <priorityList>
+        <type>edu.mayo.bmi.uima.core.type.Segment</type>
+        <type>edu.mayo.bmi.uima.core.type.Sentence</type>
+        <type>edu.mayo.bmi.uima.core.type.BaseToken</type>
+      </priorityList>
+      <priorityList>
+        <type>edu.mayo.bmi.uima.core.type.Sentence</type>
+        <type>edu.mayo.bmi.uima.core.type.NamedEntity</type>
+      </priorityList>
+    </typePriorities>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration>
+    <externalResources>
+      <externalResource>
+        <name>odie.gate.factory</name>
+        <description/>
+        <fileResourceSpecifier>
+          <fileUrl>file:gate/odiehome</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName>edu.pitt.dbmi.odie.uima.gate.resource.ODIE_GateResourceImpl</implementationName>
+      </externalResource>
+      <externalResource>
+        <name>odie.gazetteer.pr</name>
+        <description/>
+        <fileResourceSpecifier>
+          <fileUrl>file:gate/odiehome/gazetteer/ODIE_NER_Discovery_Patterns.def</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName>edu.pitt.dbmi.odie.uima.gate.resource.ODIE_GateProcessingResourceUrlResourceImpl</implementationName>
+      </externalResource>
+      <externalResource>
+        <name>odie.pre.jape.pr</name>
+        <description/>
+        <fileResourceSpecifier>
+          <fileUrl>file:gate/odiehome/jape/ODIE_NER_Discoverer_Pre_Noun_Chunker.jape</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName>edu.pitt.dbmi.odie.uima.gate.resource.ODIE_GateProcessingResourceUrlResourceImpl</implementationName>
+      </externalResource>
+    </externalResources>
+    <externalResourceBindings>
+      <externalResourceBinding>
+        <key>ODIE_AE_Jape/ODIE_Gate_Factory</key>
+        <resourceName>odie.gate.factory</resourceName>
+      </externalResourceBinding>
+      <externalResourceBinding>
+        <key>ODIE_AE_Gazetteer/ODIE_Gate_Factory</key>
+        <resourceName>odie.gate.factory</resourceName>
+      </externalResourceBinding>
+      <externalResourceBinding>
+        <key>ODIE_AE_Gazetteer/ODIE_Gazetteer_Processing_Resource</key>
+        <resourceName>odie.gazetteer.pr</resourceName>
+      </externalResourceBinding>
+      <externalResourceBinding>
+        <key>ODIE_AE_Jape/ODIE_Jape_Processing_Resource</key>
+        <resourceName>odie.pre.jape.pr</resourceName>
+      </externalResourceBinding>
+    </externalResourceBindings>
+  </resourceManagerConfiguration>
+</analysisEngineDescription>

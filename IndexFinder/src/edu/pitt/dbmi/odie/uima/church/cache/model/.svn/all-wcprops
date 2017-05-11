@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/odie/!svn/ver/598/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/church/cache/model
+END
+ODIE_HistogramEntry.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/odie/!svn/ver/593/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/church/cache/model/ODIE_HistogramEntry.java
+END
+ODIE_SuggestionFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/odie/!svn/ver/598/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/church/cache/model/ODIE_SuggestionFactory.java
+END
+ODIE_AssociationEntryFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/odie/!svn/ver/593/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/church/cache/model/ODIE_AssociationEntryFactory.java
+END
+ODIE_HistogramEntryFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/odie/!svn/ver/593/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/church/cache/model/ODIE_HistogramEntryFactory.java
+END
+ODIE_AssociationEntry.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/odie/!svn/ver/593/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/church/cache/model/ODIE_AssociationEntry.java
+END

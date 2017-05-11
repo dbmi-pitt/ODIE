@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="CoreferenceResolverAggregate">
+      <import location="../cTAKES/coref-resolver/CoreferenceResolverAggregate.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_AAE_INDEX_FINDER">
+      <import location="ODIE_AAE_NER.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>ODIE IndexFinder NER with Mayo Coreference Resolution TAE</name>
+    <description>Runs the IndexFinder NER engine alongwith the Mayo cTAKES Coreference Resolution TAE. Generates named entities and co-reference chains for certain named entities.</description>
+    <version>1.3</version>
+    <vendor>DBMI, University of Pittsburgh</vendor>
+    <configurationParameters searchStrategy="language_fallback">
+      <configurationParameter>
+        <name>SegmentID</name>
+        <description/>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+        <overrides>
+          <parameter>ODIE_AAE_INDEX_FINDER/SegmentID</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>ChunkCreatorClass</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_AAE_INDEX_FINDER/ChunkCreatorClass</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.fs.directory.path</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_AAE_INDEX_FINDER/odie.fs.directory.path</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.is.contiguous</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_AAE_INDEX_FINDER/odie.is.contiguous</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.is.overlapping</name>
+        <description>When true return overlapping annotations</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+        <overrides>
+          <parameter>ODIE_AAE_INDEX_FINDER/odie.is.overlapping</parameter>
+        </overrides>
+      </configurationParameter>
+    </configurationParameters>
+    <configurationParameterSettings>
+      <nameValuePair>
+        <name>ChunkCreatorClass</name>
+        <value>
+          <string>edu.mayo.bmi.uima.chunker.PhraseTypeChunkCreator</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.fs.directory.path</name>
+        <value>
+          <string>C:/index_radlex_200</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.is.contiguous</name>
+        <value>
+          <string>true</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.is.overlapping</name>
+        <value>
+          <string>false</string>
+        </value>
+      </nameValuePair>
+    </configurationParameterSettings>
+    <flowConstraints>
+      <fixedFlow>
+        <node>ODIE_AAE_INDEX_FINDER</node>
+        <node>CoreferenceResolverAggregate</node>
+      </fixedFlow>
+    </flowConstraints>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

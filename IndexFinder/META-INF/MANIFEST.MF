@@ -1,0 +1,35 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ODIE Pipelines
+Bundle-SymbolicName: ODIEPipelines
+Bundle-Version: 1.4
+Require-Bundle: ODIEDependencies;bundle-version="1.0.4"
+Bundle-ClassPath: .,
+ resources/,
+ lib/gate.jar,
+ lib/jasper-compiler-jdt.jar,
+ lib/jdom.jar,
+ lib/nekohtml-0.9.5.jar,
+ lib/ontotext.jar,
+ lib/stax-api-1.0.jar,
+ lib/xercesImpl.jar,
+ lib/Chunker.jar,
+ lib/gate-asm.jar,
+ lib/lvg2008dist.jar,
+ lib/trove.jar,
+ lib/OpenAI_FSM.jar,
+ lib/maxent-2.4.0.jar,
+ lib/gate-compiler-jdt.jar,
+ lib/weka.jar,
+ lib/PDFBox-0.7.2.jar,
+ lib/caties.jar,
+ lib/mod_coref-v0.2.jar
+Bundle-Vendor: DBMI, University of Pittsburgh
+Eclipse-RegisterBuddy: ODIEDependencies
+Export-Package: edu.mayo.bmi.uima.chunker.type,
+ edu.mayo.bmi.uima.core.type,
+ edu.mayo.bmi.uima.coref.type,
+ edu.pitt.dbmi.odie.uima.indexfinder.ae,
+ edu.pitt.dbmi.odie.uima.lucenefinder.ae,
+ edu.pitt.dbmi.odie.uima.util
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <name>ODIE_Word</name>
+  <description>Annotates words within the Document</description>
+  <version>1.0</version>
+  <vendor>PITT</vendor>
+  <types>
+    <typeDescription>
+      <name>edu.pitt.dbmi.odie.uima.church.types.ODIE_Word</name>
+      <description>Annotates words in the document set.</description>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>wordText</name>
+          <description>Text beneath this Word annotation.</description>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+  </types>
+</typeSystemDescription>

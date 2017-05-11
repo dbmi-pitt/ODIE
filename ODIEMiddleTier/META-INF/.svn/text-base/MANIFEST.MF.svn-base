@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ODIE Middle Tier
+Bundle-SymbolicName: ODIEMiddleTier
+Bundle-Version: 1.4
+Require-Bundle: ODIEDependencies;visibility:=reexport,
+ org.eclipse.swt;bundle-version="3.4.1"
+Bundle-ClassPath: .,
+ lib/mysql-connector-java-5.1.6-bin.jar
+Export-Package: 
+ edu.pitt.dbmi.odie.lexicalizer.lucenefinder,
+ edu.pitt.dbmi.odie.middletier,
+ edu.pitt.dbmi.odie.model
+Bundle-Vendor: DBMI, University of Pittsburgh
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <name>ODIE_StopWord</name>
+  <description>Stop word detector</description>
+  <version>1.0</version>
+  <vendor>PITT</vendor>
+  <imports>
+    <import location="ODIE_WordType.xml"/>
+  </imports>
+    <types>
+    <typeDescription>
+      <name>edu.pitt.dbmi.odie.uima.church.types.ODIE_StopWord</name>
+      <description>Word from a set of stop words</description>
+      <supertypeName>edu.pitt.dbmi.odie.uima.church.types.ODIE_Word</supertypeName>
+    </typeDescription>
+  </types>
+</typeSystemDescription>

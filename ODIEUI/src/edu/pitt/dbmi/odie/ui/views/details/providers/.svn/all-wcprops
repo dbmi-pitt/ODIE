@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/odie/!svn/ver/426/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/details/providers
+END
+DefaultDetailsContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/details/providers/DefaultDetailsContentProvider.java
+END
+PClassDetailsContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/details/providers/PClassDetailsContentProvider.java
+END
+FeatureValueLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/details/providers/FeatureValueLabelProvider.java
+END
+AnnotationInstanceContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/odie/!svn/ver/699/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/details/providers/AnnotationInstanceContentProvider.java
+END
+DefaultDetailsLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/details/providers/DefaultDetailsLabelProvider.java
+END
+TypeContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/details/providers/TypeContentProvider.java
+END
+FeatureValue.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/odie/!svn/ver/436/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/details/providers/FeatureValue.java
+END
+TypeLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/details/providers/TypeLabelProvider.java
+END

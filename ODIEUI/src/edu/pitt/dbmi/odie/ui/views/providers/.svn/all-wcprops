@@ -1,0 +1,137 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/odie/!svn/ver/426/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/providers
+END
+OntologyConceptLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/providers/OntologyConceptLabelProvider.java
+END
+AnnotationTypeSystemTreeContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/providers/AnnotationTypeSystemTreeContentProvider.java
+END
+DocumentsContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/providers/DocumentsContentProvider.java
+END
+AnnotationTypeSystemTreeLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/providers/AnnotationTypeSystemTreeLabelProvider.java
+END
+DocumentsLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/odie/!svn/ver/552/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/providers/DocumentsLabelProvider.java
+END
+TypeSystemTreeContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/providers/TypeSystemTreeContentProvider.java
+END
+AnnotationConceptsContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/providers/AnnotationConceptsContentProvider.java
+END
+TypeSystemTreeLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/providers/TypeSystemTreeLabelProvider.java
+END
+ItemCountProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/providers/ItemCountProvider.java
+END
+AnnotationLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/providers/AnnotationLabelProvider.java
+END
+CoreferenceContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/providers/CoreferenceContentProvider.java
+END
+AnnotationInstancesContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/providers/AnnotationInstancesContentProvider.java
+END
+OntologiesContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/odie/!svn/ver/766/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/providers/OntologiesContentProvider.java
+END
+AnalysisContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/providers/AnalysisContentProvider.java
+END
+PrunedTypeSystemTreeContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/providers/PrunedTypeSystemTreeContentProvider.java
+END
+CoreferenceLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/providers/CoreferenceLabelProvider.java
+END
+ConceptsTableContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/providers/ConceptsTableContentProvider.java
+END
+OntologyConceptContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/odie/!svn/ver/766/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/providers/OntologyConceptContentProvider.java
+END
+OntologiesLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/odie/!svn/ver/766/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/providers/OntologiesLabelProvider.java
+END
+AnalysisLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/providers/AnalysisLabelProvider.java
+END
+DatapointLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/providers/DatapointLabelProvider.java
+END
+StringComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/views/providers/StringComparator.java
+END

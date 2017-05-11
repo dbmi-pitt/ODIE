@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/cdp/analysis_engine
+END
+NP2LookupWindow.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/cdp/analysis_engine/NP2LookupWindow.xml
+END
+TypeSystem.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/cdp/analysis_engine/TypeSystem.xml
+END
+LookupWindowAnnotator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/cdp/analysis_engine/LookupWindowAnnotator.xml
+END
+MaxLookupWindows.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/cdp/analysis_engine/MaxLookupWindows.xml
+END
+ExtractionPrepAnnotator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/cdp/analysis_engine/ExtractionPrepAnnotator.xml
+END

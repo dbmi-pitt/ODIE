@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collectionReaderDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <implementationName>edu.pitt.dbmi.odie.uima.collection.AnalysisCollectionReader</implementationName>
+  <processingResourceMetaData>
+    <name>AnalysisCollectionReader</name>
+    <description>Reads documents stored in an Analysis object</description>
+    <version>1.0</version>
+    <vendor>University of Pittsburgh</vendor>
+    <configurationParameters>
+      <configurationParameter>
+        <name>ANALYSIS_NAME</name>
+        <description>The analysis name</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+    </configurationParameters>
+    <configurationParameterSettings/>
+    <typeSystemDescription>
+      <imports>
+        <import name="edu.pitt.dbmi.odie.uima.types.ODIETypeSystem"/>
+      </imports>
+    </typeSystemDescription>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs>
+          <type allAnnotatorFeatures="true">edu.pitt.dbmi.odie.uima.types.DatabaseInformation</type>
+        </outputs>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>false</multipleDeploymentAllowed>
+      <outputsNewCASes>true</outputsNewCASes>
+    </operationalProperties>
+  </processingResourceMetaData>
+  <resourceManagerConfiguration/>
+</collectionReaderDescription>

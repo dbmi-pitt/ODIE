@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>true</primitive>
+  <annotatorImplementationName>edu.pitt.dbmi.odie.uima.dekanlin.ae.ODIE_MiniparSimilarityClusterWordLevelTAE</annotatorImplementationName>
+  <analysisEngineMetaData>
+    <name>ODIE_MiniparSimilarityClusterWordLevelTAE</name>
+    <description>Implementation of technique described in Automatic Retrieval and Clustering Similar Words by Dekang Lin.
+Used Word Level calculations as opposed to term conflation.
+Word level is the original Lin paper format but ODIE uses terms aka "phrases" so another version of this behavior is implemented as the ODIE default.  We keep this behavior as a comparison.
+</description>
+    <version>1.0</version>
+    <vendor>University of Pittsburgh ODIE</vendor>
+    <configurationParameters>
+      <configurationParameter>
+        <name>odie.db.driver</name>
+        <description>RDBMS driver</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.db.url</name>
+        <description>Jdbc url</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.db.user.name</name>
+        <description>User name</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.db.user.password</name>
+        <description>User password</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+    </configurationParameters>
+    <configurationParameterSettings>
+      <nameValuePair>
+        <name>odie.db.driver</name>
+        <value>
+          <string>org.gjt.mm.mysql.Driver</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.db.url</name>
+        <value>
+          <string>jdbc:mysql://localhost:3306/minipar_word_level</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.db.user.name</name>
+        <value>
+          <string>caties</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.db.user.password</name>
+        <value>
+          <string>caties</string>
+        </value>
+      </nameValuePair>
+    </configurationParameterSettings>
+    <typeSystemDescription>
+      <imports>
+        <import location="../minipar/type/ODIE_MiniParTypeSystemDescriptor.xml"/>
+        <import location="../gate/type/ODIE_GateTypeSystemDescriptor.xml"/>
+      </imports>
+    </typeSystemDescription>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs>
+          <type allAnnotatorFeatures="true">edu.pitt.dbmi.odie.uima.minipar.types.POSType</type>
+          <type allAnnotatorFeatures="true">edu.pitt.dbmi.odie.uima.minipar.types.DepTreeNode</type>
+        </inputs>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

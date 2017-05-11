@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="TokenizerAnnotator">
+      <import location="../cTAKES/core/analysis_engine/TokenizerAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_AE_LuceneNer">
+      <import location="ODIE_AE_LuceneNer.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="SentenceDetectorAnnotator">
+      <import location="../cTAKES/core/analysis_engine/SentenceDetectorAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="SimpleSegmentAnnotator">
+      <import location="../cTAKES/core/analysis_engine/SimpleSegmentAnnotator.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>ODIE Lucene NER Engine</name>
+    <description>Runs the complete pipeline for annotating clinical documents in plain text format using Ontology Derived coder.</description>
+    <version/>
+    <vendor/>
+    <configurationParameters searchStrategy="language_fallback">
+      <configurationParameter>
+        <name>SegmentID</name>
+        <description/>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+        <overrides>
+          <parameter>SimpleSegmentAnnotator/SegmentID</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.fs.directory.path</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_AE_LuceneNer/odie.fs.directory.path</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.is.contiguous</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_AE_LuceneNer/odie.is.contiguous</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.is.overlapping</name>
+        <description>When true return overlapping annotations</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+        <overrides>
+          <parameter>ODIE_AE_LuceneNer/odie.is.overlapping</parameter>
+        </overrides>
+      </configurationParameter>
+    </configurationParameters>
+    <configurationParameterSettings>
+      <nameValuePair>
+        <name>odie.fs.directory.path</name>
+        <value>
+          <string>C:/odieindex</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.is.overlapping</name>
+        <value>
+          <string>true</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.is.contiguous</name>
+        <value>
+          <string>true</string>
+        </value>
+      </nameValuePair>
+    </configurationParameterSettings>
+    <flowConstraints>
+      <fixedFlow>
+        <node>SimpleSegmentAnnotator</node>
+        <node>SentenceDetectorAnnotator</node>
+        <node>TokenizerAnnotator</node>
+        <node>ODIE_AE_LuceneNer</node>
+      </fixedFlow>
+    </flowConstraints>
+    <typePriorities>
+      <name>Ordering</name>
+      <description>For subiterator</description>
+      <version>1.0</version>
+      <priorityList>
+        <type>edu.mayo.bmi.uima.core.type.Segment</type>
+        <type>edu.mayo.bmi.uima.core.type.Sentence</type>
+        <type>edu.mayo.bmi.uima.core.type.BaseToken</type>
+      </priorityList>
+      <priorityList>
+        <type>edu.mayo.bmi.uima.core.type.Sentence</type>
+        <type>edu.mayo.bmi.uima.core.type.NamedEntity</type>
+      </priorityList>
+    </typePriorities>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

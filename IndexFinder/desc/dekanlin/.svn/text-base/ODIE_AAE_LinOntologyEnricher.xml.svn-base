@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="ODIE_MiniparSimilarityClusterTAE">
+      <import location="ODIE_MiniparSimilarityClusterTAE.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_CASC_LinSuggestionGenerator">
+      <import location="ODIE_CASC_LinSuggestionGenerator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_MiniparTAE">
+      <import location="../minipar/ODIE_MiniparTAE.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_PosHistogramGeneratorTAE">
+      <import location="ODIE_PosHistogramGeneratorTAE.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>ODIE_AAE_LinOntologyEnricher</name>
+    <description/>
+    <version>1.0</version>
+    <vendor/>
+    <configurationParameters searchStrategy="language_fallback">
+      <configurationParameter>
+        <name>db.url</name>
+        <description>Jdbc url</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_MiniparSimilarityClusterTAE/odie.db.url</parameter>
+          <parameter>ODIE_CASC_LinSuggestionGenerator/odie.db.url</parameter>
+          <parameter>ODIE_PosHistogramGeneratorTAE/odie.db.url</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>db.driver</name>
+        <description>RDBMS driver</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_MiniparSimilarityClusterTAE/odie.db.driver</parameter>
+          <parameter>ODIE_PosHistogramGeneratorTAE/odie.db.driver</parameter>
+          <parameter>ODIE_CASC_LinSuggestionGenerator/odie.db.driver</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>db.username</name>
+        <description>User name</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_MiniparSimilarityClusterTAE/odie.db.user.name</parameter>
+          <parameter>ODIE_PosHistogramGeneratorTAE/odie.db.user.name</parameter>
+          <parameter>ODIE_CASC_LinSuggestionGenerator/odie.db.user.name</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>db.password</name>
+        <description>User password</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_MiniparSimilarityClusterTAE/odie.db.user.password</parameter>
+          <parameter>ODIE_PosHistogramGeneratorTAE/odie.db.user.password</parameter>
+          <parameter>ODIE_CASC_LinSuggestionGenerator/odie.db.user.password</parameter>
+        </overrides>
+      </configurationParameter>
+    </configurationParameters>
+    <configurationParameterSettings>
+      <nameValuePair>
+        <name>db.url</name>
+        <value>
+          <string>jdbc:mysql://10.144.36.202:3306/odie_1013</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>db.driver</name>
+        <value>
+          <string>org.gjt.mm.mysql.Driver</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>db.username</name>
+        <value>
+          <string>caties</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>db.password</name>
+        <value>
+          <string>caties</string>
+        </value>
+      </nameValuePair>
+    </configurationParameterSettings>
+    <flowConstraints>
+      <fixedFlow>
+        <node>ODIE_MiniparTAE</node>
+        <node>ODIE_PosHistogramGeneratorTAE</node>
+        <node>ODIE_MiniparSimilarityClusterTAE</node>
+        <node>ODIE_CASC_LinSuggestionGenerator</node>
+      </fixedFlow>
+    </flowConstraints>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

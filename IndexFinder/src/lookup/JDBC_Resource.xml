@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationParameterSettings>
+              <nameValuePair>
+                <name>DriverClassName</name>
+                <value>
+                  <string>com.mysql.jdbc.Driver</string>
+                </value>
+              </nameValuePair>
+              <nameValuePair>
+                <name>URL</name>
+                <value>
+                  <string>jdbc:mysql://localhost:3306/umls2010</string>
+                </value>
+              </nameValuePair>
+              <nameValuePair>
+                <name>Username</name>
+                <value>
+                  <string>caties</string>
+                </value>
+              </nameValuePair>
+              <nameValuePair>
+                <name>Password</name>
+                <value>
+                  <string>caties</string>
+                </value>
+              </nameValuePair>
+</configurationParameterSettings>

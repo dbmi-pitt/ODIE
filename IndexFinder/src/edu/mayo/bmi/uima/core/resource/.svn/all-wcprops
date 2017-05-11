@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/odie/!svn/ver/467/trunk/indexfinder/src/edu/mayo/bmi/uima/core/resource
+END
+FileLocator.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/odie/!svn/ver/467/trunk/indexfinder/src/edu/mayo/bmi/uima/core/resource/FileLocator.java
+END
+FileResourceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/odie/!svn/ver/244/trunk/indexfinder/src/edu/mayo/bmi/uima/core/resource/FileResourceImpl.java
+END
+SuffixMaxentModelResourceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/odie/!svn/ver/244/trunk/indexfinder/src/edu/mayo/bmi/uima/core/resource/SuffixMaxentModelResourceImpl.java
+END

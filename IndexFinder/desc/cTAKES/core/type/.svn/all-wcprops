@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/core/type
+END
+NamedEntity.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/core/type/NamedEntity.xml
+END
+ContractionToken.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/core/type/ContractionToken.xml
+END
+Property.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/core/type/Property.xml
+END
+OntologyConcept.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/core/type/OntologyConcept.xml
+END
+TypeSystem.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/core/type/TypeSystem.xml
+END
+DocumentID.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/core/type/DocumentID.xml
+END
+Lemma.xml
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/core/type/Lemma.xml
+END
+UmlsConcept.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/core/type/UmlsConcept.xml
+END
+Properties.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/core/type/Properties.xml
+END
+IdentifiedAnnotation.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/core/type/IdentifiedAnnotation.xml
+END
+NumToken.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/core/type/NumToken.xml
+END
+NewlineToken.xml
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/core/type/NewlineToken.xml
+END
+Segment.xml
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/core/type/Segment.xml
+END
+Sentence.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/core/type/Sentence.xml
+END
+SymbolToken.xml
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/core/type/SymbolToken.xml
+END
+PunctuationToken.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/core/type/PunctuationToken.xml
+END
+BaseToken.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/core/type/BaseToken.xml
+END
+WordToken.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/core/type/WordToken.xml
+END

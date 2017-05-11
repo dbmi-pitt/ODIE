@@ -1,0 +1,68 @@
+CREATE or REPLACE VIEW dist_prtcl_order_set_vw AS 
+       select os.ID AS ID,
+              os.UUID AS UUID,
+              os.SUBMISSION_DATE AS SUBMISSION_DATE,
+              os.COMPLETION_DATE AS COMPLETION_DATE,
+              os.DIST_PRTCL_ASSIGN_ID AS DIST_PRTCL_ASSIGN_ID,
+              os.NAME AS NAME,
+              os.DESCRIPTION AS DESCRIPTION,
+              dp.ID AS DIST_PRTCL_ID,
+              dp.TITLE AS DIST_PRTCL_TITLE,
+              dp.SHORT_TITLE AS DIST_PRTCL_SHORT_TITLE
+        from (((dist_prtcl dp 
+                join dist_prtcl_org dpo) 
+                join dist_prtcl_assign dpa) 
+                join order_set os) 
+       where ((dp.ID = dpo.DIST_PRTCL_ID) 
+                and (dpo.ID = dpa.DIST_PRTCL_ORG_ID) 
+               and (dpa.ID = os.DIST_PRTCL_ASSIGN_ID));
+               
+CREATE VIEW order_item_path_report_vw AS 
+         select pr.ID AS ID,
+                pr.UUID AS UUID,
+                pr.ORIGINAL_ID AS ORIGINAL_ID,
+                pr.COLLECTION_DATE_TIME AS COLLECTION_DATE_TIME,
+                pr.PATIENT_AGE_AT_COLLECTION AS PATIENT_AGE_AT_COLLECTION,
+                pr.DOCUMENT_TEXT AS DOCUMENT_TEXT,
+                pr.PATIENT_ID AS PATIENT_ID,
+                pr.ORG_ID AS ORG_ID,
+                pr.COLLECTION_YEAR AS COLLECTION_YEAR,
+                oi.ORDER_SET_ID AS ORDER_SET_ID,
+                os.UUID AS ORDER_SET_UUID,
+                o.PUBLIC_HANDLE AS PUBLIC_HANDLE from 
+                (((org o 
+                    join path_report pr) 
+                    join order_set os) 
+                    join order_item oi) 
+               where ((oi.ORDER_SET_ID = os.ID) 
+                  and (oi.PATH_REPORT_ID = pr.ID) 
+                  and (pr.ORG_ID = o.ID)) ;
+               
+select id  from dist_prtcl_order_set_vw where dist_prtcl_short_title like 'ODIE%'
+
+
+select order_set_id, count(*) as theCount from order_item
+where order_set_id in 
+     (select id  from dist_prtcl_order_set_vw 
+                 where dist_prtcl_short_title like 'ODIE%') 
+group by order_set_id 
+having theCount >= 200 ;
+
++--------------+----------+
+| order_set_id | theCount |
++--------------+----------+
+|     52592649 |      267 |
+|     53182464 |      200 |
+
+select
+    pr.id,
+    pr.document_text
+from
+    path_report pr,
+    order_set   os,
+    order_item  oi
+where
+    oi.path_report_id = pr.id and
+    oi.order_set_id = os.id and
+    oi.order_set_id in (52592649, 53313797) ;
+limit 2 ;

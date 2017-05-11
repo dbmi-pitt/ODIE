@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ODIE User Interface
+Bundle-SymbolicName: ODIEUI;singleton:=true
+Bundle-Version: 1.4
+Bundle-Activator: edu.pitt.dbmi.odie.ui.Activator
+Require-Bundle: ODIEDependencies,
+ org.eclipse.core.runtime,
+ org.eclipse.ui,
+ org.eclipse.jface.text,
+ org.eclipse.ui.editors,
+ org.eclipse.ui.workbench.texteditor,
+ ODIEMiddleTier,
+ org.eclipse.ui.intro,
+ org.eclipse.core.expressions,
+ org.eclipse.ui.forms,
+ ODIEPipelines
+Bundle-ClassPath: .
+Bundle-Vendor: DBMI, University of Pittsburgh
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Eclipse-RegisterBuddy: ODIEDependencies, ODIEUIMA
+Bundle-ActivationPolicy: lazy
+Export-Package: edu.pitt.dbmi.odie.uima.types,
+ edu.pitt.dbmi.odie.uima.utils

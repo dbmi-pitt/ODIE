@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/odie/!svn/ver/308/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/minipar/type
+END
+DepTreeNode_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/odie/!svn/ver/308/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/minipar/type/DepTreeNode_Type.java
+END
+POSType.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/odie/!svn/ver/308/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/minipar/type/POSType.java
+END
+POSType_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/odie/!svn/ver/308/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/minipar/type/POSType_Type.java
+END
+DepTreeNode.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/odie/!svn/ver/308/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/minipar/type/DepTreeNode.java
+END

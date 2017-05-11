@@ -1,0 +1,89 @@
+10
+
+dir
+746
+https://bmir-gforge.stanford.edu/svn/odie/trunk/indexfinder/src
+https://bmir-gforge.stanford.edu/svn/odie
+
+
+
+2011-01-10T20:16:52.206346Z
+745
+mitchellkj
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+f3021145-4511-4508-9844-c75a762d3a4b
+
+minipar
+dir
+
+gate
+dir
+
+sentdetect
+dir
+
+models
+dir
+
+lvg
+dir
+
+lookup
+dir
+
+log4j.properties
+file
+
+
+
+
+2009-10-22T19:20:14.877981Z
+69a3042ad8ce2cea0f69e61f06d97353
+2009-09-17T16:01:09.869967Z
+167
+mitchellkj
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+918
+
+tokenizer
+dir
+
+edu
+dir
+
+coref
+dir
+

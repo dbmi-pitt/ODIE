@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<collectionReaderDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <implementationName>edu.pitt.dbmi.odie.uima.church.reader.ODIE_JdbcCollectionReader</implementationName>
+  <processingResourceMetaData>
+    <name>ODIE_JdbcCollectionReader</name>
+    <description>Collection Reader that pull documents from a caTIES
+RDBMS.   PATHOLOGY_REPORT.DOCUMENT_TEXT.</description>
+    <version>1.0</version>
+    <vendor>Pitt</vendor>
+    <configurationParameters>
+      <configurationParameter>
+        <name>odie.db.driver</name>
+        <description>RDBMS driver</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.db.url</name>
+        <description>Jdbc url</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.db.user.name</name>
+        <description>User name</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.db.user.password</name>
+        <description>User password</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.language</name>
+        <description>Language of the documents</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.reports.to.process</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.db.select.sql</name>
+        <description>Special select statement sql that will be limited by the reports.</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+      </configurationParameter>
+    </configurationParameters>
+    <configurationParameterSettings>
+      <nameValuePair>
+        <name>odie.db.driver</name>
+        <value>
+          <string>org.gjt.mm.mysql.Driver</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.db.url</name>
+        <value>
+          <string>jdbc:mysql://1upmc-opi-spn01:3306/caties_ctrm_gt4_spn01</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.db.user.name</name>
+        <value>
+          <string>caties</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.db.user.password</name>
+        <value>
+          <string>caties</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.language</name>
+        <value>
+          <string>ENG</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.db.select.sql</name>
+        <value>
+          <string>select uuid, document_text from order_item_path_report_vw where order_set_id = 51314688</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.reports.to.process</name>
+        <value>
+          <string>20</string>
+        </value>
+      </nameValuePair>
+    </configurationParameterSettings>
+    <typeSystemDescription>
+      <imports>
+        <import name="org.apache.uima.examples.SourceDocumentInformation"/>
+      </imports>
+    </typeSystemDescription>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs>
+          <type allAnnotatorFeatures="true">org.apache.uima.examples.SourceDocumentInformation</type>
+        </outputs>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>false</multipleDeploymentAllowed>
+      <outputsNewCASes>true</outputsNewCASes>
+    </operationalProperties>
+  </processingResourceMetaData>
+  <resourceManagerConfiguration/>
+</collectionReaderDescription>

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/odie/!svn/ver/725/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/church/types
+END
+ODIE_StopWord.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/odie/!svn/ver/593/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/church/types/ODIE_StopWord.java
+END
+ODIE_StopWord_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/odie/!svn/ver/593/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/church/types/ODIE_StopWord_Type.java
+END
+ODIE_Word.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/odie/!svn/ver/725/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/church/types/ODIE_Word.java
+END
+ODIE_Word_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/odie/!svn/ver/725/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/church/types/ODIE_Word_Type.java
+END

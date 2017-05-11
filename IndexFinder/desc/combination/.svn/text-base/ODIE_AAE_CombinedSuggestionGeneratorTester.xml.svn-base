@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="ODIE_CASC_ChurchSuggestionGenerator">
+      <import location="../church/ODIE_CASC_ChurchSuggestionGenerator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="TokenizerAnnotator">
+      <import location="../cTAKES/core/analysis_engine/TokenizerAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_MiniparSimilarityClusterTAE">
+      <import location="../dekanlin/ODIE_MiniparSimilarityClusterTAE.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_AE_StopWordDetector">
+      <import location="../church/ODIE_AE_StopWordDetector.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_CASC_LspTermPairCasConsumer">
+      <import location="../lsp/ODIE_CASC_LspTermPairCasConsumer.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_MiniparTAE">
+      <import location="../minipar/ODIE_MiniparTAE.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_CASC_LspSuggestionGenerator">
+      <import location="../lsp/ODIE_CASC_LspSuggestionGenerator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_CASC_CombinedSuggestionGenerator">
+      <import location="ODIE_CASC_CombinedSuggestionGenerator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_IndexFinderTAE">
+      <import location="../indexfinder/ODIE_IndexFinderTAE.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_CASC_LinSuggestionGenerator">
+      <import location="../dekanlin/ODIE_CASC_LinSuggestionGenerator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_AE_Gazetteer">
+      <import location="../gate/gazetteer/ODIE_AE_Gazetteer.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ContextDependentTokenizerAnnotator">
+      <import location="../cTAKES/cdt/analysis_engine/ContextDependentTokenizerAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="StatusAnnotator">
+      <import location="../cTAKES/NE/analysis_engine/StatusAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="NegationAnnotator">
+      <import location="../cTAKES/NE/analysis_engine/NegationAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="SentenceDetectorAnnotator">
+      <import location="../cTAKES/core/analysis_engine/SentenceDetectorAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="SimpleSegmentAnnotator">
+      <import location="../cTAKES/core/analysis_engine/SimpleSegmentAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_AE_Jape">
+      <import location="../gate/jape/ODIE_AE_Jape.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_AE_Jape2">
+      <import location="../gate/jape/ODIE_AE_Jape.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="POSTagger">
+      <import location="../cTAKES/POS Tagger/analysis_engine/POSTagger.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_PosHistogramGeneratorTAE">
+      <import location="../dekanlin/ODIE_PosHistogramGeneratorTAE.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="Chunker">
+      <import location="../cTAKES/chunker/analysis_engine/Chunker.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_LspTAE">
+      <import location="../lsp/ODIE_LspTAE.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ExtractionPrepAnnotator">
+      <import location="../cTAKES/cdp/analysis_engine/ExtractionPrepAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="LookupWindowAnnotator">
+      <import location="../cTAKES/cdp/analysis_engine/LookupWindowAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="LvgAnnotator">
+      <import location="../cTAKES/LVG/analysis_engine/LvgAnnotator.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>ODIE Combined Suggestion Generator Tester</name>
+    <description>Runs all FY02 Concept Discovery Techniques and aggregates the results to suggested_combined_vw.</description>
+    <version>1.0</version>
+    <vendor>DBMI, University of Pittsburgh</vendor>
+    <configurationParameters searchStrategy="none">
+      <configurationParameter>
+        <name>odie.is.contiguous</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_IndexFinderTAE/odie.is.contiguous</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.is.overlapping</name>
+        <description>When true return overlapping annotations</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+        <overrides>
+          <parameter>ODIE_IndexFinderTAE/odie.is.overlapping</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>ODIE_IndexFinderTAE.odie.db.url</name>
+        <description>Jdbc url</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_IndexFinderTAE/odie.db.url</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>analysis.odie.db.url</name>
+        <description>Db url</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_CASC_ChurchSuggestionGenerator/odie.db.url</parameter>
+          <parameter>ODIE_MiniparSimilarityClusterTAE/odie.db.url</parameter>
+          <parameter>ODIE_CASC_LspSuggestionGenerator/odie.db.url</parameter>
+          <parameter>ODIE_CASC_CombinedSuggestionGenerator/odie.db.url</parameter>
+          <parameter>ODIE_CASC_LinSuggestionGenerator/odie.db.url</parameter>
+          <parameter>ODIE_PosHistogramGeneratorTAE/odie.db.url</parameter>
+          <parameter>ODIE_CASC_LspTermPairCasConsumer/odie.db.url</parameter>
+          <parameter>ODIE_LspTAE/odie.db.url</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.db.driver</name>
+        <description>Db driver</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_CASC_ChurchSuggestionGenerator/odie.db.driver</parameter>
+          <parameter>ODIE_MiniparSimilarityClusterTAE/odie.db.driver</parameter>
+          <parameter>ODIE_CASC_LspTermPairCasConsumer/odie.db.driver</parameter>
+          <parameter>ODIE_CASC_LspSuggestionGenerator/odie.db.driver</parameter>
+          <parameter>ODIE_CASC_CombinedSuggestionGenerator/odie.db.driver</parameter>
+          <parameter>ODIE_IndexFinderTAE/odie.db.driver</parameter>
+          <parameter>ODIE_CASC_LinSuggestionGenerator/odie.db.driver</parameter>
+          <parameter>ODIE_PosHistogramGeneratorTAE/odie.db.driver</parameter>
+          <parameter>ODIE_LspTAE/odie.db.driver</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.db.user.name</name>
+        <description>Username</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_CASC_ChurchSuggestionGenerator/odie.db.user.name</parameter>
+          <parameter>ODIE_MiniparSimilarityClusterTAE/odie.db.user.name</parameter>
+          <parameter>ODIE_CASC_LspTermPairCasConsumer/odie.db.user.name</parameter>
+          <parameter>ODIE_CASC_LspSuggestionGenerator/odie.db.user.name</parameter>
+          <parameter>ODIE_CASC_CombinedSuggestionGenerator/odie.db.user.name</parameter>
+          <parameter>ODIE_IndexFinderTAE/odie.db.user.name</parameter>
+          <parameter>ODIE_CASC_LinSuggestionGenerator/odie.db.user.name</parameter>
+          <parameter>ODIE_PosHistogramGeneratorTAE/odie.db.user.name</parameter>
+          <parameter>ODIE_LspTAE/odie.db.user.name</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.db.user.password</name>
+        <description>Db user password</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_CASC_ChurchSuggestionGenerator/odie.db.user.password</parameter>
+          <parameter>ODIE_MiniparSimilarityClusterTAE/odie.db.user.password</parameter>
+          <parameter>ODIE_CASC_LspTermPairCasConsumer/odie.db.user.password</parameter>
+          <parameter>ODIE_CASC_LspSuggestionGenerator/odie.db.user.password</parameter>
+          <parameter>ODIE_CASC_CombinedSuggestionGenerator/odie.db.user.password</parameter>
+          <parameter>ODIE_IndexFinderTAE/odie.db.user.password</parameter>
+          <parameter>ODIE_CASC_LinSuggestionGenerator/odie.db.user.password</parameter>
+          <parameter>ODIE_PosHistogramGeneratorTAE/odie.db.user.password</parameter>
+          <parameter>ODIE_LspTAE/odie.db.user.password</parameter>
+        </overrides>
+      </configurationParameter>
+    </configurationParameters>
+    <configurationParameterSettings>
+      <nameValuePair>
+        <name>odie.is.contiguous</name>
+        <value>
+          <string>true</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.is.overlapping</name>
+        <value>
+          <string>false</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>ODIE_IndexFinderTAE.odie.db.url</name>
+        <value>
+          <string>jdbc:mysql://1upmc-opi-cab52:3307/od_lex_ifbuild</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>analysis.odie.db.url</name>
+        <value>
+          <string>jdbc:mysql://10.144.36.202:3306/odie_1013</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.db.driver</name>
+        <value>
+          <string>org.gjt.mm.mysql.Driver</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.db.user.name</name>
+        <value>
+          <string>caties</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.db.user.password</name>
+        <value>
+          <string>caties</string>
+        </value>
+      </nameValuePair>
+    </configurationParameterSettings>
+    <flowConstraints>
+      <fixedFlow>
+        <node>SimpleSegmentAnnotator</node>
+        <node>SentenceDetectorAnnotator</node>
+        <node>TokenizerAnnotator</node>
+        <node>LvgAnnotator</node>
+        <node>ContextDependentTokenizerAnnotator</node>
+        <node>POSTagger</node>
+        <node>ODIE_AE_Gazetteer</node>
+        <node>ODIE_AE_Jape</node>
+        <node>Chunker</node>
+        <node>LookupWindowAnnotator</node>
+        <node>ODIE_IndexFinderTAE</node>
+        <node>StatusAnnotator</node>
+        <node>NegationAnnotator</node>
+        <node>ExtractionPrepAnnotator</node>
+        <node>ODIE_AE_Jape2</node>
+        <node>ODIE_CASC_LspSuggestionGenerator</node>
+        <node>ODIE_CASC_ChurchSuggestionGenerator</node>
+        <node>ODIE_MiniparTAE</node>
+        <node>ODIE_PosHistogramGeneratorTAE</node>
+        <node>ODIE_MiniparSimilarityClusterTAE</node>
+        <node>ODIE_CASC_LinSuggestionGenerator</node>
+        <node>ODIE_CASC_CombinedSuggestionGenerator</node>
+      </fixedFlow>
+    </flowConstraints>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration>
+    <imports>
+      <import location="../odie_pipe/ODIE_AE_NER_CD_RESOURCE_MGR.xml"/>
+    </imports>
+  </resourceManagerConfiguration>
+</analysisEngineDescription>

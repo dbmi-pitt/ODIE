@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <name>ODIE_GateTypeSystemDescriptor</name>
+  <description/>
+  <version>1.0</version>
+  <vendor>University of Pittsburgh DBMI ODIE project</vendor>
+  <types>
+    <typeDescription>
+      <name>edu.pitt.dbmi.odie.uima.gate.type.ODIE_GateAnnotation</name>
+      <description>Used to store transient GATE annotations in the CAS
+between calls to Wrapped GATE PRs</description>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>gateAnnotationId</name>
+          <description/>
+          <rangeTypeName>uima.cas.Integer</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>gateAnnotationType</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+    <typeDescription>
+      <name>edu.pitt.dbmi.odie.uima.gate.type.ODIE_GateFeature</name>
+      <description/>
+      <supertypeName>uima.tcas.Annotation</supertypeName>
+      <features>
+        <featureDescription>
+          <name>gateAnnotationId</name>
+          <description/>
+          <rangeTypeName>uima.cas.Integer</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>gateFeatureKey</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+        <featureDescription>
+          <name>gateFeatureValue</name>
+          <description/>
+          <rangeTypeName>uima.cas.String</rangeTypeName>
+        </featureDescription>
+      </features>
+    </typeDescription>
+  </types>
+</typeSystemDescription>

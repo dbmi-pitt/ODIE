@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>true</primitive>
+  <annotatorImplementationName>edu.pitt.dbmi.odie.uima.gate.gazetteer.ae.ODIE_GazetteerTAE</annotatorImplementationName>
+  <analysisEngineMetaData>
+    <name>ODIE_AE_Gazetteer</name>
+    <description>Equivalent functionality of the GATE Gazetteer.</description>
+    <version>1.0</version>
+    <vendor>University of Pittsburgh DBMI ODIE project</vendor>
+    <configurationParameters/>
+    <configurationParameterSettings/>
+    <typeSystemDescription>
+      <imports>
+        <import location="../../cTAKES/core/type/TypeSystem.xml"/>
+        <import location="../type/ODIE_GateTypeSystemDescriptor.xml"/>
+      </imports>
+    </typeSystemDescription>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs>
+          <type allAnnotatorFeatures="true">edu.mayo.bmi.uima.core.type.WordToken</type>
+        </inputs>
+        <outputs>
+          <type allAnnotatorFeatures="true">edu.pitt.dbmi.odie.uima.gate.type.ODIE_GateAnnotation</type>
+        </outputs>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <externalResourceDependencies>
+    <externalResourceDependency>
+      <key>ODIE_Gate_Factory</key>
+      <description/>
+      <interfaceName>edu.pitt.dbmi.odie.uima.gate.resource.ODIE_GateResource</interfaceName>
+      <optional>false</optional>
+    </externalResourceDependency>
+    <externalResourceDependency>
+      <key>ODIE_Gazetteer_Processing_Resource</key>
+      <description/>
+      <interfaceName>edu.pitt.dbmi.odie.uima.gate.resource.ODIE_GateProcessingResourceUrlResource</interfaceName>
+      <optional>false</optional>
+    </externalResourceDependency>
+  </externalResourceDependencies>
+  <resourceManagerConfiguration>
+    <externalResources>
+      <externalResource>
+        <name>odie.gate.factory</name>
+        <description/>
+        <fileResourceSpecifier>
+          <fileUrl>file:gate/odiehome</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName>edu.pitt.dbmi.odie.uima.gate.resource.ODIE_GateResourceImpl</implementationName>
+      </externalResource>
+      <externalResource>
+        <name>odie.gazetteer.pr</name>
+        <description/>
+        <fileResourceSpecifier>
+          <fileUrl>file:gate/odiehome/gazetteer/ODIE_NER_Discovery_Patterns.def</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName>edu.pitt.dbmi.odie.uima.gate.resource.ODIE_GateProcessingResourceUrlResourceImpl</implementationName>
+      </externalResource>
+    </externalResources>
+    <externalResourceBindings>
+      <externalResourceBinding>
+        <key>ODIE_Gate_Factory</key>
+        <resourceName>odie.gate.factory</resourceName>
+      </externalResourceBinding>
+      <externalResourceBinding>
+        <key>ODIE_Gazetteer_Processing_Resource</key>
+        <resourceName>odie.gazetteer.pr</resourceName>
+      </externalResourceBinding>
+    </externalResourceBindings>
+  </resourceManagerConfiguration>
+</analysisEngineDescription>

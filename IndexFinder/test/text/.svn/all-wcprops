@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/svn/odie/!svn/ver/330/trunk/indexfinder/test/text
+END
+african1.txt
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/odie/!svn/ver/329/trunk/indexfinder/test/text/african1.txt
+END
+radiology1.txt
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/odie/!svn/ver/330/trunk/indexfinder/test/text/radiology1.txt
+END
+radiology2.txt
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/odie/!svn/ver/330/trunk/indexfinder/test/text/radiology2.txt
+END
+radiology3.txt
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/odie/!svn/ver/330/trunk/indexfinder/test/text/radiology3.txt
+END

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/odie/!svn/ver/403/trunk/ui/src/edu/pitt/dbmi/odie/ui/wizards
+END
+NewOdieOntologyPackageWizard.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/odie/!svn/ver/779/trunk/ui/src/edu/pitt/dbmi/odie/ui/wizards/NewOdieOntologyPackageWizard.java
+END
+PEARInstallerWizard.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/odie/!svn/ver/659/trunk/ui/src/edu/pitt/dbmi/odie/ui/wizards/PEARInstallerWizard.java
+END
+ImportAnalysisEnginesWizard.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/odie/!svn/ver/659/trunk/ui/src/edu/pitt/dbmi/odie/ui/wizards/ImportAnalysisEnginesWizard.java
+END
+NewLexicalSetWizard.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/odie/!svn/ver/702/trunk/ui/src/edu/pitt/dbmi/odie/ui/wizards/NewLexicalSetWizard.java
+END
+DropInInstallerWizard.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/779/trunk/ui/src/edu/pitt/dbmi/odie/ui/wizards/DropInInstallerWizard.java
+END
+BioportalNewProposalNoteWizard.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/odie/!svn/ver/738/trunk/ui/src/edu/pitt/dbmi/odie/ui/wizards/BioportalNewProposalNoteWizard.java
+END
+ShowChildrenPatternFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/wizards/ShowChildrenPatternFilter.java
+END
+ImportOntologiesWizard.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/odie/!svn/ver/702/trunk/ui/src/edu/pitt/dbmi/odie/ui/wizards/ImportOntologiesWizard.java
+END
+NewAnalysisWizard.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/odie/!svn/ver/659/trunk/ui/src/edu/pitt/dbmi/odie/ui/wizards/NewAnalysisWizard.java
+END

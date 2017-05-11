@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="TokenizerAnnotator">
+      <import location="../cTAKES/core/analysis_engine/TokenizerAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_MiniparSimilarityClusterTAE">
+      <import location="../dekanlin/ODIE_MiniparSimilarityClusterTAE.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ContextDependentTokenizerAnnotator">
+      <import location="../cTAKES/cdt/analysis_engine/ContextDependentTokenizerAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="StatusAnnotator">
+      <import location="../cTAKES/NE/analysis_engine/StatusAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="NegationAnnotator">
+      <import location="../cTAKES/NE/analysis_engine/NegationAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_AE_StopWordDetector">
+      <import location="../church/ODIE_AE_StopWordDetector.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="SentenceDetectorAnnotator">
+      <import location="../cTAKES/core/analysis_engine/SentenceDetectorAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_MiniparTAE">
+      <import location="../minipar/ODIE_MiniparTAE.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="SimpleSegmentAnnotator">
+      <import location="../cTAKES/core/analysis_engine/SimpleSegmentAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="POSTagger">
+      <import location="../cTAKES/POS Tagger/analysis_engine/POSTagger.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_PosHistogramGeneratorTAE">
+      <import location="../dekanlin/ODIE_PosHistogramGeneratorTAE.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="Chunker">
+      <import location="../cTAKES/chunker/analysis_engine/Chunker.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_AE_LuceneNer">
+      <import location="../lucenefinder/ODIE_AE_LuceneNer.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ExtractionPrepAnnotator">
+      <import location="../cTAKES/cdp/analysis_engine/ExtractionPrepAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="LookupWindowAnnotator">
+      <import location="../cTAKES/cdp/analysis_engine/LookupWindowAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="LvgAnnotator">
+      <import location="../cTAKES/LVG/analysis_engine/LvgAnnotator.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>ODIE Kai 2010 Front End Pipe</name>
+    <description>Runs all Lucene Index Finder NER and preliminary TAs for Dekan Lin and Church methods.</description>
+    <version>1.0</version>
+    <vendor>DBMI, University of Pittsburgh</vendor>
+    <configurationParameters searchStrategy="none">
+      <configurationParameter>
+        <name>analysis.odie.db.url</name>
+        <description>Db url</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_MiniparSimilarityClusterTAE/odie.db.url</parameter>
+          <parameter>ODIE_PosHistogramGeneratorTAE/odie.db.url</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.db.driver</name>
+        <description>Db driver</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_MiniparSimilarityClusterTAE/odie.db.driver</parameter>
+          <parameter>ODIE_PosHistogramGeneratorTAE/odie.db.driver</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.db.user.name</name>
+        <description>Username</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_MiniparSimilarityClusterTAE/odie.db.user.name</parameter>
+          <parameter>ODIE_PosHistogramGeneratorTAE/odie.db.user.name</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.db.user.password</name>
+        <description>Db user password</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_MiniparSimilarityClusterTAE/odie.db.user.password</parameter>
+          <parameter>ODIE_PosHistogramGeneratorTAE/odie.db.user.password</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.fs.directory.path</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_AE_LuceneNer/odie.fs.directory.path</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.is.contiguous</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_AE_LuceneNer/odie.is.contiguous</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.is.overlapping</name>
+        <description>When true return overlapping annotations</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+        <overrides>
+          <parameter>ODIE_AE_LuceneNer/odie.is.overlapping</parameter>
+        </overrides>
+      </configurationParameter>
+    </configurationParameters>
+    <configurationParameterSettings>
+      <nameValuePair>
+        <name>analysis.odie.db.url</name>
+        <value>
+          <string>jdbc:mysql://localhost:3306/kai</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.db.driver</name>
+        <value>
+          <string>org.gjt.mm.mysql.Driver</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.db.user.name</name>
+        <value>
+          <string>caties</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.db.user.password</name>
+        <value>
+          <string>caties</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.fs.directory.path</name>
+        <value>
+          <string>C:/index_radlex_200</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.is.contiguous</name>
+        <value>
+          <string>true</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.is.overlapping</name>
+        <value>
+          <string>false</string>
+        </value>
+      </nameValuePair>
+    </configurationParameterSettings>
+    <flowConstraints>
+      <fixedFlow>
+        <node>SimpleSegmentAnnotator</node>
+        <node>SentenceDetectorAnnotator</node>
+        <node>TokenizerAnnotator</node>
+        <node>ODIE_AE_StopWordDetector</node>
+        <node>LvgAnnotator</node>
+        <node>ContextDependentTokenizerAnnotator</node>
+        <node>POSTagger</node>
+        <node>Chunker</node>
+        <node>LookupWindowAnnotator</node>
+        <node>ODIE_AE_LuceneNer</node>
+        <node>StatusAnnotator</node>
+        <node>NegationAnnotator</node>
+        <node>ExtractionPrepAnnotator</node>
+      </fixedFlow>
+    </flowConstraints>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration>
+    <imports>
+      <import location="../odie_pipe/ODIE_AE_NER_CD_RESOURCE_MGR.xml"/>
+    </imports>
+  </resourceManagerConfiguration>
+</analysisEngineDescription>

@@ -1,0 +1,12 @@
+output.ODIEUI/ = bin/
+bin.includes = plugin.xml,\
+               META-INF/,\
+               icons/,\
+               splash.bmp,\
+               images/,\
+               .
+src.includes = src/,\
+               images/,\
+               icons/
+source.. = src/,\
+           descriptors/

@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/odie/!svn/ver/740/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/dekanlin/model
+END
+ODIE_HistogramEntry.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/odie/!svn/ver/265/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/dekanlin/model/ODIE_HistogramEntry.java
+END
+ODIE_MiniparTriple.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/odie/!svn/ver/794/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/dekanlin/model/ODIE_MiniparTriple.java
+END
+ODIE_MiniparTripleTwComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/odie/!svn/ver/254/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/dekanlin/model/ODIE_MiniparTripleTwComparator.java
+END
+ODIE_MiniparTripleIdComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/odie/!svn/ver/254/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/dekanlin/model/ODIE_MiniparTripleIdComparator.java
+END
+ODIE_Similarity.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/odie/!svn/ver/265/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/dekanlin/model/ODIE_Similarity.java
+END
+ODIE_HistogramEntryFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/odie/!svn/ver/794/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/dekanlin/model/ODIE_HistogramEntryFactory.java
+END
+ODIE_MiniparTripleFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/odie/!svn/ver/461/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/dekanlin/model/ODIE_MiniparTripleFactory.java
+END
+ODIE_MiniparTriplePair.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/odie/!svn/ver/254/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/dekanlin/model/ODIE_MiniparTriplePair.java
+END
+ODIE_SimilarityFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/odie/!svn/ver/794/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/dekanlin/model/ODIE_SimilarityFactory.java
+END

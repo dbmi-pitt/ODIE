@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/odie/!svn/ver/226/trunk/indexfinder/dev/script/mysql/church
+END
+AlterWordPairs.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/odie/!svn/ver/226/trunk/indexfinder/dev/script/mysql/church/AlterWordPairs.sql
+END
+ReportIxy_NP.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/odie/!svn/ver/226/trunk/indexfinder/dev/script/mysql/church/ReportIxy_NP.sql
+END
+ReportIxy_NE.sql
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/odie/!svn/ver/226/trunk/indexfinder/dev/script/mysql/church/ReportIxy_NE.sql
+END
+ReportIxy_Word.sql
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/odie/!svn/ver/226/trunk/indexfinder/dev/script/mysql/church/ReportIxy_Word.sql
+END

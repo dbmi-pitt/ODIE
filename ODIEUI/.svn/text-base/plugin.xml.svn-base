@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+   <extension-point id="splashExtension" name="Splash Extensions" schema="schema/splashExtension.exsd"/>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="edu.pitt.dbmi.odie.ui.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            class="edu.pitt.dbmi.odie.ui.Perspective"
+            icon="icons/odieicon16.png"
+            id="edu.pitt.dbmi.odie.perspective"
+            name="ODIE Perspective">
+      </perspective>
+   </extension>
+  
+
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="edu.pitt.dbmi.odie.ui.views.ConceptsViewWithHelp"
+            icon="icons/237-rhomb_violet_with_c.png"
+            id="edu.pitt.dbmi.odie.ui.views.ConceptsView"
+            name="Concepts">
+      </view>
+      <view
+            class="edu.pitt.dbmi.odie.ui.views.DocumentsViewWithHelp"
+            icon="icons/703-files.png"
+            id="edu.pitt.dbmi.odie.ui.views.DocumentsView"
+            name="Documents">
+      </view>
+      <view
+            class="edu.pitt.dbmi.odie.ui.views.AnalysesViewWithHelp"
+            icon="icons/012-options_1.png"
+            id="edu.pitt.dbmi.odie.ui.views.AnalysesView"
+            name="Analyses">
+      </view>
+      <view
+            class="edu.pitt.dbmi.odie.ui.views.AnnotationsViewWithHelp"
+            icon="icons/080-file_message.png"
+            id="edu.pitt.dbmi.odie.ui.views.AnnotationTypeView"
+            name="Annotations">
+      </view>
+      <view
+            class="edu.pitt.dbmi.odie.ui.views.DetailsViewWithHelp"
+            icon="icons/220-point_gray_with_i.png"
+            id="edu.pitt.dbmi.odie.ui.views.DetailsView"
+            name="Details">
+      </view>
+      <view
+            class="edu.pitt.dbmi.odie.ui.views.SuggestionsViewWithHelp"
+            icon="icons/091-file_new_1.png"
+            id="edu.pitt.dbmi.odie.ui.views.SuggestionsView"
+            name="Suggestions"
+            restorable="true">
+      </view>
+      <view
+            class="edu.pitt.dbmi.odie.ui.views.OntologiesView"
+            icon="icons/chart_organisation.png"
+            id="edu.pitt.dbmi.odie.ui.views.OntologiesView"
+            name="Ontologies">
+      </view>
+      <view
+            class="edu.pitt.dbmi.odie.ui.views.CoreferenceViewWithHelp"
+            icon="icons/building_link.png"
+            id="edu.pitt.dbmi.odie.ui.views.CoreferenceView"
+            name="Coreference">
+      </view>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="edu.pitt.dbmi.odie.ui.editors.analysis.ChartEditor"
+            icon="icons/108-graph2.png"
+            id="edu.pitt.dbmi.odie.ui.editors.ChartEditor"
+            name="Interactive Chart">
+      </editor>
+      <editor
+            class="edu.pitt.dbmi.odie.ui.editors.document.AnnotatedDocumentEditor"
+            icon="icons/001-doc.png"
+            id="edu.pitt.dbmi.odie.ui.editors.AnnotatedDocumentEditor"
+            name="Annotated Document Editor">
+      </editor>
+      <editor
+            class="edu.pitt.dbmi.odie.ui.editors.analysis.AnalysisEditor"
+            default="false"
+            icon="icons/012-options_1.png"
+            id="edu.pitt.dbmi.odie.ui.editors.AnalysisEditor"
+            name="Analysis Editor">
+      </editor>
+      <editor
+            class="edu.pitt.dbmi.odie.ui.editors.ontology.OntologyEditor"
+            default="false"
+            icon="icons/chart_organisation.png"
+            id="edu.pitt.dbmi.odie.ui.editors.OntologyEditor"
+            name="Ontology Editor">
+      </editor>
+      <editor
+            class="edu.pitt.dbmi.odie.ui.editors.analysiscomparison.AnalysesComparisonEditor"
+            default="false"
+            icon="icons/doccompare.png"
+            id="edu.pitt.dbmi.odie.ui.editors.AnalysesComparisonEditor"
+            name="Compare Analyses">
+      </editor>
+      <editor
+            class="edu.pitt.dbmi.odie.ui.editors.browser.BrowserEditor"
+            default="false"
+            icon="icons/firefox-16.png"
+            id="edu.pitt.dbmi.odie.ui.editors.browser.BrowserEditor"
+            name="Web Browser">
+      </editor>
+   </extension>
+    
+   <extension
+         id="ODIE"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="ODIEUI.application"
+            name="ODIE Workbench v1.32">
+         <property
+               name="appName"
+               value="ODIE Workbench v1.32">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+     <property
+           name="windowImages"
+           value="icons/odie16.gif,icons/odie32.gif,icons/odie48.gif,icons/odie64.gif,icons/odie128.gif">
+     </property>
+     <property
+           name="aboutImage"
+           value="images/odieabout.gif">
+     </property>
+     <property
+           name="aboutText"
+           value="ODIE Workbench&#x0A;&#x0A;Version: 1.32&#x0A;&#x0A;(c) Copyright DBMI, University of Pittsburgh 2011. All rights reserved.&#x0A;&#x0A;This software has been developed by the Department of Biomedical Informatics at the University of Pittsburgh in collaboration with the Mayo Clinic, Stanford University and the National Center for Biomedical Informatics (NCBO).">
+     </property>
+     <property
+           name="startupProgressRect"
+           value="47,211,390,15">
+     </property>
+     <property
+           name="startupForegroundColor"
+           value="000000">
+     </property>
+     <property
+           name="startupMessageRect"
+           value="49,194,390,15">
+     </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.splashHandlers">
+      <splashHandlerProductBinding
+            productId="ODIEUI.ODIE"
+            splashId="odieui.splashHandlers">
+      </splashHandlerProductBinding>
+      <splashHandler
+            class="edu.pitt.dbmi.odie.ui.splashHandlers.SplashHandler"
+            id="odieui.splashHandlers">
+      </splashHandler>
+   </extension>
+   <extension
+         id="toolbar:edu.pitt.dbmi.odie.ui.views.AnalysesView"
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               label="File">
+            <menu
+                  label="New">
+               <command
+                     commandId="newanalysis.command"
+                     icon="icons/cog_add.png"
+                     label="Analysis"
+                     style="push"
+                     tooltip="Start a new Analysis">
+               </command>
+               <command
+                     commandId="newlexicalset.command"
+                     icon="icons/bookadd.png"
+                     label="Vocabulary"
+                     style="push"
+                     tooltip="Create a new indexfinder ontology set from existing ontologies">
+               </command>
+            </menu>
+            <menu
+                  label="Import">
+               <command
+                     commandId="importontologies.command"
+                     icon="icons/chart_organisation_add.png"
+                     label="Ontologies"
+                     style="push">
+               </command>
+            </menu>
+            <command
+                  commandId="org.eclipse.ui.window.preferences"
+                  id="Preferences"
+                  label="Preferences"
+                  style="push">
+            </command>
+            <command
+                  commandId="save.command"
+                  label="Save"
+                  style="push">
+            </command>
+            <command
+                  commandId="org.eclipse.ui.file.exit"
+                  icon="icons/door_out.png"
+                  label="Exit"
+                  style="push">
+            </command>
+         </menu>
+         <menu
+               label="Tools">
+            <command
+                  commandId="dropins.command"
+                  label="Dropins Installer"
+                  style="push">
+            </command>
+            <command
+                  commandId="pearinstaller.command"
+                  label="PEAR Installer"
+                  style="push">
+            </command>
+            <command
+                  commandId="importanalysisengines.command"
+                  label="Analysis Engine Installer"
+                  style="push">
+            </command>
+            <command
+                  commandId="browser.command"
+                  icon="icons/firefox-16.png"
+                  label="Web Browser"
+                  style="push">
+            </command>
+            <command
+                  commandId="newodiepackage.command"
+                  label="ODIE Ontology Packager"
+                  style="push">
+            </command>
+         </menu>
+         <menu
+               label="Help">
+            <command
+                  commandId="org.eclipse.ui.help.aboutAction"
+                  label="About ODIE"
+                  style="push">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:edu.pitt.dbmi.odie.ui.views.AnalysesView">
+         <command
+               commandId="runanalysis.command"
+               icon="icons/cog_go.png"
+               label="Run Analysis"
+               style="push">
+         </command>
+      </menuContribution>
+      <menuContribution
+            locationURI="popup:edu.pitt.dbmi.odie.ui.views.AnalysesView">
+         <command
+               commandId="newanalysis.command"
+               icon="icons/cog_add.png"
+               label="New Analysis"
+               style="push"
+               tooltip="Start a new Analysis">
+         </command>
+         <command
+               commandId="compareanalyses.command"
+               icon="icons/doccompare.png"
+               label="Compare Analyses"
+               style="push">
+            label="Import Ontology"
+               style="push">
+            <enabledWhen
+                  checkEnabled="false">
+               <with
+                     variable="activeMenuSelection">
+                  <count
+                        value="2">
+                  </count>
+               </with>
+            </enabledWhen>
+         </command>
+         <separator
+               name="ODIEUI.separator1"
+               visible="true">
+         </separator>
+         <command
+               commandId="deleteanalysis.command"
+               icon="icons/cog_delete.png"
+               label="Delete Analysis"
+               style="push"
+               tooltip="Deletes the selected analysis from the database">
+         </command>
+         <command
+               commandId="closeanalysis.command"
+               label="Close Analysis"
+               style="push">
+         </command>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar">
+         <command
+               commandId="importontologies.command"
+               icon="icons/chart_organisation_add.png"
+               label="Import Ontology"
+               style="push">
+         </command>
+      </menuContribution>
+      <menuContribution
+            locationURI="popup:edu.pitt.dbmi.odie.ui.views.OntologiesView">
+         <command
+               commandId="importontologies.command"
+               icon="icons/chart_organisation_add.png"
+               label="Import Ontologies"
+               style="push">
+         </command>
+         <separator
+               name="ODIEUI.separator2">
+         </separator>
+         <command
+               commandId="deleteontology.command"
+               icon="icons/chart_organisation_delete.png"
+               label="Delete Ontology"
+               style="push"
+               tooltip="Deletes the selected ontology from the database">
+         </command>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar">
+         <toolbar
+               id="ODIEUI.toolbar1">
+            <command
+                  commandId="newanalysis.command"
+                  icon="icons/cog_add.png"
+                  label="New Analysis"
+                  style="push">
+            </command>
+            <command
+                  commandId="importontologies.command"
+                  icon="icons/chart_organisation_add.png"
+                  label="Import Ontologies"
+                  style="push">
+            </command>
+            <command
+                  commandId="newlexicalset.command"
+                  icon="icons/bookadd.png"
+                  label="New Vocabulary"
+                  style="push">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            description="ODIE Commands"
+            id="ODIECategory"
+            name="ODIE">
+      </category>
+      <command
+            categoryId="ODIECategory"
+            defaultHandler="edu.pitt.dbmi.odie.ui.handlers.NewAnalysisHandler"
+            description="Launch the New Analysis Wizard"
+            id="newanalysis.command"
+            name="New Analysis">	            
+      </command>
+      <command
+            categoryId="ODIECategory"
+            defaultHandler="edu.pitt.dbmi.odie.ui.handlers.ImportOntologiesHandler"
+            description="Import ontologies into ODIE"
+            id="importontologies.command"
+            name="Import Ontologies">
+      </command>
+      <command
+            categoryId="ODIECategory"
+            description="Run the selected analysis"
+            id="runanalysis.command"
+            name="Run Analysis">
+      </command>
+      
+      <commandParameterType
+            converter="edu.pitt.dbmi.odie.ui.AnalysisConvertor"
+            id="analysis.type"
+            type="edu.pitt.dbmi.odie.model.Analysis">
+      </commandParameterType>
+      <command
+            categoryId="ODIECategory"
+            defaultHandler="edu.pitt.dbmi.odie.ui.handlers.DeleteAnalysisHandler"
+            id="deleteanalysis.command"
+            name="Delete Analysis">
+      </command>
+      <command
+            categoryId="ODIECategory"
+            defaultHandler="edu.pitt.dbmi.odie.ui.handlers.ImportAnalysisEnginesHandler"
+            description="Import a UIMA analysis engine into ODIE"
+            id="importanalysisengines.command"
+            name="Import Analysis Engines">
+      </command>
+      <command
+            categoryId="ODIECategory"
+            description="Save the active screen"
+            id="save.command"
+            name="Save">
+      </command>
+      <command
+            defaultHandler="edu.pitt.dbmi.odie.ui.handlers.PEARInstallerHandler"
+            description="Install a UIMA PEAR file"
+            id="pearinstaller.command"
+            name="PEAR Installer">
+      </command>
+      <command
+            categoryId="ODIECategory"
+            defaultHandler="edu.pitt.dbmi.odie.ui.handlers.NewLexicalSetHandler"
+            description="Launch the New Ontology Set Wizard"
+            id="newlexicalset.command"
+            name="New Ontology Set">
+      </command>
+      <command
+            categoryId="ODIECategory"
+            defaultHandler="edu.pitt.dbmi.odie.ui.handlers.DropInHandler"
+            description="Install Dropins"
+            id="dropins.command"
+            name="Dropins Installer">
+      </command>
+      <command
+            categoryId="ODIECategory"
+            id="compareanalyses.command"
+            name="Compare Analyses">
+      </command>
+      <command
+            categoryId="ODIECategory"
+            defaultHandler="edu.pitt.dbmi.odie.ui.handlers.DeleteOntologyHandler"
+            id="deleteontology.command"
+            name="Delete Ontology">
+      </command>
+      <command
+            categoryId="ODIECategory"
+            defaultHandler="edu.pitt.dbmi.odie.ui.handlers.CloseAnalysisHandler"
+            id="closeanalysis.command"
+            name="Close Analysis">
+      </command>
+      <command
+            categoryId="ODIECategory"
+            defaultHandler="edu.pitt.dbmi.odie.ui.handlers.BrowserHandler"
+            id="browser.command"
+            name="Web Browser">
+      </command>
+      <command
+            categoryId="ODIECategory"
+            defaultHandler="edu.pitt.dbmi.odie.ui.handlers.ODIEOntologyPackageHandler"
+            id="newodiepackage.command"
+            name="New ODIE Ontology Package">
+      </command>
+   </extension>
+   
+   <extension
+         point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            class="edu.pitt.dbmi.odie.ui.propertytesters.AnalysisPropertyTester"
+            id="AnalysisPropertyTester"
+            namespace="edu.pitt.dbmi.odie.ui.testers"
+            properties="isAnalysisLoaded,isPartiallyProcessed,isOE"
+            type="org.eclipse.jface.viewers.ISelection">
+      </propertyTester>
+   </extension>
+   
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="edu.pitt.dbmi.odie.ui.handlers.RunAnalysisHandler"
+            commandId="runanalysis.command">
+      </handler>
+      <handler
+            class="edu.pitt.dbmi.odie.ui.handlers.SaveAnalysisHandler"
+            commandId="save.command">
+         <enabledWhen>
+         	<with variable="activePartId">
+            	<equals value="edu.pitt.dbmi.odie.ui.editors.AnalysisEditor"/>
+            </with>  
+         </enabledWhen>
+      </handler>
+      <handler
+            class="edu.pitt.dbmi.odie.ui.handlers.CompareAnalysesHandler"
+            commandId="compareanalyses.command">
+         <enabledWhen>
+            <with
+                  variable="selection">
+               <or>
+                  <count
+                        value="2">
+                  </count>
+                  <count
+                        value="3">
+                  </count>
+                  <count
+                        value="4">
+                  </count>
+                  <count
+                        value="5">
+                  </count>
+               </or>
+            </with>
+         </enabledWhen>
+      </handler>
+         
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="edu.pitt.dbmi.odie.ui.preferences.ConfigurationPage"
+            id="edu.pitt.dbmi.odie.ui.preferences.ConfigurationPage"
+            name="Configuration">
+      </page>
+      <page
+            class="edu.pitt.dbmi.odie.ui.preferences.AdvancedPreferencesPage"
+            id="edu.pitt.dbmi.odie.ui.preferences.AdvancedPreferencesPage"
+            name="Options">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="edu.pitt.dbmi.odie.ui.preferences.PreferenceInitializer">
+      </initializer>
+   </extension>
+   
+   <extension point="org.eclipse.ui.contexts">
+      <context
+            id="edu.pitt.dbmi.odie.ui.context"
+            name="ODIE Context"
+            parentId="org.eclipse.ui.contexts.window">
+      </context>
+   </extension>
+   <extension
+         id="ODIELINUX"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="ODIEUI.application"
+            name="ODIE Workbench v1.1 Dev">
+         <property
+               name="windowImages"
+               value="icons/odie16.gif,icons/odie32.gif,icons/odie48.gif,icons/odie64.gif,icons/odie128.gif">
+         </property>
+         <property
+               name="aboutText"
+               value="ODIE Workbench&#x0A;&#x0A;Version: 1.0.3 Beta&#x0A;&#x0A;(c) Copyright DBMI, University of Pittsburgh 2008. All rights reserved.&#x0A;&#x0A;This software has been developed by the Dept. of Biomedical Informatics &#x0A;at the University of Pittsburgh in collaboration with the Mayo Clinic.">
+         </property>
+         <property
+               name="aboutImage"
+               value="images/odieabout.gif">
+         </property>
+         <property
+               name="startupForegroundColor"
+               value="000000">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="47,211,390,15">
+         </property>
+         <property
+               name="startupMessageRect"
+               value="49,194,390,15">
+         </property>
+      </product>
+   </extension>
+</plugin>

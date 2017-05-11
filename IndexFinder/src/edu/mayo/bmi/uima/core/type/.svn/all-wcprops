@@ -1,0 +1,233 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/odie/!svn/ver/644/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type
+END
+IdentifiedAnnotation.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/odie/!svn/ver/644/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/IdentifiedAnnotation.java
+END
+NumToken.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/NumToken.java
+END
+NumToken_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/NumToken_Type.java
+END
+Segment.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/Segment.java
+END
+Segment_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/Segment_Type.java
+END
+Sentence.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/Sentence.java
+END
+Sentence_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/Sentence_Type.java
+END
+SymbolToken.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/SymbolToken.java
+END
+SymbolToken_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/SymbolToken_Type.java
+END
+PunctuationToken.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/PunctuationToken.java
+END
+PunctuationToken_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/PunctuationToken_Type.java
+END
+BaseToken.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/BaseToken.java
+END
+CopySrcAnnotation_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/CopySrcAnnotation_Type.java
+END
+NamedEntity.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/odie/!svn/ver/644/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/NamedEntity.java
+END
+Property.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/Property.java
+END
+ContractionToken.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/ContractionToken.java
+END
+CopyDestAnnotation.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/CopyDestAnnotation.java
+END
+ContractionToken_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/ContractionToken_Type.java
+END
+Property_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/Property_Type.java
+END
+UmlsConcept.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/UmlsConcept.java
+END
+Lemma_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/Lemma_Type.java
+END
+DocumentID_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/odie/!svn/ver/644/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/DocumentID_Type.java
+END
+UmlsConcept_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/UmlsConcept_Type.java
+END
+IdentifiedAnnotation_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/odie/!svn/ver/644/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/IdentifiedAnnotation_Type.java
+END
+NewlineToken.java
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/NewlineToken.java
+END
+NewlineToken_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/NewlineToken_Type.java
+END
+WordToken.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/WordToken.java
+END
+BaseToken_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/BaseToken_Type.java
+END
+WordToken_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/WordToken_Type.java
+END
+CopySrcAnnotation.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/CopySrcAnnotation.java
+END
+NamedEntity_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/odie/!svn/ver/644/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/NamedEntity_Type.java
+END
+OntologyConcept.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/OntologyConcept.java
+END
+CopyDestAnnotation_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/CopyDestAnnotation_Type.java
+END
+OntologyConcept_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/OntologyConcept_Type.java
+END
+DocumentID.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/odie/!svn/ver/644/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/DocumentID.java
+END
+Lemma.java
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/Lemma.java
+END
+Properties.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/Properties.java
+END
+Properties_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/odie/!svn/ver/352/trunk/indexfinder/src/edu/mayo/bmi/uima/core/type/Properties_Type.java
+END

@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/odie/!svn/ver/499/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/analysis/summary
+END
+ComparisonValuesDataLabelProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/odie/!svn/ver/502/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/analysis/summary/ComparisonValuesDataLabelProvider.java
+END
+OntologyPerformanceContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/odie/!svn/ver/629/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/analysis/summary/OntologyPerformanceContentProvider.java
+END
+DocSpecificPerformanceSection.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/odie/!svn/ver/780/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/analysis/summary/DocSpecificPerformanceSection.java
+END
+OntologyPerformanceTreeTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/odie/!svn/ver/653/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/analysis/summary/OntologyPerformanceTreeTable.java
+END
+ComparisonValuesData.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/odie/!svn/ver/700/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/analysis/summary/ComparisonValuesData.java
+END
+DocumentPerformanceContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/odie/!svn/ver/780/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/analysis/summary/DocumentPerformanceContentProvider.java
+END
+OntologySpecificPerformanceSection.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/odie/!svn/ver/780/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/analysis/summary/OntologySpecificPerformanceSection.java
+END
+DocumentPerformanceTreeTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/odie/!svn/ver/653/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/analysis/summary/DocumentPerformanceTreeTable.java
+END
+SummaryPage.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/odie/!svn/ver/780/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/analysis/summary/SummaryPage.java
+END
+OverviewSection.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/odie/!svn/ver/780/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/analysis/summary/OverviewSection.java
+END
+OverviewContentProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/odie/!svn/ver/779/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/analysis/summary/OverviewContentProvider.java
+END
+OverviewTreeTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/odie/!svn/ver/780/trunk/ui/src/edu/pitt/dbmi/odie/ui/editors/analysis/summary/OverviewTreeTable.java
+END

@@ -1,0 +1,54 @@
+<project name="IndexFinder"  basedir="..">
+	
+	<description>
+        ODIE PEAR Packager
+    </description>
+        
+	<property name="PEARClassPath" value="$main_root/bin;$main_root/lib/gate.jar;
+				$main_root/lib/jasper-compiler-jdt.jar;
+				$main_root/lib/jdom.jar;$main_root/lib/mysql-connector-java-5.1.6-bin.jar;
+				$main_root/lib/nekohtml-0.9.5.jar;$main_root/lib/ontotext.jar;
+				$main_root/lib/stax-api-1.0.jar;
+				$main_root/lib/xercesImpl.jar;
+				$main_root/resources;
+				$main_root/lib/caties.jar;
+				$main_root/lib/Chunker.jar;
+				$main_root/lib/cTAKES-chunker.jar;
+				$main_root/lib/cTAKES-clinical-documents-pipeline.jar;
+				$main_root/lib/cTAKES-context-dependent-tokenizer.jar;
+				$main_root/lib/cTAKES-dictionary-lookup.jar;
+				$main_root/lib/cTAKES-document-preprocessor.jar;
+				$main_root/lib/cTAKES-LVG.jar;
+				$main_root/lib/cTAKES-NE-contexts.jar;
+				$main_root/lib/cTAKES-POS-tagger.jar;
+				$main_root/lib/mod_cTAKES-core.jar;
+				$main_root/lib/gate-asm.jar;
+				$main_root/lib/lvg2008dist.jar;
+				$main_root/lib/opennlp-tools-1.4.3.jar;
+				$main_root/lib/trove.jar;
+				$main_root/lib/OpenAI_FSM.jar;
+				$main_root/lib/PDFBox-0.7.2.jar;
+				$main_root/lib/maxent-2.4.0.jar;
+				$main_root/lib/gate-compiler-jdt.jar;
+				$main_root/lib/coref-resolver-0.1.jar;
+				$main_root/lib/weka.jar;" />
+	
+	<path id="pearTask.classpath">
+		<fileset dir="${basedir}/../ODIEDependencies/lib/" includes="uima-pear-ant-task.jar, uima-core.jar"/>
+	</path>
+	
+	<taskdef name="packagePear" classname="org.apache.uima.pear.tools.PearPackagingAntTask"
+		classpathref="pearTask.classpath"/>
+	
+	<target name="buildNERPear"	description="Builds the Indexfinder NER PEAR">
+		<packagePear
+		componentID="ODIE_NER"
+		mainComponentDesc="${basedir}/desc/odie_pipe/ODIE_AAE_NER.xml"
+		classpath="${PEARClassPath}"
+		datapath="$main_root/resources"
+		mainComponentDir="${basedir}"
+		targetDir="c:/tmp">
+		</packagePear>
+	</target>
+	
+</project>

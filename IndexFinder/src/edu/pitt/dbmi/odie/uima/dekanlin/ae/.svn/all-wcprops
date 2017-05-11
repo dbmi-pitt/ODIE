@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/odie/!svn/ver/745/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/dekanlin/ae
+END
+ODIE_PosHistogramGeneratorTAE.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/odie/!svn/ver/794/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/dekanlin/ae/ODIE_PosHistogramGeneratorTAE.java
+END
+ODIE_MiniparStatisticsGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/odie/!svn/ver/750/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/dekanlin/ae/ODIE_MiniparStatisticsGenerator.java
+END
+ODIE_MiniparSimilarityClusterTAE.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/odie/!svn/ver/794/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/dekanlin/ae/ODIE_MiniparSimilarityClusterTAE.java
+END
+ODIE_PosHistogramGeneratorWordLevelTAE.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/odie/!svn/ver/551/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/dekanlin/ae/ODIE_PosHistogramGeneratorWordLevelTAE.java
+END
+ODIE_MiniparSimilarityClusterWordLevelTAE.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/odie/!svn/ver/551/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/dekanlin/ae/ODIE_MiniparSimilarityClusterWordLevelTAE.java
+END

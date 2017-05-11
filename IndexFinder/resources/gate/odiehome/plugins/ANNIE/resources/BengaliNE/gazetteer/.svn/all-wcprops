@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/BengaliNE/gazetteer
+END
+forenames.lst
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/BengaliNE/gazetteer/forenames.lst
+END
+organisations.lst
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/BengaliNE/gazetteer/organisations.lst
+END
+bengali_gazetteer.def
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/BengaliNE/gazetteer/bengali_gazetteer.def
+END
+city_bengali.lst
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/BengaliNE/gazetteer/city_bengali.lst
+END
+surnames.lst
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/BengaliNE/gazetteer/surnames.lst
+END

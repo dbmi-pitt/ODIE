@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>true</primitive>
+  <annotatorImplementationName>edu.pitt.dbmi.odie.uima.ae.minipar.Minipar</annotatorImplementationName>
+  <analysisEngineMetaData>
+    <name>ODIE_MiniparTAE</name>
+    <description>Wraps the Minipar parser as a UIMA TAE.  Port of same wrapper in the GATE environment.</description>
+    <version>1.0</version>
+    <vendor>University Of Pittsburgh DBMI</vendor>
+    <configurationParameters/>
+    <configurationParameterSettings/>
+    <typeSystemDescription>
+      <imports>
+        <import location="ODIE_MiniParTypeSystemDescriptor.xml"/>
+        <import name="edu.mayo.bmi.uima.core.type.Sentence"/>
+      </imports>
+    </typeSystemDescription>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs>
+          <type allAnnotatorFeatures="true">edu.mayo.bmi.uima.core.type.Sentence</type>
+        </inputs>
+        <outputs>
+          <type allAnnotatorFeatures="true">edu.pitt.dbmi.odie.uima.ae.minipar.POSType</type>
+          <type allAnnotatorFeatures="true">edu.pitt.dbmi.odie.uima.ae.minipar.DepTreeNode</type>
+        </outputs>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <externalResourceDependencies>
+    <externalResourceDependency>
+      <key>miniparDataDir</key>
+      <description>Location of MiniPar data directory</description>
+      <optional>false</optional>
+    </externalResourceDependency>
+    <externalResourceDependency>
+      <key>miniparBinary</key>
+      <description>URL to Minipar Binary</description>
+      <optional>false</optional>
+    </externalResourceDependency>
+  </externalResourceDependencies>
+  <resourceManagerConfiguration>
+    <externalResources>
+      <externalResource>
+        <name>miniparBinary</name>
+        <description>Minipar Binary location</description>
+        <fileResourceSpecifier>
+          <fileUrl>file:resources/minipar/bin/minipar.exe</fileUrl>
+        </fileResourceSpecifier>
+      </externalResource>
+      <externalResource>
+        <name>miniparDataDir</name>
+        <description/>
+        <fileResourceSpecifier>
+          <fileUrl>file:resources/minipar/data</fileUrl>
+        </fileResourceSpecifier>
+      </externalResource>
+    </externalResources>
+    <externalResourceBindings>
+      <externalResourceBinding>
+        <key>miniparBinary</key>
+        <resourceName>miniparBinary</resourceName>
+      </externalResourceBinding>
+      <externalResourceBinding>
+        <key>miniparDataDir</key>
+        <resourceName>miniparDataDir</resourceName>
+      </externalResourceBinding>
+    </externalResourceBindings>
+  </resourceManagerConfiguration>
+</analysisEngineDescription>

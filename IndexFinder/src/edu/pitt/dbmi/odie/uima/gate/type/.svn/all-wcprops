@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/odie/!svn/ver/725/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/gate/type
+END
+ODIE_GateAnnotation.java
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/odie/!svn/ver/725/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/gate/type/ODIE_GateAnnotation.java
+END
+ODIE_GateAnnotation_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/odie/!svn/ver/725/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/gate/type/ODIE_GateAnnotation_Type.java
+END
+ODIE_GateFeature.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/odie/!svn/ver/725/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/gate/type/ODIE_GateFeature.java
+END
+ODIE_GateFeature_Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/odie/!svn/ver/725/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/gate/type/ODIE_GateFeature_Type.java
+END

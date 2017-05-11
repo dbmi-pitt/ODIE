@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/odie/!svn/ver/704/trunk/middletier/src/edu/pitt/dbmi/odie/middletier
+END
+BioportalNote.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/652/trunk/middletier/src/edu/pitt/dbmi/odie/middletier/BioportalNote.java
+END
+AnalysisSpaceMiddleTier.java
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/odie/!svn/ver/392/trunk/middletier/src/edu/pitt/dbmi/odie/middletier/AnalysisSpaceMiddleTier.java
+END
+MiddleTier.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/odie/!svn/ver/782/trunk/middletier/src/edu/pitt/dbmi/odie/middletier/MiddleTier.java
+END
+MiddleTierJDBC.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/odie/!svn/ver/355/trunk/middletier/src/edu/pitt/dbmi/odie/middletier/MiddleTierJDBC.java
+END
+SQLFileLoader.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/781/trunk/middletier/src/edu/pitt/dbmi/odie/middletier/SQLFileLoader.java
+END
+Configuration.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/795/trunk/middletier/src/edu/pitt/dbmi/odie/middletier/Configuration.java
+END
+ModelChangeEvent.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/odie/!svn/ver/9/trunk/middletier/src/edu/pitt/dbmi/odie/middletier/ModelChangeEvent.java
+END
+AnalysisSpaceMiddleTierFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/odie/!svn/ver/313/trunk/middletier/src/edu/pitt/dbmi/odie/middletier/AnalysisSpaceMiddleTierFactory.java
+END

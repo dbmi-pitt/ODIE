@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/odie/!svn/ver/714/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/lsp/model
+END
+ODIE_Relationship.java
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/odie/!svn/ver/714/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/lsp/model/ODIE_Relationship.java
+END
+ODIE_Sentence.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/odie/!svn/ver/714/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/lsp/model/ODIE_Sentence.java
+END
+ODIE_ScoredTerm.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/odie/!svn/ver/311/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/lsp/model/ODIE_ScoredTerm.java
+END
+ODIE_Suggestion.java
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/odie/!svn/ver/714/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/lsp/model/ODIE_Suggestion.java
+END
+ODIE_Term.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/odie/!svn/ver/714/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/lsp/model/ODIE_Term.java
+END
+ODIE_Relation.java
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/odie/!svn/ver/714/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/lsp/model/ODIE_Relation.java
+END
+ODIE_LSP.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/714/trunk/indexfinder/src/edu/pitt/dbmi/odie/uima/lsp/model/ODIE_LSP.java
+END

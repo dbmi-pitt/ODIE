@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/odie/!svn/ver/389/trunk/ui/src/edu/pitt/dbmi/odie/ui/sorters
+END
+DocumentsSorter.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/odie/!svn/ver/552/trunk/ui/src/edu/pitt/dbmi/odie/ui/sorters/DocumentsSorter.java
+END
+DatapointSorter.java
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/sorters/DatapointSorter.java
+END
+HeaderSortListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/sorters/HeaderSortListener.java
+END
+SuggestionSorter.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/sorters/SuggestionSorter.java
+END
+MultiColumnSorter.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/sorters/MultiColumnSorter.java
+END
+StatisticsSorter.java
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/odie/!svn/ver/774/trunk/ui/src/edu/pitt/dbmi/odie/ui/sorters/StatisticsSorter.java
+END

@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/svn/odie/!svn/ver/638/trunk/indexfinder/src/lvg/data/rules
+END
+exceptionI.data
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/odie/!svn/ver/638/trunk/indexfinder/src/lvg/data/rules/exceptionI.data
+END
+trieD.data
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/odie/!svn/ver/638/trunk/indexfinder/src/lvg/data/rules/trieD.data
+END
+plural.rul
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/odie/!svn/ver/638/trunk/indexfinder/src/lvg/data/rules/plural.rul
+END
+dm.rul
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/odie/!svn/ver/638/trunk/indexfinder/src/lvg/data/rules/dm.rul
+END
+ruleD.data
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/odie/!svn/ver/638/trunk/indexfinder/src/lvg/data/rules/ruleD.data
+END
+trieI.data
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/odie/!svn/ver/638/trunk/indexfinder/src/lvg/data/rules/trieI.data
+END
+im.rul
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/odie/!svn/ver/638/trunk/indexfinder/src/lvg/data/rules/im.rul
+END
+ruleI.data
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/odie/!svn/ver/638/trunk/indexfinder/src/lvg/data/rules/ruleI.data
+END
+verbinfl.rul
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/odie/!svn/ver/638/trunk/indexfinder/src/lvg/data/rules/verbinfl.rul
+END
+exceptionD.data
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/odie/!svn/ver/638/trunk/indexfinder/src/lvg/data/rules/exceptionD.data
+END

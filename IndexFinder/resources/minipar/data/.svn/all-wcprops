@@ -1,0 +1,281 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data
+END
+prons.txt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/prons.txt
+END
+units.txt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/units.txt
+END
+titles.txt
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/titles.txt
+END
+endings.lsp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/endings.lsp
+END
+skip.txt
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/skip.txt
+END
+auxiliary.txt
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/auxiliary.txt
+END
+barenp.txt
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/barenp.txt
+END
+months.txt
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/months.txt
+END
+muclex1.ind
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/muclex1.ind
+END
+interj.lsp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/interj.lsp
+END
+orgs.txt
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/orgs.txt
+END
+muclex1.hdr
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/muclex1.hdr
+END
+minipar-init.lsp
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/minipar-init.lsp
+END
+gblex.lsp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/gblex.lsp
+END
+lexrules.lsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/lexrules.lsp
+END
+address.txt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/address.txt
+END
+before-org.txt
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/before-org.txt
+END
+moneymod.txt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/moneymod.txt
+END
+orgtype.txt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/orgtype.txt
+END
+manual.lsp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/manual.lsp
+END
+dates.txt
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/dates.txt
+END
+subj.txt
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/subj.txt
+END
+dist.txt
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/dist.txt
+END
+prep.txt
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/prep.txt
+END
+all.hdr
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/all.hdr
+END
+wndict.lsp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/wndict.lsp
+END
+geoentity.txt
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/geoentity.txt
+END
+sims.hdr
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/sims.hdr
+END
+numbers.txt
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/numbers.txt
+END
+adj-noun.txt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/adj-noun.txt
+END
+nn.txt
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/nn.txt
+END
+begwords.txt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/begwords.txt
+END
+minipar.lsp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/minipar.lsp
+END
+llrule.lsp
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/llrule.lsp
+END
+capdesig.txt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/capdesig.txt
+END
+gbatt.lsp
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/gbatt.lsp
+END
+said.txt
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/said.txt
+END
+dict.hdr
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/dict.hdr
+END
+wndict.ind
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/wndict.ind
+END
+moneyunit.txt
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/moneyunit.txt
+END
+cfgrules.lsp
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/cfgrules.lsp
+END
+llrule.ind
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/llrule.ind
+END
+business.txt
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/business.txt
+END
+muclex1.lsp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/muclex1.lsp
+END
+llrule.hdr
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/llrule.hdr
+END
+tagging.lsp
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/odie/!svn/ver/108/trunk/indexfinder/resources/minipar/data/tagging.lsp
+END

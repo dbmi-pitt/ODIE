@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/odie/!svn/ver/69/trunk/indexfinder/resources/lvg/data/misc
+END
+removeS.data
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/odie/!svn/ver/69/trunk/indexfinder/resources/lvg/data/misc/removeS.data
+END
+stopWords.data
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/odie/!svn/ver/69/trunk/indexfinder/resources/lvg/data/misc/stopWords.data
+END
+conjunctionWord.data
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/odie/!svn/ver/69/trunk/indexfinder/resources/lvg/data/misc/conjunctionWord.data
+END
+nonInfoWords.data
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/odie/!svn/ver/69/trunk/indexfinder/resources/lvg/data/misc/nonInfoWords.data
+END
+symbolSynonyms.data
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/odie/!svn/ver/69/trunk/indexfinder/resources/lvg/data/misc/symbolSynonyms.data
+END

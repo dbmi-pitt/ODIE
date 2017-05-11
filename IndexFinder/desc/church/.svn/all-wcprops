@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/odie/!svn/ver/739/trunk/indexfinder/desc/church
+END
+ODIE_AE_StopWordDetector.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/odie/!svn/ver/206/trunk/indexfinder/desc/church/ODIE_AE_StopWordDetector.xml
+END
+ODIE_AAE_ChurchSuggestionGenerator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/odie/!svn/ver/277/trunk/indexfinder/desc/church/ODIE_AAE_ChurchSuggestionGenerator.xml
+END
+ODIE_AE_ChurchMutualInformationAnalysisStyleMap.xml
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/church/ODIE_AE_ChurchMutualInformationAnalysisStyleMap.xml
+END
+ODIE_CPE_ChurchSuggestionGenerator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/odie/!svn/ver/263/trunk/indexfinder/desc/church/ODIE_CPE_ChurchSuggestionGenerator.xml
+END
+ODIE_AE_ChurchMutualInformationAnalysis.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/church/ODIE_AE_ChurchMutualInformationAnalysis.xml
+END
+ODIE_CASC_ChurchSuggestionGenerator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/716/trunk/indexfinder/desc/church/ODIE_CASC_ChurchSuggestionGenerator.xml
+END
+ODIE_AAE_ChurchSuggestionGeneratorTester.xml
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/odie/!svn/ver/263/trunk/indexfinder/desc/church/ODIE_AAE_ChurchSuggestionGeneratorTester.xml
+END
+ODIE_AE_Tokeniser.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/206/trunk/indexfinder/desc/church/ODIE_AE_Tokeniser.xml
+END
+ODIE_CASC_InformationTheoreticMeasurer.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/odie/!svn/ver/252/trunk/indexfinder/desc/church/ODIE_CASC_InformationTheoreticMeasurer.xml
+END
+ODIE_AAE_ChurchOntologyEnricher.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/odie/!svn/ver/298/trunk/indexfinder/desc/church/ODIE_AAE_ChurchOntologyEnricher.xml
+END

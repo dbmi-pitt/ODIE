@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/odie/!svn/ver/421/trunk/ui/src/edu/pitt/dbmi/odie/uima/collection
+END
+AnalysisCollectionReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/uima/collection/AnalysisCollectionReader.java
+END
+AnalysisCasConsumer.java
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/odie/!svn/ver/662/trunk/ui/src/edu/pitt/dbmi/odie/uima/collection/AnalysisCasConsumer.java
+END

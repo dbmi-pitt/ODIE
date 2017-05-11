@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/core/analysis_engine
+END
+TokenizerAnnotator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/core/analysis_engine/TokenizerAnnotator.xml
+END
+SimpleSegmentAnnotator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/core/analysis_engine/SimpleSegmentAnnotator.xml
+END
+SentenceDetectorAnnotator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/core/analysis_engine/SentenceDetectorAnnotator.xml
+END

@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/schema
+END
+PercentSchema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/schema/PercentSchema.xml
+END
+PosSchema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/schema/PosSchema.xml
+END
+SentenceSchema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/schema/SentenceSchema.xml
+END
+FacilitySchema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/schema/FacilitySchema.xml
+END
+OrganizationSchema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/schema/OrganizationSchema.xml
+END
+StreetSchema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/schema/StreetSchema.xml
+END
+EntityMentionSchema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/schema/EntityMentionSchema.xml
+END
+PersonSchema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/schema/PersonSchema.xml
+END
+LocationSchema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/schema/LocationSchema.xml
+END
+PhoneSchema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/schema/PhoneSchema.xml
+END
+GpeSchema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/schema/GpeSchema.xml
+END
+SyntaxTreeNodeSchema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/schema/SyntaxTreeNodeSchema.xml
+END
+EntitySchema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/schema/EntitySchema.xml
+END
+DateSchema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/schema/DateSchema.xml
+END
+TokenSchema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/schema/TokenSchema.xml
+END
+IdentifierSchema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/schema/IdentifierSchema.xml
+END
+AddressSchema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/schema/AddressSchema.xml
+END
+MoneySchema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/schema/MoneySchema.xml
+END
+EmailSchema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/schema/EmailSchema.xml
+END
+InternetSchema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/schema/InternetSchema.xml
+END
+UtteranceSchema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/schema/UtteranceSchema.xml
+END
+EntityHeadSchema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/schema/EntityHeadSchema.xml
+END
+CorefSchema.xml
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/odie/!svn/ver/191/trunk/indexfinder/resources/gate/odiehome/plugins/ANNIE/resources/schema/CorefSchema.xml
+END

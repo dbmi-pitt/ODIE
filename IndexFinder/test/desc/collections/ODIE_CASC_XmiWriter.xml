@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<casConsumerDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <implementationName>edu.pitt.dbmi.odie.uima.church.consumer.ODIE_XmiWriterCasConsumer</implementationName>
+  <processingResourceMetaData>
+    <name>ODIE_CASC_XmiWriter</name>
+    <description>Writes CAS to an XMI file in the designated OUPUT directory.</description>
+    <version>1.0</version>
+    <vendor>PITT</vendor>
+    <configurationParameters>
+      <configurationParameter>
+        <name>OutputDirectory</name>
+        <description>Directory where xmi files are places</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+      </configurationParameter>
+    </configurationParameters>
+    <configurationParameterSettings>
+      <nameValuePair>
+        <name>OutputDirectory</name>
+        <value>
+          <string>C:/workspace/ws-uima-tutorial/IndexFinder/church-outputs</string>
+        </value>
+      </nameValuePair>
+    </configurationParameterSettings>
+    <typeSystemDescription>
+      <imports>
+        <import location="ODIE_StopWordType.xml"/>
+      </imports>
+    </typeSystemDescription>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs>
+          <type allAnnotatorFeatures="true">edu.pitt.dbmi.odie.uima.church.types.ODIE_StopWord</type>
+          <type allAnnotatorFeatures="true">edu.pitt.dbmi.odie.uima.church.types.ODIE_Word</type>
+        </inputs>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>false</modifiesCas>
+      <multipleDeploymentAllowed>false</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </processingResourceMetaData>
+  <resourceManagerConfiguration/>
+</casConsumerDescription>

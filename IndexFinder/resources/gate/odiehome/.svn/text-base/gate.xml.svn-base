@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!-- gate.xml: GATE configuration data -->
+<GATE>
+
+<!-- NOTE: the next element may be overwritten by the GUI!!! -->
+<GATECONFIG Look_and_Feel="com.sun.java.swing.plaf.windows.WindowsLookAndFeel"
+ Menus_font="Lucida Sans Unicode#12#false#false"
+ Save_session_on_exit="true"
+ Save_options_on_exit="true"
+ Main_frame_height="600"
+ Known_plugin_path=""
+ Load_plugin_path=""
+ Main_frame_width="800"
+ Other_components_font="Lucida Sans Unicode#12#false#false"
+ Last_filechooser_location=""
+ Text_components_font="Lucida Sans Unicode#12#false#false"
+/>
+
+</GATE>

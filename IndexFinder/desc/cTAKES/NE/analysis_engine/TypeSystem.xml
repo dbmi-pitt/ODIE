@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typeSystemDescription xmlns="http://uima.apache.org/resourceSpecifier">
+<name>TypeSystem</name>
+<description></description>
+<version>1.0</version>
+<vendor></vendor>
+<imports>
+<import location="../type/ContextTypeSystem.xml"/>
+<import location="../../core/type/Segment.xml"/>
+<import location="../../core/type/BaseToken.xml"/>
+<import location="../../core/type/WordToken.xml"/>
+<import location="../../core/type/ContractionToken.xml"/>
+<import location="../../core/type/NewlineToken.xml"/>
+<import location="../../core/type/NumToken.xml"/>
+<import location="../../core/type/PunctuationToken.xml"/>
+<import location="../../core/type/SymbolToken.xml"/>
+<import location="../../core/type/Sentence.xml"/>
+<import location="../../core/type/NamedEntity.xml"/>
+</imports>
+</typeSystemDescription>

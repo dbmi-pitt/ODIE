@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/NE/analysis_engine
+END
+TypeSystem.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/NE/analysis_engine/TypeSystem.xml
+END
+StatusAnnotator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/NE/analysis_engine/StatusAnnotator.xml
+END
+NegationAnnotator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/69/trunk/indexfinder/desc/cTAKES/NE/analysis_engine/NegationAnnotator.xml
+END

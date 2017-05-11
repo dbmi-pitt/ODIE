@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/odie/!svn/ver/226/trunk/indexfinder/dev/script/mysql/combined
+END
+best_church_vs_lin.sql
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/odie/!svn/ver/226/trunk/indexfinder/dev/script/mysql/combined/best_church_vs_lin.sql
+END
+best_lsp_vs_lin.sql
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/odie/!svn/ver/226/trunk/indexfinder/dev/script/mysql/combined/best_lsp_vs_lin.sql
+END
+best_church.sql
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/odie/!svn/ver/226/trunk/indexfinder/dev/script/mysql/combined/best_church.sql
+END
+best_lsp.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/odie/!svn/ver/226/trunk/indexfinder/dev/script/mysql/combined/best_lsp.sql
+END
+best_lin.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/odie/!svn/ver/226/trunk/indexfinder/dev/script/mysql/combined/best_lin.sql
+END
+combined.sql
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/odie/!svn/ver/226/trunk/indexfinder/dev/script/mysql/combined/combined.sql
+END

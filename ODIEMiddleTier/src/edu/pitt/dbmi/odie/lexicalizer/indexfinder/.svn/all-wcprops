@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/odie/!svn/ver/559/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/indexfinder
+END
+ODIE_IndexFinderUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/odie/!svn/ver/530/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/indexfinder/ODIE_IndexFinderUtils.java
+END
+ODIE_IndexFinderFoundryDdlBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/odie/!svn/ver/530/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/indexfinder/ODIE_IndexFinderFoundryDdlBuilder.java
+END
+ODIE_IndexFinderFoundryBuilderOriginal.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/odie/!svn/ver/530/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/indexfinder/ODIE_IndexFinderFoundryBuilderOriginal.java
+END
+ODIE_MorphologicalNormalizer.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/odie/!svn/ver/530/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/indexfinder/ODIE_MorphologicalNormalizer.java
+END
+ODIE_LexicalizerTerm.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/odie/!svn/ver/530/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/indexfinder/ODIE_LexicalizerTerm.java
+END
+LexicalSetBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/odie/!svn/ver/559/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/indexfinder/LexicalSetBuilder.java
+END
+ODIE_ExceptionClassLexicalization.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/odie/!svn/ver/530/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/indexfinder/ODIE_ExceptionClassLexicalization.java
+END
+ODIE_StopWords.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/odie/!svn/ver/530/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/indexfinder/ODIE_StopWords.java
+END
+IndexFinderBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/odie/!svn/ver/530/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/indexfinder/IndexFinderBuilder.java
+END
+ODIE_IndexFinderBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/odie/!svn/ver/530/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/indexfinder/ODIE_IndexFinderBuilder.java
+END
+ODIE_LexicalizerWord.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/odie/!svn/ver/530/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/indexfinder/ODIE_LexicalizerWord.java
+END
+ODIE_IndexFinderBestMneumonicNameDeterminer.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/odie/!svn/ver/530/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/indexfinder/ODIE_IndexFinderBestMneumonicNameDeterminer.java
+END
+ODIE_IndexFinderFoundryBuilder.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/odie/!svn/ver/530/trunk/middletier/src/edu/pitt/dbmi/odie/lexicalizer/indexfinder/ODIE_IndexFinderFoundryBuilder.java
+END

@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/svn/odie/!svn/ver/739/trunk/indexfinder/desc/dekanlin
+END
+ODIE_PosHistogramGeneratorTAE.xml
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/odie/!svn/ver/182/trunk/indexfinder/desc/dekanlin/ODIE_PosHistogramGeneratorTAE.xml
+END
+ODIE_AAE_WordLevelMiniparTester.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/odie/!svn/ver/507/trunk/indexfinder/desc/dekanlin/ODIE_AAE_WordLevelMiniparTester.xml
+END
+ODIE_MiniparSimilarityClusterTAE.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/odie/!svn/ver/507/trunk/indexfinder/desc/dekanlin/ODIE_MiniparSimilarityClusterTAE.xml
+END
+ODIE_CPE_LinSuggestionGenerator0325.xml
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/odie/!svn/ver/593/trunk/indexfinder/desc/dekanlin/ODIE_CPE_LinSuggestionGenerator0325.xml
+END
+ODIE_AAE_LinOntologyEnricher.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/odie/!svn/ver/300/trunk/indexfinder/desc/dekanlin/ODIE_AAE_LinOntologyEnricher.xml
+END
+ODIE_MiniparStatisticsGeneratorCASConsumer.xml
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/odie/!svn/ver/203/trunk/indexfinder/desc/dekanlin/ODIE_MiniparStatisticsGeneratorCASConsumer.xml
+END
+ODIE_MiniparSimilarityClusterWordLevelTAE.xml
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/odie/!svn/ver/507/trunk/indexfinder/desc/dekanlin/ODIE_MiniparSimilarityClusterWordLevelTAE.xml
+END
+ODIE_CPE_LinSuggestionGenerator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/odie/!svn/ver/259/trunk/indexfinder/desc/dekanlin/ODIE_CPE_LinSuggestionGenerator.xml
+END
+ODIE_CASC_LinSuggestionGenerator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/odie/!svn/ver/799/trunk/indexfinder/desc/dekanlin/ODIE_CASC_LinSuggestionGenerator.xml
+END
+ODIE_AAE_LinSuggestionGeneratorTester.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/odie/!svn/ver/777/trunk/indexfinder/desc/dekanlin/ODIE_AAE_LinSuggestionGeneratorTester.xml
+END
+ODIE_AAE_PhraseMiniparTester.xml
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/odie/!svn/ver/507/trunk/indexfinder/desc/dekanlin/ODIE_AAE_PhraseMiniparTester.xml
+END

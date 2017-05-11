@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="TokenizerAnnotator">
+      <import location="../cTAKES/core/analysis_engine/TokenizerAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ContextDependentTokenizerAnnotator">
+      <import location="../cTAKES/cdt/analysis_engine/ContextDependentTokenizerAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="StatusAnnotator">
+      <import location="../cTAKES/NE/analysis_engine/StatusAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="NegationAnnotator">
+      <import location="../cTAKES/NE/analysis_engine/NegationAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="SentenceDetectorAnnotator">
+      <import location="../cTAKES/core/analysis_engine/SentenceDetectorAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="CoreferenceResolverAggregate">
+      <import location="../cTAKES/coref-resolver/CoreferenceResolverAggregate.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="SimpleSegmentAnnotator">
+      <import location="../cTAKES/core/analysis_engine/SimpleSegmentAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="POSTagger">
+      <import location="../cTAKES/POS Tagger/analysis_engine/POSTagger.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="Chunker">
+      <import location="../cTAKES/chunker/analysis_engine/Chunker.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="DictionaryLookupAnnotatorDB">
+      <import location="../cTAKES/lookup/analysis_engine/DictionaryLookupAnnotatorDB.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ExtractionPrepAnnotator">
+      <import location="../cTAKES/cdp/analysis_engine/ExtractionPrepAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="LookupWindowAnnotator">
+      <import location="../cTAKES/cdp/analysis_engine/LookupWindowAnnotator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="LvgAnnotator">
+      <import location="../cTAKES/LVG/analysis_engine/LvgAnnotator.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>ODIE_AAE_CoreferenceResolverTester</name>
+    <description/>
+    <version>1.0</version>
+    <vendor/>
+    <configurationParameters searchStrategy="language_fallback"/>
+    <configurationParameterSettings/>
+    <flowConstraints>
+      <fixedFlow>
+        <node>SimpleSegmentAnnotator</node>
+        <node>SentenceDetectorAnnotator</node>
+        <node>TokenizerAnnotator</node>
+        <node>LvgAnnotator</node>
+        <node>ContextDependentTokenizerAnnotator</node>
+        <node>POSTagger</node>
+        <node>Chunker</node>
+        <node>LookupWindowAnnotator</node>
+        <node>DictionaryLookupAnnotatorDB</node>
+        <node>StatusAnnotator</node>
+        <node>NegationAnnotator</node>
+        <node>ExtractionPrepAnnotator</node>
+        <node>CoreferenceResolverAggregate</node>
+      </fixedFlow>
+    </flowConstraints>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration>
+    <externalResources>
+      <externalResource>
+        <name>chunker.model</name>
+        <description/>
+        <fileResourceSpecifier>
+          <fileUrl>file:models/chunker.model.bin.gz</fileUrl>
+        </fileResourceSpecifier>
+      </externalResource>
+      <externalResource>
+        <name>sentence.detector.model</name>
+        <description/>
+        <fileResourceSpecifier>
+          <fileUrl>file:sentdetect/mayo/sdmed.mod</fileUrl>
+        </fileResourceSpecifier>
+      </externalResource>
+      <externalResource>
+        <name>weka.model</name>
+        <description/>
+        <fileResourceSpecifier>
+          <fileUrl>file:coref/J48_v0.2.mod</fileUrl>
+        </fileResourceSpecifier>
+      </externalResource>
+      <externalResource>
+        <name>DbConnectionResrc</name>
+        <description/>
+        <fileResourceSpecifier>
+          <fileUrl>file:lookup/JdbcDesc.xml</fileUrl>
+        </fileResourceSpecifier>
+        <implementationName>edu.pitt.dbmi.odie.uima.util.JdbcConnectionResourceImpl</implementationName>
+      </externalResource>
+    </externalResources>
+    <externalResourceBindings>
+      <externalResourceBinding>
+        <key>Chunker/ChunkerModel</key>
+        <resourceName>chunker.model</resourceName>
+      </externalResourceBinding>
+      <externalResourceBinding>
+        <key>SentenceDetectorAnnotator/MaxentModel</key>
+        <resourceName>sentence.detector.model</resourceName>
+      </externalResourceBinding>
+      <externalResourceBinding>
+        <key>CoreferenceResolverAggregate/ChainCreator/wekaModel</key>
+        <resourceName>weka.model</resourceName>
+      </externalResourceBinding>
+      <externalResourceBinding>
+        <key>DictionaryLookupAnnotatorDB/DbConnection</key>
+        <resourceName>DbConnectionResrc</resourceName>
+      </externalResourceBinding>
+    </externalResourceBindings>
+  </resourceManagerConfiguration>
+</analysisEngineDescription>

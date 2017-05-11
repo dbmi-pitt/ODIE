@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/odie/!svn/ver/389/trunk/ui/src/edu/pitt/dbmi/odie/ui/preferences
+END
+PreferenceInitializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/preferences/PreferenceInitializer.java
+END
+AdvancedPreferencesPage.java
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/odie/!svn/ver/795/trunk/ui/src/edu/pitt/dbmi/odie/ui/preferences/AdvancedPreferencesPage.java
+END
+ConfigurationPage.java
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/odie/!svn/ver/493/trunk/ui/src/edu/pitt/dbmi/odie/ui/preferences/ConfigurationPage.java
+END
+PreferenceDefaults.java
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/odie/!svn/ver/795/trunk/ui/src/edu/pitt/dbmi/odie/ui/preferences/PreferenceDefaults.java
+END
+PreferenceConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/odie/!svn/ver/795/trunk/ui/src/edu/pitt/dbmi/odie/ui/preferences/PreferenceConstants.java
+END
+PreferenceUtil.java
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/odie/!svn/ver/92/trunk/ui/src/edu/pitt/dbmi/odie/ui/preferences/PreferenceUtil.java
+END

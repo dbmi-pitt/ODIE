@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/svn/odie/!svn/ver/326/trunk/middletier/dev/java/src
+END
+AnalysisLanguageResource.java
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/odie/!svn/ver/92/trunk/middletier/dev/java/src/AnalysisLanguageResource.java
+END
+BaseMiddleTierImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/odie/!svn/ver/73/trunk/middletier/dev/java/src/BaseMiddleTierImpl.java
+END
+StatisticsUpdater.java
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/odie/!svn/ver/73/trunk/middletier/dev/java/src/StatisticsUpdater.java
+END
+FileDocumentImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/odie/!svn/ver/99/trunk/middletier/dev/java/src/FileDocumentImpl.java
+END
+AnalysisLanguageResourceJDBC.java
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/odie/!svn/ver/73/trunk/middletier/dev/java/src/AnalysisLanguageResourceJDBC.java
+END
+DocumentAnalysisJDBC.java
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/odie/!svn/ver/73/trunk/middletier/dev/java/src/DocumentAnalysisJDBC.java
+END
+MiddleTierJDBC.java
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/odie/!svn/ver/73/trunk/middletier/dev/java/src/MiddleTierJDBC.java
+END
+AnalysisJDBC.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/odie/!svn/ver/73/trunk/middletier/dev/java/src/AnalysisJDBC.java
+END
+IPersistable.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/odie/!svn/ver/73/trunk/middletier/dev/java/src/IPersistable.java
+END
+IDocument.java
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/odie/!svn/ver/73/trunk/middletier/dev/java/src/IDocument.java
+END
+SQLStatements.java
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/odie/!svn/ver/73/trunk/middletier/dev/java/src/SQLStatements.java
+END
+Statistics.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/odie/!svn/ver/73/trunk/middletier/dev/java/src/Statistics.java
+END
+Annotation.java
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/odie/!svn/ver/326/trunk/middletier/dev/java/src/Annotation.java
+END

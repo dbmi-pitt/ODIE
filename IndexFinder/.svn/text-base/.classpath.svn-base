@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry excluding="edu/mayo/bmi/coref/util/|edu/mayo/bmi/coref/|edu/mayo/bmi/uima/cdt/type/|edu/mayo/bmi/uima/chunker/type/|edu/mayo/bmi/uima/context/type/|edu/mayo/bmi/uima/coref/|edu/mayo/bmi/uima/lookup/type/|edu/mayo/bmi/uima/lvg/resource/|edu/mayo/bmi/uima/core/type/" kind="src" path="src"/>
+	<classpathentry exported="true" kind="lib" path="resources" sourcepath="resources"/>
+	<classpathentry exported="true" kind="lib" path="lib/gate.jar" sourcepath="IndexFindersrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/jasper-compiler-jdt.jar" sourcepath="IndexFindersrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/nekohtml-0.9.5.jar" sourcepath="IndexFindersrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/ontotext.jar" sourcepath="IndexFindersrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/stax-api-1.0.jar" sourcepath="IndexFindersrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/xercesImpl.jar" sourcepath="IndexFindersrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/Chunker.jar" sourcepath="IndexFindersrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/gate-asm.jar" sourcepath="IndexFindersrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/lvg2008dist.jar" sourcepath="IndexFindersrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/trove.jar" sourcepath="IndexFindersrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/OpenAI_FSM.jar" sourcepath="IndexFindersrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/maxent-2.4.0.jar" sourcepath="IndexFindersrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/gate-compiler-jdt.jar" sourcepath="IndexFindersrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/weka.jar" sourcepath="IndexFindersrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/PDFBox-0.7.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/caties.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/mod_coref-v0.2.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<styleMap>
+<rule>
+<pattern>edu.pitt.dbmi.odie.uima.church.types.ODIE_Word</pattern>
+<label>ODIE_Word</label>
+<style>color:black; background:lightblue;</style>
+</rule>
+<rule>
+<pattern>edu.pitt.dbmi.odie.uima.church.types.ODIE_StopWord</pattern>
+<label>ODIE_StopWord</label>
+<style>color:black; background:lightgreen;</style>
+</rule>
+</styleMap>
+

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<analysisEngineDescription xmlns="http://uima.apache.org/resourceSpecifier">
+  <frameworkImplementation>org.apache.uima.java</frameworkImplementation>
+  <primitive>false</primitive>
+  <delegateAnalysisEngineSpecifiers>
+    <delegateAnalysisEngine key="ODIE_AAE_LspOntologyEnricher">
+      <import location="../lsp/ODIE_AAE_LspOntologyEnricher.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_CASC_ChurchSuggestionGenerator">
+      <import location="../church/rdbms/ODIE_CASC_ChurchSuggestionGenerator.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="ODIE_AAE_INDEX_FINDER_PROPOSING">
+      <import location="../indexfinder/ODIE_AAE_INDEX_FINDER_PROPOSING.xml"/>
+    </delegateAnalysisEngine>
+    <delegateAnalysisEngine key="CoreferenceResolverAggregate">
+      <import location="../cTAKES/coref-resolver/CoreferenceResolverAggregate.xml"/>
+    </delegateAnalysisEngine>
+  </delegateAnalysisEngineSpecifiers>
+  <analysisEngineMetaData>
+    <name>ODIE Ontology Enrichment Engine (All Methods)</name>
+    <description>Runs a two pass Indexfinder NER engine, one each for target ontology and one for new concept proposals.
+
+Both lexical syntactic patterns and mutual information metrics calculated using Church and Lin methods are used to generate a list of suggestions for new concepts.</description>
+    <version>1.0</version>
+    <vendor>DBMI, University of Pittsburgh</vendor>
+    <configurationParameters searchStrategy="language_fallback">
+      <configurationParameter>
+        <name>analysis.db.url</name>
+        <description>Database url</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_CASC_ChurchSuggestionGenerator/odie.db.url</parameter>
+          <parameter>ODIE_AAE_LspOntologyEnricher/db.url</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.is.contiguous.existing</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+        <overrides>
+          <parameter>ODIE_AAE_INDEX_FINDER_PROPOSING/odie.is.contiguous.existing</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.is.overlapping.existing</name>
+        <description>When true return overlapping annotations</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+        <overrides>
+          <parameter>ODIE_AAE_INDEX_FINDER_PROPOSING/odie.is.overlapping.existing</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.fs.directory.path.existing</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_AAE_INDEX_FINDER_PROPOSING/odie.fs.directory.path.existing</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.is.contiguous.proposal</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+        <overrides>
+          <parameter>ODIE_AAE_INDEX_FINDER_PROPOSING/odie.is.contiguous.proposal</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.is.overlapping.proposal</name>
+        <description>When true return overlapping annotations</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>false</mandatory>
+        <overrides>
+          <parameter>ODIE_AAE_INDEX_FINDER_PROPOSING/odie.is.overlapping.proposal</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>odie.fs.directory.path.proposal</name>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_AAE_INDEX_FINDER_PROPOSING/odie.fs.directory.path.proposal</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>db.driver</name>
+        <description>Db driver</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_AAE_LspOntologyEnricher/db.driver</parameter>
+          <parameter>ODIE_CASC_ChurchSuggestionGenerator/odie.db.driver</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>db.username</name>
+        <description>Username</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_AAE_LspOntologyEnricher/db.username</parameter>
+          <parameter>ODIE_CASC_ChurchSuggestionGenerator/odie.db.user.name</parameter>
+        </overrides>
+      </configurationParameter>
+      <configurationParameter>
+        <name>db.password</name>
+        <description>Db user password</description>
+        <type>String</type>
+        <multiValued>false</multiValued>
+        <mandatory>true</mandatory>
+        <overrides>
+          <parameter>ODIE_AAE_LspOntologyEnricher/db.password</parameter>
+          <parameter>ODIE_CASC_ChurchSuggestionGenerator/odie.db.user.password</parameter>
+        </overrides>
+      </configurationParameter>
+    </configurationParameters>
+    <configurationParameterSettings>
+      <nameValuePair>
+        <name>analysis.db.url</name>
+        <value>
+          <string>jdbc:mysql://localhost:3306/odie_100920</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.is.contiguous.existing</name>
+        <value>
+          <string>true</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.is.overlapping.existing</name>
+        <value>
+          <string>false</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.fs.directory.path.existing</name>
+        <value>
+          <string>C:\workspace\ODIERuntime\indices\lucenefinder\1</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.is.contiguous.proposal</name>
+        <value>
+          <string>true</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.is.overlapping.proposal</name>
+        <value>
+          <string>false</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>odie.fs.directory.path.proposal</name>
+        <value>
+          <string>C:\workspace\ODIERuntime\indices\lucenefinder\2</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>db.driver</name>
+        <value>
+          <string>org.gjt.mm.mysql.Driver</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>db.username</name>
+        <value>
+          <string>caties</string>
+        </value>
+      </nameValuePair>
+      <nameValuePair>
+        <name>db.password</name>
+        <value>
+          <string>caties</string>
+        </value>
+      </nameValuePair>
+    </configurationParameterSettings>
+    <flowConstraints>
+      <fixedFlow>
+        <node>ODIE_AAE_INDEX_FINDER_PROPOSING</node>
+        <node>CoreferenceResolverAggregate</node>
+        <node>ODIE_AAE_LspOntologyEnricher</node>
+        <node>ODIE_CASC_ChurchSuggestionGenerator</node>
+      </fixedFlow>
+    </flowConstraints>
+    <typePriorities/>
+    <fsIndexCollection/>
+    <capabilities>
+      <capability>
+        <inputs/>
+        <outputs/>
+        <languagesSupported/>
+      </capability>
+    </capabilities>
+    <operationalProperties>
+      <modifiesCas>true</modifiesCas>
+      <multipleDeploymentAllowed>true</multipleDeploymentAllowed>
+      <outputsNewCASes>false</outputsNewCASes>
+    </operationalProperties>
+  </analysisEngineMetaData>
+  <resourceManagerConfiguration/>
+</analysisEngineDescription>

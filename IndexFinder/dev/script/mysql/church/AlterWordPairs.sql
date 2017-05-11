@@ -1,0 +1,1 @@
+alter table word_pair_scores add id bigint(20) NOT NULL AUTO_INCREMENT PRIMARY KEY FIRST ;

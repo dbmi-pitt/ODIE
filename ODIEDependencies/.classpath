@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="lib" path="lib/lucene-core-2.9.3.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/log4j-1.2.13.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/axis-1.2.1.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/bioportalservices.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-discovery-0.2.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-logging-1.0.4.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/jaxrpc-1.1-noQName.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/swtgraphics2d.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/wsdl4j-1.5.1.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/gspell.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/junit.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/nlpSelect.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/obo2owl.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/servlet-2_3.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/antlr-2.7.6.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-collections-3.1.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/dom4j-1.6.1.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/javassist-3.4.GA.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/jta-1.1.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/slf4j-simple-1.5.8.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/slf4j-api-1.5.8.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/mod-uima-core.jar" sourcepath="/uimaj-core/src/main/java"/>
+	<classpathentry exported="true" kind="lib" path="lib/uima-document-annotation.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/uima-cpe.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/uima-tools.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/uima-examples.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/geronimo-stax-api_1.0_spec-1.0.1.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/jsr250-api-1.0.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/mysql-connector-java-5.1.10-bin.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/protege-owl-inference.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/protege-owl.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/protege.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/serializer.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/xalan.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/xercesImpl.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/xml-apis.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/xsltc.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/jcommon-1.0.16.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/jfreechart-1.0.10-experimental.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/jfreechart-1.0.10-swt.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/jfreechart-1.0.10.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/glazedlists-1.8.0_java15.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/jaxen-core.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/jaxen-jdom.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/saxpath.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-cli-1.2.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/hibernate-commons-annotations-3.2.0.Final.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/hibernate-search-3.2.1.Final.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/lucene-analyzers-2.9.3.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/lucene-snowball-2.9.3.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/hibernate3_5.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/hibernate-jpa-2.0-api-1.0.0.Final.jar" sourcepath="ODIEDependenciessrc.zip"/>
+	<classpathentry exported="true" kind="lib" path="lib/TextTools1.4.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

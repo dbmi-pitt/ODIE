@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/svn/odie/!svn/ver/378/trunk/indexfinder/desc/lsp
+END
+ODIE_CPE_LspSuggestionGenerator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/odie/!svn/ver/263/trunk/indexfinder/desc/lsp/ODIE_CPE_LspSuggestionGenerator.xml
+END
+ODIE_CASC_LspSuggestionGenerator.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/odie/!svn/ver/378/trunk/indexfinder/desc/lsp/ODIE_CASC_LspSuggestionGenerator.xml
+END
+ODIE_LspTAE.xml
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/odie/!svn/ver/76/trunk/indexfinder/desc/lsp/ODIE_LspTAE.xml
+END
+ODIE_AAE_LspSuggestionGeneratorTester.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/odie/!svn/ver/263/trunk/indexfinder/desc/lsp/ODIE_AAE_LspSuggestionGeneratorTester.xml
+END
+ODIE_AE_JAPE_Discoverer_Post_Noun_Chunker.xml
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/odie/!svn/ver/293/trunk/indexfinder/desc/lsp/ODIE_AE_JAPE_Discoverer_Post_Noun_Chunker.xml
+END
+ODIE_CASC_LspTermPairCasConsumer.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/odie/!svn/ver/205/trunk/indexfinder/desc/lsp/ODIE_CASC_LspTermPairCasConsumer.xml
+END
+ODIE_AAE_LspOntologyEnricher.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/odie/!svn/ver/300/trunk/indexfinder/desc/lsp/ODIE_AAE_LspOntologyEnricher.xml
+END
